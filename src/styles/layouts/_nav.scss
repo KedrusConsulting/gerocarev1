@@ -1,0 +1,45 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  height: 9.6rem;
+  background-color: #fff;
+
+  & > .row {
+    flex: 1;
+    @include d-flex(flex-start, center);
+  }
+
+  &__grp {
+    flex: 1;
+    margin-left: 7.5%;
+    @include d-flex(space-between, center);
+  }
+
+  &__list {
+    flex: 1;
+    @include d-flex(space-between, center);
+  }
+
+  &__item {
+    & > *:not(:last-child) {
+      margin-right: 2.4rem;
+    }
+  }
+
+  &__link {
+    &:hover,
+    &:active {
+      color: #b0dfca;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    margin-left: 7.5%;
+
+    & > *:not(:last-child) {
+      margin-right: 2.4rem;
+    }
+  }
+}

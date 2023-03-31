@@ -1,0 +1,33 @@
+.heading {
+  font-family: "DM Serif Display", serif;
+
+  &--1 {
+    font-size: get-heading-size(h1);
+    line-height: get-line-height(l1);
+  }
+
+  &--2 {
+    font-size: get-heading-size(h2);
+    line-height: get-line-height(l2);
+  }
+
+  &--3 {
+    font-size: get-heading-size(h3);
+    line-height: get-line-height(l3);
+  }
+
+  &--4 {
+    font-size: get-heading-size(h4);
+    line-height: get-line-height(l3);
+  }
+
+  &--5 {
+    font-size: get-heading-size(h5);
+    line-height: get-line-height(l4);
+  }
+
+  &--6 {
+    font-size: get-heading-size(h6);
+    line-height: get-line-height(l4);
+  }
+}

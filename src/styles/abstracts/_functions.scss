@@ -1,0 +1,15 @@
+@function get-color($color) {
+  @return map-get($colors, $color);
+}
+
+@function get-text-size($text) {
+  @return map-get($font-texts, $text);
+}
+
+@function get-heading-size($heading) {
+  @return map-get($font-headings, $heading);
+}
+
+@function get-line-height($line-height) {
+  @return map-get($line-heights, $line-height);
+}
