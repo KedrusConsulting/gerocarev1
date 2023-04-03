@@ -2,3 +2,11 @@
   max-width: 120rem;
   margin: 0 auto;
 }
+
+.grid {
+  display: grid;
+
+  &--footer {
+    grid-template-columns: max(60rem) 1fr 1fr 1fr;
+  }
+}
