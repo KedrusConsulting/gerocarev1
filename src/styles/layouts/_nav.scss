@@ -18,6 +18,10 @@
   &__list {
     flex: 1;
     @include d-flex(space-between, center);
+
+    @include respond(tab-md) {
+      display: none;
+    }
   }
 
   &__item {
@@ -37,6 +41,10 @@
     display: flex;
     align-items: center;
     margin-left: 7.5%;
+
+    @include respond(tab-md) {
+      display: none;
+    }
 
     & > *:not(:last-child) {
       margin-right: 2.4rem;

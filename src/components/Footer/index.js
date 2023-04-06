@@ -13,7 +13,7 @@ const footerList = [
       { name: "Elderly Home Visit", href: "#" },
       { name: "Teleconsultation Doctor", href: "#" },
       { name: "Partner Services", href: "#" },
-      { name: "Caregivers", href: "#" }
+      { name: "Care Givers", href: "#" }
     ]
   },
 

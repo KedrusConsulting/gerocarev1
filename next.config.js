@@ -1,11 +1,17 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
+
+
+module.exports = {
+  nextConfig: {
+    reactStrictMode: true,
+  },
+
+  module: {
+    rules: [
+      {
+        test: /\.svg$/,
+        use: ['@svgr/webpack'],
+      },
+    ],
+  },
 }
-
-// const withSass = require('@zeit/next-sass')
-// exports = withSass({
-//   /* additional configuration options here */
-// })
-
-module.exports = nextConfig

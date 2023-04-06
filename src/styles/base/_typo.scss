@@ -1,5 +1,11 @@
 .heading {
   font-family: "DM Serif Display", serif;
+  font-weight: 400;
+
+  &--display {
+    font-size: get-heading-size(display);
+    line-height: get-line-height(ld);
+  }
 
   &--1 {
     font-size: get-heading-size(h1);
@@ -30,4 +36,8 @@
     font-size: get-heading-size(h6);
     line-height: get-line-height(l4);
   }
+}
+
+.text {
+  font-size: 1.8rem;
 }

@@ -1,12 +1,36 @@
 .row {
   max-width: 120rem;
   margin: 0 auto;
+
+  @include respond(tab-land) {
+    padding: 2.4rem;
+  }
 }
 
 .grid {
   display: grid;
 
   &--footer {
-    grid-template-columns: max(60rem) 1fr 1fr 1fr;
+    @include grid-template-col(max(55rem) 1fr 1fr 1fr);
+  }
+
+  &--2-col {
+    @include grid-template-col(55% 45%);
+  }
+
+  &--2-col-reverse {
+    @include grid-template-col(45% 55%);
+  }
+
+  &--3-col {
+    @include grid-template-col(1fr 1fr 1fr);
+    gap: 3.2rem;
+  }
+
+  &--4-col {
+  }
+
+  &--center-v {
+    align-items: center;
   }
 }

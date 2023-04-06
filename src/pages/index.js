@@ -1,6 +1,10 @@
 import Head from "next/head";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+
+import Solutions from "@/components/Solutions";
+import Services from "@/components/Services";
+import Testimonials from "@/components/Testimonials";
 // import "../styles/main.scss";
 
 
@@ -14,18 +18,21 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet" />
       </Head>
 
       <Navigation />
 
       <header className="header">
         <div className="row">
-          <h1 className="heading heading--1">Home</h1>
+          {/* <h1 className="heading heading--1">Home</h1> */}
         </div>
       </header>
 
       <main>
+        <Testimonials />
+        {/* <Services /> */}
+        {/* <Solutions /> */}
       </main>
 
       <Footer />
