@@ -9,6 +9,8 @@ import Awards from "@/components/Awards";
 import Header from "@/components/Header";
 import FeaturedIn from "@/components/FeaturedIn";
 import CTA from "@/components/CTA";
+import GetStarted from "@/components/GetStarted";
+import Benefits from "@/components/Benefits";
 // import "../styles/main.scss";
 
 export default function Home() {
@@ -33,9 +35,11 @@ export default function Home() {
 
       <main>
         <Awards />
-        {/* <Testimonials /> */}
-        {/* <Services /> */}
-        {/* <Solutions /> */}
+        <Services />
+        <Testimonials />
+        <Solutions />
+        <GetStarted />
+        <Benefits />
         <FeaturedIn />
         <CTA />
       </main>

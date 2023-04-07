@@ -1,4 +1,8 @@
 .section {
+  &--services {
+    padding: 9.6rem 0;
+  }
+
   &--testimonials {
     background-color: get-color(primary);
     padding: 9.6rem 0;
@@ -14,6 +18,19 @@
       margin: 0 auto;
       cursor: grab;
     }
+  }
+
+  &--get-started {
+    background-color: #e0efc6;
+    padding: 9.6rem 0;
+  }
+
+  &--benefits {
+    padding: 9.6rem 0;
+  }
+
+  &--solutions {
+    padding: 9.6rem 0;
   }
 
   &--awards {

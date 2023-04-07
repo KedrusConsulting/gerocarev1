@@ -166,6 +166,95 @@
   }
 }
 
+.get-started {
+  @extend %grid--2;
+  gap: 4rem;
+  align-items: center;
+
+  &__caption {
+    max-width: 55rem;
+    margin: 0 auto 10.4rem;
+    text-align: center;
+    color: get-color(primary);
+
+    .heading {
+      margin-bottom: 1.6rem;
+    }
+
+    p {
+      text-align: center;
+    }
+  }
+
+  &__img {
+    img {
+      height: fit-content;
+    }
+  }
+
+  &__step {
+    background: #f5faed;
+    padding: 2.4rem 1.6rem;
+    display: flex;
+    align-items: center;
+    color: get-color(primary);
+    border-radius: 0.8rem;
+    max-width: 54rem;
+    margin: 0 auto;
+    align-self: center;
+
+    &:not(:last-child) {
+      margin-bottom: 1.6rem;
+    }
+
+    span {
+      display: block;
+      margin-right: 1.2rem;
+      font-size: 9.6rem;
+      line-height: 9.6rem;
+      font-family: "Graphik M Trial";
+    }
+
+    .heading {
+      font-family: "Graphik M Trial";
+      color: get-color(primary);
+    }
+  }
+}
+
+.benefits {
+  .heading--display {
+    max-width: 56.5rem;
+    margin: 0 auto 6.4rem;
+    text-align: center;
+    color: get-color(primary);
+  }
+
+  &__grid {
+    @extend %grid--3;
+  }
+
+  &__card {
+    background: #eefaef;
+    padding: 4rem 2.4rem;
+    border-radius: 1.6rem;
+
+    .heading {
+      color: get-color(primary);
+      margin-bottom: 1.6rem;
+    }
+
+    p {
+      color: #000000;
+      opacity: 80%;
+    }
+  }
+
+  &__icon {
+    margin-bottom: 0.8rem;
+  }
+}
+
 .featured-in {
   &__caption {
     display: block;
