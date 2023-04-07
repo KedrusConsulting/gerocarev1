@@ -1,0 +1,66 @@
+.header {
+  padding: 13vh 0 15vh;
+
+  &__text-sub {
+    display: flex;
+    align-items: center;
+
+    padding: 0.8rem 1.4rem;
+    max-width: fit-content;
+    background-color: hsla(51, 65%, 84%, 1);
+    border-radius: 10rem;
+    margin-bottom: 3.2rem;
+  }
+
+  &--grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  img {
+    margin-right: 1.2rem;
+  }
+
+  span {
+    color: get-color(primary);
+    font-size: get-text-size(sm);
+  }
+
+  .heading,
+  p {
+    color: get-color(primary);
+  }
+
+  .heading {
+    max-width: 54rem;
+    margin-bottom: 1.6rem;
+  }
+
+  p {
+    font-size: get-text-size(lg);
+    max-width: 40rem;
+    margin-bottom: 5.6rem;
+  }
+
+  &__img {
+    position: relative;
+
+    img {
+      height: fit-content;
+    }
+  }
+
+  &__cta {
+    display: flex;
+    align-items: center;
+
+    & > *:not(:last-child) {
+      margin-right: 1.6rem;
+    }
+  }
+
+  .mySwiper {
+    width: 100%;
+  }
+}

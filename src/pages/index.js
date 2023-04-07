@@ -5,8 +5,11 @@ import Footer from "@/components/Footer";
 import Solutions from "@/components/Solutions";
 import Services from "@/components/Services";
 import Testimonials from "@/components/Testimonials";
+import Awards from "@/components/Awards";
+import Header from "@/components/Header";
+import FeaturedIn from "@/components/FeaturedIn";
+import CTA from "@/components/CTA";
 // import "../styles/main.scss";
-
 
 export default function Home() {
   return (
@@ -18,21 +21,23 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap"
+          rel="stylesheet"
+        />
       </Head>
 
       <Navigation />
 
-      <header className="header">
-        <div className="row">
-          {/* <h1 className="heading heading--1">Home</h1> */}
-        </div>
-      </header>
+      <Header />
 
       <main>
-        <Testimonials />
+        <Awards />
+        {/* <Testimonials /> */}
         {/* <Services /> */}
         {/* <Solutions /> */}
+        <FeaturedIn />
+        <CTA />
       </main>
 
       <Footer />

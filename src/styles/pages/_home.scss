@@ -165,3 +165,51 @@
     }
   }
 }
+
+.featured-in {
+  &__caption {
+    display: block;
+    font-family: "Graphik M Trial";
+    font-weight: 500;
+    font-size: get-text-size(lg);
+    line-height: 3.2rem;
+    letter-spacing: 0.255em;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 2.4rem;
+
+    color: #000000;
+  }
+
+  &__logos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    img {
+      height: 3.2rem;
+      object-fit: contain;
+    }
+  }
+}
+
+.cta {
+  text-align: center;
+
+  .heading {
+    max-width: 52.4rem;
+    margin: 0 auto 2.4rem;
+    color: get-color(primary);
+  }
+
+  p {
+    max-width: 83rem;
+    color: get-color(primary);
+    margin: 0 auto 3.2rem;
+  }
+
+  &__btn {
+    width: 20.5rem;
+    margin: 0 auto;
+  }
+}
