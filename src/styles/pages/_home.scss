@@ -255,6 +255,39 @@
   }
 }
 
+.metrics {
+  &__caption {
+    max-width: 66.7rem;
+    margin: 0 auto 6.4rem;
+    text-align: center;
+    color: get-color(primary);
+
+    .heading {
+      margin-bottom: 1.6rem;
+    }
+  }
+
+  &__grid {
+    @extend %grid--4;
+  }
+
+  &__stat {
+    text-align: center;
+
+    span {
+      font-family: "DM Serif Display", serif;
+      // font-family: "Graphik L Trial";
+      font-size: 8rem;
+      color: #9bca46;
+    }
+
+    .heading {
+      font-family: "Graphik M Trial";
+      color: get-color(primary);
+    }
+  }
+}
+
 .featured-in {
   &__caption {
     display: block;

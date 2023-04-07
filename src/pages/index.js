@@ -11,6 +11,7 @@ import FeaturedIn from "@/components/FeaturedIn";
 import CTA from "@/components/CTA";
 import GetStarted from "@/components/GetStarted";
 import Benefits from "@/components/Benefits";
+import Metrics from "@/components/Metrics";
 // import "../styles/main.scss";
 
 export default function Home() {
@@ -40,6 +41,7 @@ export default function Home() {
         <Solutions />
         <GetStarted />
         <Benefits />
+        <Metrics />
         <FeaturedIn />
         <CTA />
       </main>

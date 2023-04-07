@@ -8,3 +8,9 @@
   @include grid-template-col(1fr 1fr 1fr);
   gap: 3.2rem;
 }
+
+%grid--4 {
+  display: grid;
+  @include grid-template-col(1fr 1fr 1fr 1fr);
+  gap: 3.2rem;
+}
