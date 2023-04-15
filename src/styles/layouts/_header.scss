@@ -63,4 +63,108 @@
   .mySwiper {
     width: 100%;
   }
+
+  &__about-us {
+    max-width: 72.3rem;
+    margin: 0 auto;
+    text-align: center;
+
+    .heading {
+      max-width: 100%;
+    }
+
+    p {
+      max-width: 56.6rem;
+      margin: 0 auto 5.6rem;
+    }
+
+    img {
+      height: 100%;
+    }
+  }
+
+  &--about {
+    padding-bottom: 0;
+  }
+
+  &--pricing {
+    max-width: 90.6rem;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 0;
+
+    .heading,
+    p {
+      max-width: 100%;
+    }
+  }
+
+  &--elderly {
+    // padding-bottom: 0;
+  }
+
+  &__elderly-text {
+    max-width: 70rem;
+    margin: 0 auto 5.6rem;
+    text-align: center;
+
+    .heading {
+      max-width: 100%;
+    }
+
+    p {
+      max-width: 52rem;
+      margin: 0 auto 3.2rem;
+    }
+
+    .btn--main {
+      margin: 0 auto;
+    }
+  }
+
+  &__elderly-img {
+    img {
+      height: fit-content;
+      object-fit: contain;
+    }
+  }
+
+  &__hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6.4rem;
+    align-items: center;
+    margin-bottom: 4.8rem;
+
+    h1 {
+      max-width: 59rem;
+    }
+
+    p {
+      max-width: 49rem;
+    }
+
+    img {
+      border-radius: 0.8rem;
+    }
+  }
+
+  &__hire {
+    max-width: 70.5rem;
+    margin: 0 auto;
+    text-align: center;
+
+    .heading {
+      max-width: 100%;
+    }
+
+    p {
+      max-width: 62.3rem;
+      margin: 0 auto 4.8rem;
+    }
+
+    .btn--main {
+      margin: 0 auto;
+    }
+  }
 }

@@ -1,0 +1,10 @@
+.access {
+  &__price {
+    display: flex;
+    justify-content: center;
+
+    .pricing__table {
+      grid-template-columns: max-content;
+    }
+  }
+}

@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 
-
 module.exports = {
   nextConfig: {
     reactStrictMode: true,
@@ -10,8 +9,8 @@ module.exports = {
     rules: [
       {
         test: /\.svg$/,
-        use: ['@svgr/webpack'],
+        use: ["@svgr/webpack"],
       },
     ],
   },
-}
+};

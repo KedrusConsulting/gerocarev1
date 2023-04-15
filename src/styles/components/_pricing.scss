@@ -1,0 +1,186 @@
+.tab {
+  margin-bottom: 7.2rem;
+
+  &__ctrl {
+    display: flex;
+    justify-content: space-between;
+    max-width: 49.7rem;
+    margin: 0 auto;
+    background-color: #f7f7f7;
+    padding: 0.4rem;
+    height: 5.6rem;
+    position: relative;
+    border-radius: 0.4rem;
+    cursor: pointer;
+
+    span {
+      font-size: get-text-size(lg);
+      width: calc((100% - 2.4rem) / 2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.2rem 2.4rem;
+      border-radius: 0.4rem;
+      color: get-color(primary);
+      position: relative;
+      z-index: 3;
+    }
+
+    &::after {
+      content: "";
+      width: calc((100% - 2.4rem) / 2);
+      background-color: get-color(primary);
+      height: calc(100% - 0.8rem);
+      display: inline-block;
+      position: absolute;
+      border-radius: 0.4rem;
+      z-index: 2;
+      transition: all 0.4s;
+    }
+  }
+
+  input {
+    display: none;
+  }
+
+  input:checked ~ &__ctrl::after {
+    transform: translateX(calc(100% + 1.6rem));
+  }
+
+  input ~ &__ctrl > span:nth-child(1),
+  input:checked ~ &__ctrl > span:nth-child(2) {
+    color: #ffffff;
+  }
+
+  input:checked ~ &__ctrl > span:nth-child(1),
+  input ~ &__ctrl > span:nth-child(2) {
+    color: get-color(primary);
+  }
+}
+
+.pricing {
+  &__table {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5.6rem;
+    max-width: 85rem;
+    margin: 0 auto;
+    color: get-color(primary);
+
+    .btn--main {
+      width: 27.4rem;
+      max-width: 27.4rem;
+      margin: 0 auto;
+    }
+  }
+
+  &__plan {
+    background-color: #f5faed;
+    border-radius: 0.8rem;
+    padding: 4.8rem 4.8rem 3.2rem;
+
+    h4 {
+      margin-bottom: 2.4rem;
+    }
+
+    p {
+      font-family: "Graphik L Trial";
+      margin-bottom: 3.2rem;
+    }
+  }
+
+  &__price {
+    margin-bottom: 4.8rem;
+  }
+
+  &__amt {
+    font-family: "Graphik M Trial";
+    font-size: get-heading-size(h1);
+    line-height: get-line-height(l1);
+  }
+
+  &__list {
+    max-width: 25rem;
+    margin: 0 auto;
+    margin-bottom: 7.2rem;
+  }
+
+  &__item {
+    display: flex;
+
+    &:not(:last-child) {
+      margin-bottom: 1.2rem;
+    }
+  }
+
+  &__icon {
+    display: block;
+    margin-right: 1.6rem;
+  }
+
+  &__tele,
+  &__doc {
+    max-width: 85rem;
+    margin: 9.6rem auto;
+
+    .heading {
+      margin-bottom: 0.8rem !important;
+    }
+
+    p {
+      margin-bottom: 6.4rem;
+      color: get-color(primary);
+      text-align: center;
+    }
+
+    &-grp {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__doc {
+    margin: 9.6rem auto 0;
+
+    &-grp {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+.price {
+  &__card {
+    background-color: #f5faed;
+    color: get-color(primary);
+    max-width: 39.8rem;
+    padding: 4rem 4.8rem;
+    border-radius: 0.8rem;
+
+    .heading--4 {
+      margin-bottom: 2.4rem;
+    }
+
+    p {
+      font-family: "Graphik L Trial";
+      margin-bottom: 1.6rem;
+      text-align: left;
+    }
+
+    .btn--main {
+      width: 27.4rem;
+      max-width: 27.4rem;
+      margin: 0 auto;
+    }
+  }
+
+  &__price {
+    margin-bottom: 4.8rem;
+  }
+
+  &__amt {
+    font-family: "Graphik M Trial";
+    font-size: get-heading-size(h1);
+    line-height: get-line-height(l1);
+  }
+}

@@ -13,8 +13,8 @@ const footerList = [
       { name: "Elderly Home Visit", href: "#" },
       { name: "Teleconsultation Doctor", href: "#" },
       { name: "Partner Services", href: "#" },
-      { name: "Care Givers", href: "#" }
-    ]
+      { name: "Care Givers", href: "#" },
+    ],
   },
 
   {
@@ -22,9 +22,9 @@ const footerList = [
     list: [
       { name: "Blogs", href: "#" },
       { name: "User Registration", href: "#" },
-      { name: "Subsrption Plan", href: "#" },
+      { name: "Subscription Plan", href: "#" },
       { name: "Contact Geocare", href: "#" },
-    ]
+    ],
   },
 
   {
@@ -32,11 +32,11 @@ const footerList = [
     list: [
       { name: "Blogs", href: "#" },
       { name: "User Registration", href: "#" },
-      { name: "Subsrption Plan", href: "#" },
+      { name: "Subscription Plan", href: "#" },
       { name: "Contact Geocare", href: "#" },
-    ]
+    ],
   },
-]
+];
 
 const Footer = () => {
   return (
@@ -56,23 +56,30 @@ const Footer = () => {
 
             <div className="footer__award-b">
               <figure className="footer__award">
-
-                <Image src={image_url_1} alt="Top 30 African Health Innovation" className="footer__award-img" />
-                <Image src={image_url_2} alt="Top 50 African Innovation" className="footer__award-img" />
+                <Image
+                  src={image_url_1}
+                  alt="Top 30 African Health Innovation"
+                  className="footer__award-img"
+                />
+                <Image
+                  src={image_url_2}
+                  alt="Top 50 African Innovation"
+                  className="footer__award-img"
+                />
               </figure>
-
             </div>
           </div>
         </div>
 
-
-        {footerList.map(list => (
+        {footerList.map((list) => (
           <ul className="footer__list">
             <h6 className="heading heading--6">{list.category}</h6>
 
-            {list.list.map(item => (
-              <li className='footer__item'>
-                <a href={item.href} className="footer__link">{item.name}</a>
+            {list.list.map((item) => (
+              <li className="footer__item">
+                <a href={item.href} className="footer__link">
+                  {item.name}
+                </a>
               </li>
             ))}
           </ul>

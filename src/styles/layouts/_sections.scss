@@ -104,4 +104,55 @@
   &--cta {
     padding: 4.8rem 0 9.6rem;
   }
+
+  &--vision {
+    background-color: get-color(primary);
+    padding: 9.6rem 0;
+  }
+
+  &--story {
+    padding: 9.6rem 0;
+  }
+
+  &--pricing {
+    padding: 0 0 9.6rem;
+
+    .heading {
+      text-align: center;
+      color: get-color(primary);
+      margin-bottom: 2.4rem;
+    }
+  }
+
+  &--our-services {
+    padding: 4.8rem 0 9.6rem;
+  }
+
+  &--simple-step {
+    padding: 9.6rem 0;
+    background-color: #f5faed;
+  }
+
+  &--subscription {
+    padding: 9.6rem 0;
+  }
+
+  &--access {
+    padding: 16rem 0 6.4rem;
+  }
+
+  &--full-bg {
+    img {
+      display: block;
+      height: fit-content;
+    }
+  }
+
+  &--key-features {
+    padding: 9.6rem 0;
+  }
+
+  &--video {
+    padding: 9.6rem 0;
+  }
 }

@@ -1,0 +1,137 @@
+.simple-step {
+  &__caption {
+    max-width: 47.8rem;
+    color: get-color(primary);
+    margin: 0 auto 7.2rem;
+    text-align: center;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3.2rem;
+  }
+
+  &__card {
+    padding: 3.2rem;
+    border-radius: 0.8rem;
+    color: get-color(primary);
+    transition: background-color 0.4s;
+
+    &:hover {
+      background-color: #fcfdfa;
+    }
+
+    .heading--5,
+    .heading--6 {
+      margin-bottom: 2.4rem;
+    }
+
+    p {
+      max-width: 29.7rem;
+    }
+  }
+
+  &__badge {
+    display: inline-block;
+    font-size: get-text-size(sm);
+    background-color: #b0dfca;
+    padding: 0.4rem 1.2rem;
+    border-radius: 3rem;
+    margin-bottom: 1.2rem;
+  }
+
+  &__btn {
+    width: 28.5rem;
+    max-width: 28.5rem;
+    margin: 3.2rem auto 0;
+  }
+}
+
+.subscription {
+  &__caption {
+    max-width: 50rem;
+    margin: 0 auto 6.4rem;
+    color: get-color(primary);
+    text-align: center;
+  }
+}
+
+.access {
+  &__grid {
+    @extend %grid--2;
+    align-items: center;
+    gap: 6.4rem;
+  }
+
+  &__content {
+    color: get-color(primary);
+
+    .heading {
+      margin-bottom: 3.2rem;
+    }
+
+    p,
+    ul {
+      margin-bottom: 4.8rem;
+    }
+
+    ul {
+      max-width: 44.6rem;
+    }
+
+    li {
+      display: flex;
+
+      &:not(:last-child) {
+        margin-bottom: 1.2rem;
+      }
+
+      img {
+        margin-right: 1.2rem;
+      }
+    }
+
+    .btn--main {
+      width: fit-content;
+    }
+  }
+
+  &__img {
+    img {
+      height: fit-content;
+    }
+  }
+}
+
+.key-features {
+  &__caption {
+    max-width: 65rem;
+    margin: 0 auto 6.4rem;
+    text-align: center;
+    color: get-color(primary);
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    text-align: center;
+    color: get-color(primary);
+  }
+
+  &__feature {
+    img {
+      margin-bottom: 0.4rem;
+    }
+  }
+}
+
+.testimonial-video {
+  text-align: center;
+  color: get-color(primary);
+
+  .heading {
+    margin-bottom: 2.4rem;
+  }
+}

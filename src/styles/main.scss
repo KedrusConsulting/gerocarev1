@@ -11,6 +11,8 @@
 @import "./components/logo";
 @import "./components/button";
 @import "./components/awards";
+@import "./components/pricing";
+@import "./components/simple-step";
 
 @import "./layouts/nav";
 @import "./layouts/grid";
@@ -19,5 +21,7 @@
 @import "./layouts/footer";
 
 @import "./pages/home";
+@import "./pages/about";
+@import "./pages/doc";
 
 @import "./base/utilities";
