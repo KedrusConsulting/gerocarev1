@@ -9,11 +9,11 @@ const footerList = [
   {
     category: "Our Services",
     list: [
-      { name: "Doctor on Demand", href: "#" },
-      { name: "Elderly Home Visit", href: "#" },
-      { name: "Teleconsultation Doctor", href: "#" },
+      { name: "Doctor on Demand", href: "/doctor-on-demand" },
+      { name: "Elderly Home Visit", href: "/elderly-care" },
+      { name: "Teleconsultation Doctor", href: "/teleconsultation" },
       { name: "Partner Services", href: "#" },
-      { name: "Care Givers", href: "#" },
+      { name: "Care Givers", href: "/care-giver" },
     ],
   },
 
