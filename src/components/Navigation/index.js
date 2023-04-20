@@ -3,6 +3,7 @@ import Logo from "../Logo";
 import Link from "next/link";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
+import Image from "next/image";
 
 const navList = [
   { name: "About Us", href: "/about" },
@@ -14,6 +15,7 @@ const navList = [
 ];
 
 const Navigation = () => {
+  const [openMenu, setOpenMenu] = React.useState(false);
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -28,39 +30,15 @@ const Navigation = () => {
       <div className="row">
         <Logo />
 
-        <div className="navbar__grp">
+        <div className={`navbar__grp ${openMenu ? "active" : ""}`}>
           <ul className="navbar__list">
             {navList.map((list) => (
-              <li
-                className="navbar__item"
-                id={list.id ? list.id : ""}
-                onClick={list.id ? handleClick : ""}
-              >
+              <li className="navbar__item" id={list.id ? list.id : ""}>
                 <Link href={list.href} className="navbar__link">
                   {list.name}
                 </Link>
               </li>
             ))}
-
-            <Menu
-              id="services-menu"
-              aria-labelledby="demo-positioned-button"
-              anchorEl={anchorEl}
-              open={open}
-              onClose={handleClose}
-              anchorOrigin={{
-                vertical: "top",
-                horizontal: "left",
-              }}
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "left",
-              }}
-            >
-              <MenuItem onClick={handleClose}>Profile</MenuItem>
-              <MenuItem onClick={handleClose}>My account</MenuItem>
-              <MenuItem onClick={handleClose}>Logout</MenuItem>
-            </Menu>
           </ul>
 
           <div className="navbar__actions">
@@ -73,7 +51,22 @@ const Navigation = () => {
           </div>
         </div>
 
-        <div className="navbar__menu">&nbsp;</div>
+        <div
+          className="navbar__menu"
+          onClick={() => setOpenMenu((prev) => !prev)}
+        >
+          {!openMenu ? (
+            <Image
+              src={require("@/assets/img/menu.svg")}
+              alt="Mobile Menu icon"
+            />
+          ) : (
+            <Image
+              src={require("@/assets/img/menu-close.svg")}
+              alt="Mobile Menu Close icon"
+            />
+          )}
+        </div>
       </div>
     </nav>
   );
