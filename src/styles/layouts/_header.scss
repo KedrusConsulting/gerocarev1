@@ -56,6 +56,7 @@
 
     img {
       height: fit-content;
+      border-radius: 0.8rem;
     }
   }
 
@@ -136,12 +137,12 @@
     }
   }
 
-  &__hero {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 6.4rem;
-    align-items: center;
-    margin-bottom: 4.8rem;
+  &__text {
+    // display: grid;
+    // grid-template-columns: 1fr 1fr;
+    // gap: 6.4rem;
+    // align-items: center;
+    // margin-bottom: 4.8rem;
 
     h1 {
       max-width: 59rem;
@@ -149,10 +150,6 @@
 
     p {
       max-width: 49rem;
-    }
-
-    img {
-      border-radius: 0.8rem;
     }
   }
 
@@ -173,6 +170,26 @@
     .btn--main {
       margin: 0 auto;
     }
+  }
+}
+
+[class*="hmo"] {
+  .heading {
+    max-width: 66.4rem;
+  }
+
+  p {
+    max-width: 62.3rem;
+  }
+}
+
+[class*="hmo-"] {
+  // .heading {
+  //   max-width: 82.7rem;
+  // }
+
+  p {
+    max-width: 55rem;
   }
 }
 
