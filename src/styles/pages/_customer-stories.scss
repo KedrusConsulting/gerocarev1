@@ -1,0 +1,10 @@
+.customers-stories {
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    max-width: 96rem;
+    margin: 0 auto;
+    gap: 6.4rem;
+  }
+}

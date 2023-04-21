@@ -1,11 +1,12 @@
 .section {
-  &--services {
-    padding: 9.6rem 0;
-  }
+  padding: 9.6rem 0;
+
+  // &--services {
+  // }
 
   &--testimonials {
     background-color: get-color(primary);
-    padding: 9.6rem 0;
+    // padding: 9.6rem 0;
 
     .row {
       margin: 0;
@@ -22,16 +23,16 @@
 
   &--get-started {
     background-color: #e0efc6;
-    padding: 9.6rem 0;
+    // padding: 9.6rem 0;
   }
 
-  &--benefits {
-    padding: 9.6rem 0;
-  }
+  // &--benefits {
+  //   padding: 9.6rem 0;
+  // }
 
-  &--solutions {
-    padding: 9.6rem 0;
-  }
+  // &--solutions {
+  //   padding: 9.6rem 0;
+  // }
 
   &--awards {
     height: 30rem;
@@ -94,12 +95,12 @@
 
   &--metrics {
     background: #f5faed;
-    padding: 9.6rem 0;
+    // padding: 9.6rem 0;
   }
 
-  &--featured-in {
-    padding: 9.6rem 0;
-  }
+  // &--featured-in {
+  //   padding: 9.6rem 0;
+  // }
 
   &--cta {
     padding: 4.8rem 0 9.6rem;
@@ -107,12 +108,12 @@
 
   &--vision {
     background-color: get-color(primary);
-    padding: 9.6rem 0;
+    // padding: 9.6rem 0;
   }
 
-  &--story {
-    padding: 9.6rem 0;
-  }
+  // &--story {
+  //   padding: 9.6rem 0;
+  // }
 
   &--pricing {
     padding: 0 0 9.6rem;
@@ -129,13 +130,13 @@
   }
 
   &--simple-step {
-    padding: 9.6rem 0;
     background-color: #f5faed;
+    // padding: 9.6rem 0;
   }
 
-  &--subscription {
-    padding: 9.6rem 0;
-  }
+  // &--subscription {
+  //   padding: 9.6rem 0;
+  // }
 
   &--access {
     padding: 16rem 0 6.4rem;
@@ -148,11 +149,16 @@
     }
   }
 
-  &--key-features {
-    padding: 9.6rem 0;
-  }
+  // &--key-features {
+  //   padding: 9.6rem 0;
+  // }
 
-  &--video {
-    padding: 9.6rem 0;
+  // &--video {
+  //   padding: 9.6rem 0;
+  // }
+
+  &--customers-stories {
+    background-color: get-color(primary);
+    padding: 12rem 0;
   }
 }
