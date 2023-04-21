@@ -69,30 +69,29 @@
   }
 
   .mySwiper {
+    cursor: grab;
     width: 100%;
-  }
-
-  &__about-us {
-    max-width: 72.3rem;
-    margin: 0 auto;
-    text-align: center;
-
-    .heading {
-      max-width: 100%;
-    }
-
-    p {
-      max-width: 56.6rem;
-      margin: 0 auto 5.6rem;
-    }
-
-    img {
-      height: 100%;
-    }
   }
 
   &--about {
     padding-bottom: 0;
+
+    .row {
+      max-width: 100%;
+    }
+
+    .heading {
+      max-width: 72.3rem;
+    }
+
+    p {
+      max-width: 56.6rem;
+    }
+
+    img {
+      display: block;
+      height: 100%;
+    }
   }
 
   &--pricing {

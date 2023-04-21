@@ -6,7 +6,6 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 import { Navigation, Pagination } from "swiper";
-import Image from "next/image";
 import Award from "../Award";
 import Section from "@/Layout/Section";
 

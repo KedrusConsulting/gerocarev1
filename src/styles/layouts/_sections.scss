@@ -37,6 +37,7 @@
   &--awards {
     height: 30rem;
     cursor: grab;
+    padding: 0;
 
     .row:last-of-type {
       height: 79%;
@@ -50,7 +51,7 @@
       max-width: fit-content !important;
       left: 50% !important;
       transform: translateX(-50%) !important;
-      bottom: 4rem !important;
+      bottom: 1rem !important;
     }
 
     .swiper-pagination-bullet {

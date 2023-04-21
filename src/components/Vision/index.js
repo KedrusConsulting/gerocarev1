@@ -1,3 +1,5 @@
+import Section from "@/Layout/Section";
+import SplitScreen from "@/Layout/SplitScreen";
 import Image from "next/image";
 import React from "react";
 
@@ -29,45 +31,43 @@ const details = [
 
 const Vision = () => {
   return (
-    <section className="section section--vision">
-      <div className="row">
-        <div className="vision">
-          <div className="vision__grid grid">
-            <div className="vision__statement">
-              <div>
-                <h5 className="heading heading--5">Our Mission</h5>
-                <p>
-                  Our Mission is to pioneer medical inclusion by leveraging
-                  technology to provide access to medical care to underserved
-                  segments of people across Africa.
-                </p>
-              </div>
-
-              <div>
-                <h5 className="heading heading--5">Our Vision</h5>
-                <p>
-                  To be the most loved, used, sustainable and easily accessible
-                  home medical service
-                </p>
-              </div>
+    <Section sectionName={"vision"}>
+      <div className="vision">
+        <SplitScreen>
+          <div className="vision__statement">
+            <div>
+              <h5 className="heading heading--5">Our Mission</h5>
+              <p>
+                Our Mission is to pioneer medical inclusion by leveraging
+                technology to provide access to medical care to underserved
+                segments of people across Africa.
+              </p>
             </div>
 
-            <div className="vision__about">
-              {details.map((detail) => (
-                <div className="vision__grp">
-                  <Image src={detail.icon} alt={detail.name} />
-
-                  <div>
-                    <span className="heading--3">{detail.stat}</span>
-                    <span>{detail.name}</span>
-                  </div>
-                </div>
-              ))}
+            <div>
+              <h5 className="heading heading--5">Our Vision</h5>
+              <p>
+                To be the most loved, used, sustainable and easily accessible
+                home medical service
+              </p>
             </div>
           </div>
-        </div>
+
+          <div className="vision__about">
+            {details.map((detail) => (
+              <div className="vision__grp">
+                <Image src={detail.icon} alt={detail.name} />
+
+                <div>
+                  <span className="heading--3">{detail.stat}</span>
+                  <span>{detail.name}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </SplitScreen>
       </div>
-    </section>
+    </Section>
   );
 };
 

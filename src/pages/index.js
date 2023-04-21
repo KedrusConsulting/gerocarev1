@@ -61,13 +61,21 @@ export default function Home() {
 
       <main>
         <Awards />
+
         <Services />
+
         <Testimonials />
+
         <Solutions />
+
         <GetStarted />
+
         <Benefits />
+
         <Metrics />
+
         <FeaturedIn />
+
         <CTA />
       </main>
     </Root>
