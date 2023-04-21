@@ -1,3 +1,4 @@
+import Section from "@/Layout/Section";
 import Image from "next/image";
 import React from "react";
 
@@ -26,31 +27,29 @@ const benefits = [
 
 const Benefits = () => {
   return (
-    <section className="section section--benefits">
-      <div className="row">
-        <div className="benefits">
-          <h2 className="heading heading--display">
-            Why Our Paitents Love Gerocare Services
-          </h2>
+    <Section sectionName={"benefits"}>
+      <div className="benefits">
+        <h2 className="heading heading--display">
+          Why Our Paitents Love Gerocare Services
+        </h2>
 
-          <div className="benefits__grid">
-            {benefits.map((benefit) => (
-              <div className="benefits__card">
-                <Image
-                  className="benefits__icon"
-                  src={benefit.icon}
-                  alt={benefit.title}
-                />
+        <div className="benefits__grid">
+          {benefits.map((benefit) => (
+            <div className="benefits__card">
+              <Image
+                className="benefits__icon"
+                src={benefit.icon}
+                alt={benefit.title}
+              />
 
-                <h6 className="heading heading--6">{benefit.title}</h6>
+              <h6 className="heading heading--6">{benefit.title}</h6>
 
-                <p>{benefit.description}</p>
-              </div>
-            ))}
-          </div>
+              <p>{benefit.description}</p>
+            </div>
+          ))}
         </div>
       </div>
-    </section>
+    </Section>
   );
 };
 

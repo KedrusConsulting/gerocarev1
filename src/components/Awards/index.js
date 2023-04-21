@@ -8,10 +8,11 @@ import "swiper/css/navigation";
 import { Navigation, Pagination } from "swiper";
 import Image from "next/image";
 import Award from "../Award";
+import Section from "@/Layout/Section";
 
 const Awards = () => {
   return (
-    <section className="section section--awards">
+    <Section sectionName={"awards"}>
       <div className="row">
         <div className="awards__caption">
           <span className="awards__subtitle">Our Awards & accolades</span>
@@ -76,7 +77,7 @@ const Awards = () => {
           </SwiperSlide>
         </Swiper>
       </div>
-    </section>
+    </Section>
   );
 };
 

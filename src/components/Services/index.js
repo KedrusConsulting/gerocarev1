@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 
 import DoctorOnDemand from "@/assets/img/doctor-on-demand.svg";
+import Section from "@/Layout/Section";
 
 const services = [
   {
@@ -43,35 +44,33 @@ const services = [
 
 const Services = () => {
   return (
-    <section className="section section--services">
-      <div className="row">
-        <div className="services__caption">
-          <h2 className="heading heading--display">Our Services</h2>
-          <p>
-            Explore our bouquet of Premium health care services designed to
-            provide the best possible experience for those that have shown
-            greater care for us.
-          </p>
-        </div>
-
-        <div className="services grid grid--3-col">
-          {services.map((service) => (
-            <div className="services__service">
-              <Image
-                className="services__icon"
-                src={service.icon}
-                alt={service.name}
-              />
-              <h6 className="heading heading--6">{service.name}</h6>
-              <p className="services__description">{service.description}</p>
-              <a className="services__link" href={service.href}>
-                See Pricing
-              </a>
-            </div>
-          ))}
-        </div>
+    <Section sectionName={"services"}>
+      <div className="services__caption">
+        <h2 className="heading heading--display">Our Services</h2>
+        <p>
+          Explore our bouquet of Premium health care services designed to
+          provide the best possible experience for those that have shown greater
+          care for us.
+        </p>
       </div>
-    </section>
+
+      <div className="services grid grid--3-col">
+        {services.map((service) => (
+          <div className="services__service">
+            <Image
+              className="services__icon"
+              src={service.icon}
+              alt={service.name}
+            />
+            <h6 className="heading heading--6">{service.name}</h6>
+            <p className="services__description">{service.description}</p>
+            <a className="services__link" href={service.href}>
+              See Pricing
+            </a>
+          </div>
+        ))}
+      </div>
+    </Section>
   );
 };
 
