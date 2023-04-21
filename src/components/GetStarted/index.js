@@ -1,3 +1,5 @@
+import Section from "@/Layout/Section";
+import SplitScreen from "@/Layout/SplitScreen";
 import Image from "next/image";
 import React from "react";
 
@@ -28,37 +30,36 @@ const steps = [
 
 const GetStarted = () => {
   return (
-    <section className="section section--get-started">
-      <div className="row">
-        <div className="get-started__caption">
-          <h2 className="heading heading--display">How to Get Started</h2>
-          <p>
-            Our onboarding process is as easy as breathing. Complete four simple
-            steps, and you’re set for your first visit.
-          </p>
-        </div>
-        <div className="get-started">
-          <div className="get-started__img">
-            <Image
-              src={require("@/assets/img/get-started-img@4x.png")}
-              alt="get started img"
-            />
-          </div>
-          <div className="get-started__steps">
-            {steps.map((step) => (
-              <div className="get-started__step">
-                <span>{step.step}</span>
-
-                <div className="step">
-                  <h6 className="heading heading--6">{step.title}</h6>
-                  <p>Input your credentials to setup your personal account</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+    <Section sectionName={"get-started"}>
+      <div className="get-started__caption">
+        <h2 className="heading heading--display">How to Get Started</h2>
+        <p>
+          Our onboarding process is as easy as breathing. Complete four simple
+          steps, and you’re set for your first visit.
+        </p>
       </div>
-    </section>
+
+      <SplitScreen>
+        <div className="get-started__img">
+          <Image
+            src={require("@/assets/img/get-started-img@4x.png")}
+            alt="get started img"
+          />
+        </div>
+        <div className="get-started__steps">
+          {steps.map((step) => (
+            <div className="get-started__step">
+              <span>{step.step}</span>
+
+              <div className="step">
+                <h6 className="heading heading--6">{step.title}</h6>
+                <p>Input your credentials to setup your personal account</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </SplitScreen>
+    </Section>
   );
 };
 

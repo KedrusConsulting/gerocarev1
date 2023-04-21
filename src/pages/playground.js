@@ -1,5 +1,34 @@
 import Head from "next/head";
 import Navigation from "@/components/Navigation";
+import SplitScreen from "@/Layout/SplitScreen";
+import Image from "next/image";
+import Section from "@/Layout/Section";
+import Footer from "@/components/Footer";
+
+const steps = [
+  {
+    step: 1,
+    title: "Create an account",
+    description: "Input your credentials to setup your personal account",
+  },
+  {
+    step: 2,
+    title: "Add a Beneficiary",
+    description: "Provide the relevant details of your beneficiary",
+  },
+
+  {
+    step: 3,
+    title: "Select a plan",
+    description: "Choose a subscription plan that suits your needs",
+  },
+
+  {
+    step: 4,
+    title: "Make Payment",
+    description: "Proceed to payment and start enjoying our services",
+  },
+];
 
 export default function Contact() {
   return (
@@ -18,6 +47,31 @@ export default function Contact() {
       </Head>
 
       <Navigation />
+
+      {/* <Section sectionName={"get-started"}>
+        <SplitScreen>
+          <div className="get-started__img">
+            <Image
+              src={require("@/assets/img/get-started-img@4x.png")}
+              alt="get started img"
+            />
+          </div>
+          <div className="get-started__steps">
+            {steps.map((step) => (
+              <div className="get-started__step">
+                <span>{step.step}</span>
+
+                <div className="step">
+                  <h6 className="heading heading--6">{step.title}</h6>
+                  <p>Input your credentials to setup your personal account</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </SplitScreen>
+      </Section> */}
+
+      <Footer />
 
       {/* <header className="header">
       <div className="row">

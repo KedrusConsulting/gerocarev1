@@ -14,6 +14,10 @@ html {
   @include respond(tab-md) {
     font-size: 50%;
   }
+
+  @include respond(tab-port) {
+    font-size: 56.25%;
+  }
 }
 
 img {

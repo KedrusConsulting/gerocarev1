@@ -41,7 +41,7 @@ const footerList = [
 const Footer = () => {
   return (
     <footer className="footer">
-      <div className="row grid grid--footer">
+      <div className="row grid footer__grid">
         <div className="footer__summary">
           <Logo />
 
@@ -84,6 +84,10 @@ const Footer = () => {
             ))}
           </ul>
         ))}
+
+        {/* <div className="footer__copyright">
+          <p>Copyright © 2023 Gerocare, All rights reserved.</p>
+        </div> */}
       </div>
     </footer>
   );

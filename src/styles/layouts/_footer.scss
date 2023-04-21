@@ -3,8 +3,26 @@
   color: get-color(white);
   padding: 8rem 0;
 
+  &__grid {
+    @include grid-template-col(max(55rem) 1fr 1fr 1fr);
+
+    @include respond(tab-port) {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 6.4rem;
+    }
+
+    @include respond(phone) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+      gap: 6.4rem 3.2rem;
+    }
+  }
+
   &__summary {
-    
+    @include respond(tab-port) {
+      grid-column: 1 / -1;
+    }
   }
 
   &__text {
@@ -18,7 +36,6 @@
   }
 
   &__award-b {
-    
   }
 
   &__award {
@@ -44,16 +61,15 @@
   }
 
   &__item {
-    margin-bottom: 1.6rem
+    margin-bottom: 1.6rem;
   }
 
   &__link {
     &,
-    &:link, 
+    &:link,
     &:visited {
       color: get-color(white);
-      font-family: "Graphik L Trial"
+      font-family: "Graphik L Trial";
     }
-
   }
 }
