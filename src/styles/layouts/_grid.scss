@@ -30,3 +30,28 @@
     align-items: center;
   }
 }
+
+.auth {
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    // align-items: center;
+    height: 100vh;
+  }
+
+  &__left {
+    background-image: url("../../assets/img/auth-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &__right {
+    padding: 3.2rem;
+  }
+
+  &__header {
+    margin: 2.4rem 0;
+    color: get-color(primary);
+  }
+}

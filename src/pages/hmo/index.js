@@ -2,6 +2,7 @@ import Root from "@/Layout/Root";
 import React from "react";
 import Header from "@/components/Header";
 import HeroCentered from "@/components/HeroCentered";
+import Image from "next/image";
 
 const HMO = () => {
   return (
@@ -22,6 +23,13 @@ const HMO = () => {
           </a>
         </HeroCentered>
       </Header>
+
+      <section className="section section--full-width-img">
+        <Image
+          src={require("@/assets/img/hmo-img.png")}
+          alt="Happy Man and his wife with sitting in the living room"
+        />
+      </section>
     </Root>
   );
 };
