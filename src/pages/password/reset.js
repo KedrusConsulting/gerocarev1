@@ -1,6 +1,23 @@
+import InputField from "@/components/InputField";
+import Logo from "@/components/Logo";
+import { Formik } from "formik";
+import * as Yup from "Yup";
+import Head from "next/head";
 import React from "react";
 
 const ResetPassword = () => {
+  const initialValues = {
+    password: "",
+    confirm_password: "",
+  };
+
+  const validationSchema = Yup.object().shape({
+    password: Yup.string().min(8).required(),
+    confirm_password: Yup.string().min(8).required(),
+  });
+
+  const onSubmit = (values, { reform }, onSubmitProps) => {};
+
   return (
     <>
       <Head>
@@ -19,10 +36,58 @@ const ResetPassword = () => {
       <div className="auth__container">
         <div className="auth__left"></div>
         <div className="auth__right">
+          <div className="auth__logo-box">
+            <Logo />
+          </div>
+
           <header className="auth__header">
             <h4 className="heading heading--4">Reset Password</h4>
             <p>Choose New password</p>
           </header>
+
+          <Formik
+            initialValues={initialValues}
+            validationSchema={validationSchema}
+            onSubmit={onSubmit}
+          >
+            {({
+              values,
+              dirty,
+              errors,
+              handleChange,
+              handleSubmit,
+              isSubmitting,
+              isValid,
+            }) => (
+              <form className="form" onSubmit={handleSubmit}>
+                <InputField
+                  type={"password"}
+                  label={"Password:"}
+                  name={"password"}
+                  id={"password"}
+                  placeholder={"*******"}
+                  value={values.password}
+                  onChange={handleChange}
+                  error={errors.password}
+                />
+
+                <InputField
+                  type={"password"}
+                  label={"Confirm Password:"}
+                  name={"confirm-password"}
+                  id={"confirm-password"}
+                  placeholder={"*******"}
+                  value={values.confirm_password}
+                  onChange={handleChange}
+                  error={errors.confirm_password}
+                />
+
+                <button type="submit" className="btn btn--main btn--full">
+                  {dirty && isSubmitting ? "Please wait..." : "Reset"}
+                </button>
+              </form>
+            )}
+          </Formik>
         </div>
       </div>
     </>

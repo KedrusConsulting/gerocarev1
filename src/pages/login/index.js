@@ -7,6 +7,8 @@ import Link from "next/link";
 import Image from "next/image";
 import Checkbox from "@/components/Checkbox";
 
+// import "bootstrap/dist/css/bootstrap.min.css";
+
 export default function Login() {
   const initialValues = {
     email: "",
@@ -83,7 +85,7 @@ export default function Login() {
                 />
 
                 <button type="submit" className="btn btn--main btn--full">
-                  Sign In
+                  {dirty && isSubmitting ? "Please wait..." : "Sign In"}
                 </button>
 
                 <div className="inputfield__grp">

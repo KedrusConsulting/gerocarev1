@@ -49,6 +49,7 @@
   &__right {
     padding: 3.2rem;
     align-self: center;
+    position: relative;
 
     width: 80%;
     margin: 0 auto;
@@ -57,5 +58,15 @@
   &__header {
     margin: 2.4rem 0;
     color: get-color(primary);
+  }
+
+  &__logo-box {
+    position: absolute;
+    top: -15%;
+    left: 2.4rem;
+
+    &-lg {
+      top: -70%;
+    }
   }
 }

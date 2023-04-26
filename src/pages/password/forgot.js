@@ -1,7 +1,21 @@
 import Head from "next/head";
 import Navigation from "@/components/Navigation";
+import { Formik } from "formik";
+import * as Yup from "Yup";
+import InputField from "@/components/InputField";
+import Logo from "@/components/Logo";
 
 export default function Forgot() {
+  const initialValues = {
+    email: "",
+  };
+
+  const validationSchema = Yup.object().shape({
+    email: Yup.string().email().required(),
+  });
+
+  const onSubmit = (values, { reform }, onSubmitProps) => {};
+
   return (
     <>
       <Head>
@@ -20,10 +34,47 @@ export default function Forgot() {
       <div className="auth__container">
         <div className="auth__left"></div>
         <div className="auth__right">
+          <div className="auth__logo-box">
+            <Logo />
+          </div>
+
           <header className="auth__header">
             <h4 className="heading heading--4">Reset Password</h4>
             <p>Input details to reset password</p>
           </header>
+
+          <Formik
+            initialValues={initialValues}
+            validationSchema={validationSchema}
+            onSubmit={onSubmit}
+          >
+            {({
+              values,
+              dirty,
+              errors,
+              handleChange,
+              handleSubmit,
+              isSubmitting,
+              isValid,
+            }) => (
+              <form className="form" onSubmit={handleSubmit}>
+                <InputField
+                  type={"email"}
+                  label={"Email:"}
+                  name={"email"}
+                  id={"email"}
+                  placeholder={"Enter Email Address"}
+                  value={values.email}
+                  onChange={handleChange}
+                  error={errors.email}
+                />
+
+                <button type="submit" className="btn btn--main btn--full">
+                  {dirty && isSubmitting ? "Please wait..." : "Send Reset Link"}
+                </button>
+              </form>
+            )}
+          </Formik>
         </div>
       </div>
     </>

@@ -1,3 +1,6 @@
+import Logo from "@/components/Logo";
+import Head from "next/head";
+import Link from "next/link";
 import React from "react";
 
 const Success = () => {
@@ -19,7 +22,17 @@ const Success = () => {
       <div className="auth__container">
         <div className="auth__left"></div>
         <div className="auth__right">
-          <h4 className="heading heading--4">Password Reset Successfully</h4>
+          <div className="auth__logo-box auth__logo-box-lg">
+            <Logo />
+          </div>
+
+          <header className="auth__header">
+            <h4 className="heading heading--4">Password Reset Successfully</h4>
+          </header>
+
+          <Link href={"/login"} className="btn btn--main btn--full">
+            Sign In
+          </Link>
         </div>
       </div>
     </>
