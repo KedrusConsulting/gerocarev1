@@ -1,0 +1,17 @@
+.form {
+  max-width: 40rem;
+
+  & > *:not(:last-child) {
+    margin-bottom: 1.6rem;
+  }
+
+  .btn--main {
+    margin-top: 3.2rem;
+    // width: 60%;
+    margin: 3.2rem auto 1.6rem;
+  }
+
+  &__link {
+    font-size: 1.4rem;
+  }
+}

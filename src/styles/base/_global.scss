@@ -5,6 +5,12 @@ body {
   line-height: get-line-height(l5);
 }
 
+.divider {
+  height: 1px;
+  width: 100%;
+  background-color: #e0e0e0;
+}
+
 .hmo-plan {
   display: flex;
   justify-content: center;

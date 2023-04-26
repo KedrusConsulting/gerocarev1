@@ -7,6 +7,10 @@
   padding: 1.45rem 2.4rem;
   cursor: pointer;
 
+  img {
+    margin-right: 0.4rem;
+  }
+
   &--main {
     width: 16.7rem;
     background-color: hsla(94, 71%, 68%, 1);
@@ -15,5 +19,15 @@
   &--sec {
     width: 12rem;
     background-color: hsla(83, 57%, 95%, 1);
+  }
+
+  &--full {
+    width: 100%;
+  }
+
+  &--outline {
+    border: 1.5px solid hsla(94, 71%, 68%, 1);
+    background-color: transparent;
+    color: get-color(primary);
   }
 }

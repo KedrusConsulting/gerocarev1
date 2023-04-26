@@ -1,0 +1,94 @@
+.inputfield {
+  display: flex;
+  flex-direction: column;
+  border: none;
+
+  &__input {
+    border: 0.5px solid #b4b4b4;
+    padding: 1.2rem;
+    border-radius: 0.8rem;
+    font-size: 1.4rem;
+    font-family: "Graphik L Trial";
+    color: get-color(primary);
+
+    &::placeholder {
+      color: hsla(0, 0%, 71%, 0.288);
+    }
+
+    &:focus {
+      outline: none;
+      // border: none;
+    }
+  }
+
+  &__label {
+    display: inline-block;
+    margin-bottom: 0.2rem;
+    font-size: 1.4rem;
+    font-family: "Graphik R Trial";
+  }
+
+  &__error {
+    color: hsla(0, 73%, 65%, 0.863);
+    font-size: 1.4rem;
+    font-family: "Graphik L Trial";
+  }
+
+  &__grp {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &--center {
+    align-items: center;
+  }
+
+  &--dir-column {
+    flex-direction: column;
+  }
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+
+  &__input {
+    display: none;
+  }
+
+  &__label-box {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__label {
+    font-family: "Graphik R Trial";
+    font-size: 1.4rem;
+    color: get-color(primary);
+  }
+
+  &__check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 1.8rem;
+    height: 1.8rem;
+    padding: 0.2rem;
+    border: 1.5px solid get-color(primary);
+    border-radius: 0.5rem;
+    margin-right: 0.3rem;
+  }
+
+  &__input:checked + &__label-box &__check {
+    background-color: get-color(primary);
+
+    &::after {
+      content: "\2713";
+      color: #fff;
+      font-size: 1.2rem;
+    }
+  }
+}
