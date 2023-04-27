@@ -70,3 +70,68 @@
     }
   }
 }
+
+.hmo {
+  &__pricing-caption {
+    color: get-color(primary);
+    margin-bottom: 6.4rem;
+    // text-align: center;
+
+    .heading {
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+
+  &__table {
+    width: 100%;
+    // border: 1px solid get-color(primary);
+    border-collapse: collapse;
+    border-radius: 0.8rem;
+
+    thead {
+      background-color: get-color(primary);
+      color: #fff;
+      border-radius: 0.8rem;
+    }
+
+    td {
+      text-align: center;
+      padding: 5.6rem 1.6rem;
+      border: 1px solid get-color(primary);
+    }
+
+    .headings {
+      background-color: #f5faed;
+      color: get-color(primary);
+    }
+
+    .btn--table {
+      border: 1.5px solid get-color(primary);
+      background-color: #f5faed;
+      color: get-color(primary);
+    }
+  }
+
+  &__text {
+    display: block;
+    color: get-color(primary);
+    text-align: center;
+    max-width: 23.2rem;
+  }
+
+  &__amt {
+    font-family: "Graphik M Trial";
+    font-size: 3.2rem;
+    color: get-color(primary);
+  }
+
+  &__link {
+    margin-top: 4.8rem;
+
+    .btn--main {
+      width: max-content;
+      margin: 0 auto;
+    }
+  }
+}
