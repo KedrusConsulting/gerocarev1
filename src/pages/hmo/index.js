@@ -88,7 +88,7 @@ const HMO = () => {
 
       <Section sectionName={"hmo-pricing"}>
         <div className="hmo__pricing-caption">
-          <h2 className="heading heading--display">HMO Pricing</h2>
+          <h2 className="heading heading--displabv   y">HMO Pricing</h2>
         </div>
 
         <table className="hmo__table">
@@ -128,7 +128,7 @@ const HMO = () => {
 
         <div className="hmo__link">
           <Link href="/register" className="btn btn--main">
-            View Plan Details
+            Get Started
           </Link>
         </div>
       </Section>

@@ -135,3 +135,55 @@
     }
   }
 }
+
+[class$="plan-details"] {
+  // &__caption {
+
+  // }
+
+  table {
+    width: 100%;
+    border: 1px solid get-color(primary);
+    border-collapse: collapse;
+  }
+
+  thead {
+    // text-align: center;
+
+    .heading {
+      font-family: "Graphik M Trial";
+      color: get-color(primary);
+    }
+  }
+
+  td {
+    border-collapse: collapse;
+    border: 1px solid get-color(primary);
+    padding: 1.6rem 2.4rem;
+  }
+
+  .table {
+    &__item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__item-name {
+      display: block;
+      color: get-color(primary);
+      max-width: 27rem;
+      margin-right: 1.6rem;
+    }
+
+    &__item-name.heading {
+      font-family: "Graphik M Trial";
+    }
+
+    &__icon {
+      width: 2.2rem;
+      height: 2.2rem;
+      transform: translateY(2px);
+    }
+  }
+}

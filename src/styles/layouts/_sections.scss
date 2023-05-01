@@ -171,4 +171,14 @@
       height: fit-content;
     }
   }
+
+  &--plan-details {
+    background-color: #f5faed;
+
+    .heading--display {
+      text-align: center;
+      color: get-color(primary);
+      margin-bottom: 2.4rem;
+    }
+  }
 }
