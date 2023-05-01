@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Navigation from "@/components/Navigation";
+import Logo from "@/components/Logo";
 
 export default function Contact() {
   return (
@@ -17,13 +18,13 @@ export default function Contact() {
         />
       </Head>
 
-      <Navigation />
+      <nav className="register__nav">
+        <Logo />
 
-      <header className="header">
-        <div className="row">
-          <h1 className="heading heading--1">Register</h1>
-        </div>
-      </header>
+        <div className="register__progress"></div>
+
+        <div className="register__empty"></div>
+      </nav>
     </>
   );
 }

@@ -1,29 +1,11 @@
 import React from "react";
 import Logo from "../Logo";
 import Link from "next/link";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
 import Image from "next/image";
-
-const navList = [
-  { name: "About Us", href: "/about" },
-  { name: "Services", href: "#", id: "services-menu" },
-  { name: "Pricing", href: "/pricing" },
-  { name: "Customer Stories", href: "/testimonials" },
-  { name: "Blog", href: "/blog" },
-  { name: "Contact Us", href: "/contact" },
-];
 
 const Navigation = () => {
   const [openMenu, setOpenMenu] = React.useState(false);
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const open = Boolean(anchorEl);
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
+  const [openDropDown, setOpenDropDown] = React.useState(false);
 
   return (
     <nav className="navbar">
@@ -32,13 +14,77 @@ const Navigation = () => {
 
         <div className={`navbar__grp ${openMenu ? "active" : ""}`}>
           <ul className="navbar__list">
-            {navList.map((list) => (
-              <li className="navbar__item" id={list.id ? list.id : ""}>
-                <Link href={list.href} className="navbar__link">
-                  {list.name}
-                </Link>
-              </li>
-            ))}
+            <li className="navbar__item">
+              <Link href="/about" className="navbar__link">
+                About Us
+              </Link>
+            </li>
+
+            <li
+              className={`navbar__item ${openDropDown ? "active" : ""}`}
+              id="services"
+              onClick={() => setOpenDropDown((prev) => !prev)}
+            >
+              <Link href="#" className="navbar__link">
+                Services
+              </Link>
+
+              <ul className={`dropdown__list ${openDropDown ? "active" : ""}`}>
+                <li className="dropdown__item">
+                  <Link href="/elderly-care" className="dropdown__link">
+                    Elderly Home Visit
+                  </Link>
+                </li>
+
+                <li className="dropdown__item">
+                  <Link href="/teleconsultation" className="dropdown__link">
+                    Teleconsultation Doctor
+                  </Link>
+                </li>
+
+                <li className="dropdown__item">
+                  <Link href="/doctor-on-demand" className="dropdown__link">
+                    Doctor On Demand
+                  </Link>
+                </li>
+
+                <li className="dropdown__item">
+                  <Link href="/care-giver" className="dropdown__link">
+                    Care Givers
+                  </Link>
+                </li>
+
+                <li className="dropdown__item">
+                  <Link href="/hmo" className="dropdown__link">
+                    HMO Plans
+                  </Link>
+                </li>
+              </ul>
+            </li>
+
+            <li className="navbar__item">
+              <Link href="/pricing" className="navbar__link">
+                Pricing
+              </Link>
+            </li>
+
+            <li className="navbar__item">
+              <Link href="/testimonials" className="navbar__link">
+                Customer Stories
+              </Link>
+            </li>
+
+            <li className="navbar__item">
+              <Link href="#" className="navbar__link">
+                Blog
+              </Link>
+            </li>
+
+            <li className="navbar__item">
+              <Link href="/contact" className="navbar__link">
+                Contact Us
+              </Link>
+            </li>
           </ul>
 
           <div className="navbar__actions">
