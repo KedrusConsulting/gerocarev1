@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Navigation from "@/components/Navigation";
 import { Formik } from "formik";
-import * as Yup from "Yup";
+import * as Yup from "yup";
 import InputField from "@/components/InputField";
 import Logo from "@/components/Logo";
 

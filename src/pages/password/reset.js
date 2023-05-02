@@ -1,7 +1,7 @@
 import InputField from "@/components/InputField";
 import Logo from "@/components/Logo";
 import { Formik } from "formik";
-import * as Yup from "Yup";
+import * as Yup from "yup";
 import Head from "next/head";
 import React from "react";
 
