@@ -2,7 +2,7 @@ import Head from "next/head";
 import Logo from "@/components/Logo";
 import InputField from "@/components/InputField";
 import { Formik } from "formik";
-import * as Yup from "Yup";
+import * as Yup from "yup";
 import Link from "next/link";
 import Image from "next/image";
 import Checkbox from "@/components/Checkbox";
