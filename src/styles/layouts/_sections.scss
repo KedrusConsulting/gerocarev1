@@ -39,12 +39,28 @@
     cursor: grab;
     padding: 0;
 
+    @include respond(tab-land) {
+      height: 40rem;
+    }
+
     .row:last-of-type {
       height: 79%;
+
+      @include respond(phone) {
+        height: 75%;
+      }
+    }
+
+    .row .row {
+      @include respond(phone) {
+        padding: 0;
+      }
     }
 
     .swiper {
       height: 100%;
+      // overflow: visible;
+      overflow-x: hidden;
     }
 
     .swiper-pagination {
@@ -52,6 +68,10 @@
       left: 50% !important;
       transform: translateX(-50%) !important;
       bottom: 1rem !important;
+
+      @include respond(tab-md) {
+        bottom: -0.5rem !important;
+      }
     }
 
     .swiper-pagination-bullet {

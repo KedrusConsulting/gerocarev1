@@ -4,6 +4,7 @@ import SplitScreen from "@/Layout/SplitScreen";
 import Image from "next/image";
 import Section from "@/Layout/Section";
 import Footer from "@/components/Footer";
+import Awards from "@/components/Awards";
 
 const steps = [
   {
@@ -47,6 +48,8 @@ export default function Contact() {
       </Head>
 
       <Navigation />
+
+      <Awards />
 
       {/* <Section sectionName={"get-started"}>
         <SplitScreen>
