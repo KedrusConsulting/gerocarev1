@@ -4,6 +4,10 @@
     color: get-color(primary);
     margin: 0 auto 7.2rem;
     text-align: center;
+
+    @include respond(tab-port) {
+      max-width: 30rem;
+    }
   }
 
   &__grid {

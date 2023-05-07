@@ -163,9 +163,27 @@
 
   &--elderly {
     // padding-bottom: 0;
-    @include respond(phone-sm) {
+    @include respond(phone) {
       padding-bottom: 1.6rem;
     }
+  }
+
+  &--teleconsultation,
+  &--doc-on-demand {
+    @include respond(tab-port) {
+      text-align: center;
+    }
+
+    .btn--main,
+    p {
+      @include respond(tab-port) {
+        margin: 0 auto 4rem;
+      }
+    }
+  }
+
+  &--care-giver {
+    padding-bottom: 4.8rem;
   }
 
   &__elderly-text {
@@ -203,6 +221,14 @@
 
     h1 {
       max-width: 59rem;
+
+      @include respond(tab-port) {
+        margin: 0 auto;
+      }
+
+      @include respond(phone) {
+        max-width: 40rem;
+      }
     }
 
     p {

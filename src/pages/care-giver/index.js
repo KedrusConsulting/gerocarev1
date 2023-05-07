@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import Image from "next/image";
 
 import React from "react";
+import Header from "@/components/Header";
 
 const steps = [
   {
@@ -71,24 +72,22 @@ export default function Contact() {
 
       <Navigation />
 
-      <header className="header">
-        <div className="row">
-          <div className="header__hire">
-            <h1 className="heading heading--display">
-              Hire a Caregiver for your elderly loved ones.
-            </h1>
+      <Header className={"care-giver"}>
+        <div className="header__hire">
+          <h1 className="heading heading--display">
+            Hire a Caregiver for your elderly loved ones.
+          </h1>
 
-            <p>
-              We’ll provide access to In-home care, companionship, and 24/7
-              live-in services for your elderly loved ones.
-            </p>
+          <p>
+            We’ll provide access to In-home care, companionship, and 24/7
+            live-in services for your elderly loved ones.
+          </p>
 
-            <a href="/register" className="btn btn--main">
-              Get Started
-            </a>
-          </div>
+          <a href="/register" className="btn btn--main">
+            Get Started
+          </a>
         </div>
-      </header>
+      </Header>
 
       <main>
         <section className="section section--full-bg">
@@ -147,8 +146,7 @@ export default function Contact() {
               </h2>
 
               <iframe
-                width="560"
-                height="315"
+                className="testimonial__video"
                 src="https://www.youtube.com/embed/dp4iW4hZkm0"
                 title="YouTube video player"
                 frameborder="0"

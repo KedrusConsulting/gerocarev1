@@ -184,6 +184,10 @@
   }
 
   &--full-bg {
+    @include respond(tab-port) {
+      padding: 0;
+    }
+
     img {
       display: block;
       height: fit-content;
@@ -223,6 +227,24 @@
       text-align: center;
       color: get-color(primary);
       margin-bottom: 2.4rem;
+    }
+  }
+
+  &--video {
+    .heading {
+      @include respond(phone) {
+        max-width: 30rem;
+        margin: 0 auto 4rem;
+      }
+    }
+
+    .testimonial__video {
+      max-width: 56rem;
+      margin: 0 auto;
+
+      @include respond(phone-sm) {
+        width: 95%;
+      }
     }
   }
 }
