@@ -1,6 +1,10 @@
 .header {
   padding: 13vh 0 15vh;
 
+  @include respond(tab-md) {
+    padding: 10vh 0 15vh;
+  }
+
   .heading,
   p {
     color: get-color(primary);
@@ -13,6 +17,10 @@
   p {
     font-size: get-text-size(lg);
     margin-bottom: 5.6rem;
+
+    @include respond(phone) {
+      ont-size: get-text-size(md);
+    }
   }
 
   img {
@@ -22,6 +30,10 @@
   span {
     color: get-color(primary);
     font-size: get-text-size(sm);
+
+    @include respond(tab-md) {
+      font-size: 1.2rem;
+    }
   }
 
   &__text-sub {
@@ -33,6 +45,16 @@
     background-color: hsla(51, 65%, 84%, 1);
     border-radius: 10rem;
     margin-bottom: 3.2rem;
+
+    @include respond(phone) {
+      padding: 0.8rem 1.2rem;
+    }
+
+    img {
+      @include respond(phone) {
+        width: 1.6rem;
+      }
+    }
   }
 
   &--home {
@@ -46,6 +68,10 @@
   }
 
   &--testimonials {
+    @include respond(phone) {
+      padding: 5vh 0;
+    }
+
     p {
       max-width: 70rem;
     }
@@ -57,12 +83,26 @@
     img {
       height: fit-content;
       border-radius: 0.8rem;
+
+      @include respond(tab-md) {
+        display: block;
+        max-width: 80%;
+        margin: 0 auto;
+      }
+
+      @include respond(phone) {
+        max-width: 95%;
+      }
     }
   }
 
   &__cta {
     display: flex;
     align-items: center;
+
+    @include respond(tab-md) {
+      margin-bottom: 4.8rem;
+    }
 
     & > *:not(:last-child) {
       margin-right: 1.6rem;
@@ -79,14 +119,28 @@
 
     .row {
       max-width: 100%;
+
+      @include respond(tab-land) {
+        padding: 0;
+      }
     }
 
     .heading {
       max-width: 72.3rem;
+
+      @include respond(tab-land) {
+        max-width: 95%;
+        margin: 0 auto 1.6rem;
+      }
     }
 
     p {
       max-width: 56.6rem;
+
+      @include respond(tab-land) {
+        max-width: 90%;
+        margin: 0 auto 3.2rem;
+      }
     }
 
     img {

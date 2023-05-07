@@ -28,7 +28,9 @@ export default function Home() {
                 src={require("@/assets/img/check-icon.svg")}
                 alt={"Check icon"}
               />
-              <span>Highly Preferred by over +30,009 Customers</span>
+              <span>
+                Highly Preferred by over <strong>+30,000</strong> Customers
+              </span>
             </div>
 
             <h1 className="heading heading--display">

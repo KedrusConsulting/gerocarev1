@@ -5,6 +5,15 @@ import Image from "next/image";
 import Section from "@/Layout/Section";
 import Footer from "@/components/Footer";
 import Awards from "@/components/Awards";
+import Header from "@/components/Header";
+import Services from "@/components/Services";
+import Testimonials from "@/components/Testimonials";
+import Solutions from "@/components/Solutions";
+import GetStarted from "@/components/GetStarted";
+import Benefits from "@/components/Benefits";
+import Metrics from "@/components/Metrics";
+import FeaturedIn from "@/components/FeaturedIn";
+import CTA from "@/components/CTA";
 
 const steps = [
   {
@@ -49,30 +58,22 @@ export default function Contact() {
 
       <Navigation />
 
-      <Awards />
+      <Header className={"about"}>
+        <HeroCentered>
+          <h1 className="heading heading--display">
+            We provide regular doctor home visits.
+          </h1>
+          <p>
+            Our Mission is to pioneer medical inclusion by leveraging technology
+            to provide access to medical care to underserved segments of people
+            across Africa.
+          </p>
+        </HeroCentered>
 
-      {/* <Section sectionName={"get-started"}>
-        <SplitScreen>
-          <div className="get-started__img">
-            <Image
-              src={require("@/assets/img/get-started-img@4x.png")}
-              alt="get started img"
-            />
-          </div>
-          <div className="get-started__steps">
-            {steps.map((step) => (
-              <div className="get-started__step">
-                <span>{step.step}</span>
+        <AboutImgSlider />
+      </Header>
 
-                <div className="step">
-                  <h6 className="heading heading--6">{step.title}</h6>
-                  <p>Input your credentials to setup your personal account</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </SplitScreen>
-      </Section> */}
+      <CTA />
 
       <Footer />
 

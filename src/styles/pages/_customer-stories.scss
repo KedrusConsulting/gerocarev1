@@ -6,5 +6,13 @@
     max-width: 96rem;
     margin: 0 auto;
     gap: 6.4rem;
+
+    @include respond(tab-port) {
+      gap: 4rem;
+    }
+
+    @include respond(phone-lg) {
+      grid-template-columns: 1fr;
+    }
   }
 }

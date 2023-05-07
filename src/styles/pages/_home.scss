@@ -3,8 +3,18 @@
     margin-bottom: 6.4rem;
   }
 
+  @include respond(tab-port) {
+    &:not(:last-child) {
+      margin-bottom: 8.8rem;
+    }
+  }
+
   &__caption {
     @include caption(64.4rem, 7.2rem);
+
+    @include respond(tab-port) {
+      @include caption(50rem, 6.4rem);
+    }
   }
 
   &__text-box {
@@ -12,6 +22,15 @@
       color: get-color(primary);
       max-width: 37rem;
       margin-bottom: 2.4rem;
+
+      @include respond(tab-port) {
+        font-size: 4rem;
+      }
+    }
+
+    @include respond(tab-port) {
+      max-width: fit-content;
+      margin: 0 auto;
     }
   }
 
@@ -20,6 +39,16 @@
       padding: 4rem;
       height: 60rem;
       object-fit: contain;
+
+      @include respond(phone) {
+        height: fit-content;
+        padding: 0;
+        margin-bottom: 2.4rem;
+      }
+    }
+
+    @include respond(tab-port) {
+      grid-row: 1 / 2;
     }
   }
 
@@ -134,8 +163,13 @@
     max-width: 73rem;
     text-align: center;
 
+    @include respond(phone) {
+      max-width: 30rem;
+    }
+
     .heading {
       color: hsla(125, 55%, 96%, 1);
+      margin-bottom: 0.8rem;
     }
 
     p {
@@ -177,6 +211,11 @@
     text-align: center;
     color: get-color(primary);
 
+    @include respond(phone) {
+      max-width: 30rem;
+      margin: 0 auto 8rem;
+    }
+
     .heading {
       margin-bottom: 1.6rem;
     }
@@ -189,6 +228,16 @@
   &__img {
     img {
       height: fit-content;
+
+      @include respond(tab-port) {
+        display: block;
+        max-width: 75%;
+        margin: 0 auto;
+      }
+
+      @include respond(phone) {
+        max-width: 95%;
+      }
     }
   }
 
@@ -213,11 +262,23 @@
       font-size: 9.6rem;
       line-height: 9.6rem;
       font-family: "Graphik M Trial";
+
+      @include respond(phone) {
+        font-size: 8rem;
+        line-height: 8rem;
+      }
     }
 
     .heading {
       font-family: "Graphik M Trial";
       color: get-color(primary);
+    }
+
+    p {
+      @include respond(phone) {
+        font-size: 1.4rem;
+        line-height: 2rem;
+      }
     }
   }
 }
@@ -228,10 +289,22 @@
     margin: 0 auto 6.4rem;
     text-align: center;
     color: get-color(primary);
+
+    @include respond(phone) {
+      font-size: 3.8rem;
+    }
   }
 
   &__grid {
     @extend %grid--3;
+
+    @include respond(tab-port) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include respond(phone) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__card {
@@ -265,10 +338,21 @@
     .heading {
       margin-bottom: 1.6rem;
     }
+
+    p {
+      @include respond(phone) {
+        max-width: 33.5rem;
+        margin: 0 auto;
+      }
+    }
   }
 
   &__grid {
     @extend %grid--4;
+
+    @include respond(tab-port) {
+      grid-template-columns: 1fr 1fr;
+    }
   }
 
   &__stat {
@@ -279,11 +363,21 @@
       // font-family: "Graphik L Trial";
       font-size: 8rem;
       color: #9bca46;
+
+      @include respond(tab-port) {
+        font-size: clamp(4.8rem, 3vw, 5.6rem);
+        line-height: clamp(5.6rem, 3vw, 6rem);
+      }
     }
 
     .heading {
       font-family: "Graphik M Trial";
       color: get-color(primary);
+
+      @include respond(phone) {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+      }
     }
   }
 }
@@ -301,6 +395,10 @@
     margin-bottom: 2.4rem;
 
     color: #000000;
+
+    @include respond(phone) {
+      margin-bottom: 4rem;
+    }
   }
 
   &__logos {
@@ -308,9 +406,27 @@
     align-items: center;
     justify-content: space-between;
 
+    @include respond(tab-port) {
+      flex-wrap: wrap;
+    }
+
+    @include respond(phone) {
+      justify-content: center;
+    }
+
     img {
       height: 3.2rem;
       object-fit: contain;
+
+      @include respond(tab-port) {
+        width: 18rem;
+        margin-right: 2.4rem;
+        margin-bottom: 2.4rem;
+      }
+
+      @include respond(phone) {
+        width: 12rem;
+      }
     }
   }
 }
@@ -322,12 +438,20 @@
     max-width: 52.4rem;
     margin: 0 auto 2.4rem;
     color: get-color(primary);
+
+    @include respond(tab-port) {
+      max-width: 40rem;
+    }
+
+    @include respond(phone) {
+      font-size: 3.2rem;
+    }
   }
 
   p {
     max-width: 83rem;
     color: get-color(primary);
-    margin: 0 auto 3.2rem;
+    margin: 0 auto 4rem;
   }
 
   &__btn {

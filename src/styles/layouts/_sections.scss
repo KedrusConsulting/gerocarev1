@@ -1,8 +1,9 @@
 .section {
   padding: 9.6rem 0;
 
-  // &--services {
-  // }
+  @include respond(phone-lg) {
+    padding: 7.2rem 0;
+  }
 
   &--testimonials {
     background-color: get-color(primary);
@@ -12,6 +13,7 @@
       margin: 0;
       width: 100%;
       max-width: 100%;
+      // padding-right: 2.4rem;
     }
 
     .swiper-wrapper {
@@ -19,6 +21,8 @@
       margin: 0 auto;
       cursor: grab;
     }
+
+    @include swiper();
   }
 
   &--get-started {
@@ -181,6 +185,10 @@
   &--customers-stories {
     background-color: get-color(primary);
     padding: 12rem 0;
+
+    @include respond(phone-lg) {
+      padding: 7.2rem 0;
+    }
   }
 
   &--full-width-img {

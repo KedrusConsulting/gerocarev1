@@ -54,17 +54,34 @@
   &__about {
     @extend %grid--2;
     gap: 6.4rem;
+
+    margin-top: 6.4rem;
   }
 
   &__grp {
     display: flex;
     align-items: center;
 
+    @include respond(phone) {
+      justify-content: center;
+      align-items: center;
+      flex-direction: column-reverse;
+    }
+
     img {
       margin-right: 1.6rem;
+
+      @include respond(phone) {
+        margin-right: 0;
+      }
     }
 
     div {
+      text-align: center;
+
+      @include respond(phone) {
+        margin-bottom: 2.4rem;
+      }
     }
 
     div span {
@@ -122,12 +139,20 @@
     gap: 4.8rem;
     align-items: center;
 
+    @include respond(tab-port) {
+      grid-template-columns: 1fr;
+    }
+
     &:not(:last-child) {
       margin-bottom: 12rem;
     }
 
     &:last-of-type {
       grid-template-columns: 45% 55%;
+
+      @include respond(tab-port) {
+        grid-template-columns: 1fr;
+      }
     }
 
     h4,

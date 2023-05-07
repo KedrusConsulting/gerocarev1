@@ -25,6 +25,22 @@ const Testimonials = () => {
         onSwiper={(swiper) => console.log(swiper)}
         navigation={true}
         modules={[Navigation]}
+        breakpoints={{
+          300: {
+            slidesPerView: 1,
+            spaceBetween: 30,
+          },
+
+          600: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+          },
+
+          900: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+        }}
       >
         <SwiperSlide>
           <Blockquote
