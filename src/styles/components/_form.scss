@@ -5,6 +5,10 @@
     margin-bottom: 1.6rem;
   }
 
+  @include respond(phone) {
+    margin: 0 auto;
+  }
+
   .btn--main {
     margin-top: 3.2rem;
     // width: 60%;
