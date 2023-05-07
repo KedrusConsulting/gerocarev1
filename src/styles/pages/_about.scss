@@ -185,6 +185,12 @@
     max-width: 48.6rem;
     color: get-color(primary);
     margin-bottom: 8rem;
+
+    @include respond(tab-port) {
+      max-width: 50rem;
+      margin: 0 auto 6.4rem;
+      text-align: center;
+    }
   }
 
   &__grid {
@@ -192,6 +198,19 @@
     grid-template-columns: repeat(4, 1fr);
     align-items: center;
     justify-content: center;
+
+    @include respond(tab-port) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 4.8rem;
+
+      max-width: 50rem;
+      margin: 0 auto;
+    }
+
+    @include respond(phone-sm) {
+      grid-template-columns: 1fr;
+      gap: 4rem;
+    }
   }
 
   &__card {

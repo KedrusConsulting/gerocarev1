@@ -163,6 +163,9 @@
 
   &--elderly {
     // padding-bottom: 0;
+    @include respond(phone-sm) {
+      padding-bottom: 1.6rem;
+    }
   }
 
   &__elderly-text {
