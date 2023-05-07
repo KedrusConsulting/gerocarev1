@@ -2,6 +2,7 @@ import Head from "next/head";
 import Navigation from "@/components/Navigation";
 
 import Footer from "@/components/Footer";
+import OurServices from "@/components/OurServices";
 
 const steps = [
   {
@@ -45,6 +46,8 @@ export default function Contact() {
       </Head>
 
       <Navigation />
+
+      <OurServices />
 
       <Footer />
 
