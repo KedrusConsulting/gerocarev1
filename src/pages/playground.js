@@ -1,19 +1,7 @@
 import Head from "next/head";
 import Navigation from "@/components/Navigation";
-import SplitScreen from "@/Layout/SplitScreen";
-import Image from "next/image";
-import Section from "@/Layout/Section";
+
 import Footer from "@/components/Footer";
-import Awards from "@/components/Awards";
-import Header from "@/components/Header";
-import Services from "@/components/Services";
-import Testimonials from "@/components/Testimonials";
-import Solutions from "@/components/Solutions";
-import GetStarted from "@/components/GetStarted";
-import Benefits from "@/components/Benefits";
-import Metrics from "@/components/Metrics";
-import FeaturedIn from "@/components/FeaturedIn";
-import CTA from "@/components/CTA";
 
 const steps = [
   {
@@ -57,23 +45,6 @@ export default function Contact() {
       </Head>
 
       <Navigation />
-
-      <Header className={"about"}>
-        <HeroCentered>
-          <h1 className="heading heading--display">
-            We provide regular doctor home visits.
-          </h1>
-          <p>
-            Our Mission is to pioneer medical inclusion by leveraging technology
-            to provide access to medical care to underserved segments of people
-            across Africa.
-          </p>
-        </HeroCentered>
-
-        <AboutImgSlider />
-      </Header>
-
-      <CTA />
 
       <Footer />
 
