@@ -230,6 +230,27 @@
     }
   }
 
+  &--plan-prices {
+    padding: 6.4rem 0;
+
+    .splitscreen {
+      @include respond(tab-port) {
+        gap: 6.4rem;
+      }
+
+      &__right {
+        grid-row: 1;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+      }
+
+      .btn--main {
+        margin: 0 auto;
+      }
+    }
+  }
+
   &--video {
     .heading {
       @include respond(phone) {

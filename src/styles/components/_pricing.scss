@@ -250,6 +250,10 @@
     display: flex;
     margin-bottom: 3.2rem;
 
+    @include respond(tab-port) {
+      grid-row: 1;
+    }
+
     & > *:not(:last-child) {
       margin-right: 2.4rem;
     }
@@ -258,6 +262,10 @@
     &--2 {
       display: flex;
       flex-direction: column;
+
+      @include respond(phone) {
+        text-align: center;
+      }
     }
 
     p {
@@ -275,5 +283,11 @@
     color: get-color(primary);
     font-size: 3.2rem;
     margin-bottom: 1.2rem;
+
+    @include respond(phone) {
+      max-width: 20rem;
+      font-size: 2rem;
+      padding: 1.6rem;
+    }
   }
 }

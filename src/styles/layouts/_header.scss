@@ -272,6 +272,10 @@
   //   max-width: 82.7rem;
   // }
 
+  @include respond(tab-port) {
+    padding-bottom: 0;
+  }
+
   p {
     max-width: 55rem;
   }
