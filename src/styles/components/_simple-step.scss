@@ -12,11 +12,12 @@
 
   &__grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 3.2rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.6rem;
 
     @include respond(tab-port) {
       grid-template-columns: repeat(2, 1fr);
+      gap: 3.2rem;
       max-width: 90rem;
       margin: 0 auto;
     }
@@ -27,10 +28,14 @@
   }
 
   &__card {
-    padding: 3.2rem;
+    padding: 3.2rem 1.6rem;
     border-radius: 0.8rem;
     color: get-color(primary);
     transition: background-color 0.4s;
+
+    @include respond(tab-port) {
+      padding: 3.2rem;
+    }
 
     @include respond(phone) {
       text-align: center;
@@ -66,7 +71,7 @@
   &__btn {
     width: 28.5rem;
     max-width: 28.5rem;
-    margin: 3.2rem auto 0;
+    margin: 4.8rem auto 0;
   }
 }
 
@@ -164,6 +169,11 @@
     align-items: center;
     text-align: center;
     color: get-color(primary);
+
+    @include respond(phone) {
+      grid-template-columns: 1fr;
+      gap: 6.4rem;
+    }
   }
 
   &__feature {
@@ -179,5 +189,19 @@
 
   .heading {
     margin-bottom: 2.4rem;
+  }
+}
+
+.testimonial__video {
+  width: 56rem;
+  height: 31.2rem;
+  margin: 0 auto;
+
+  @include respond(phone) {
+    width: 80%;
+  }
+
+  @include respond(phone-sm) {
+    width: 95%;
   }
 }

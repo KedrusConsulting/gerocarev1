@@ -21,6 +21,12 @@ const steps = [
 
   {
     step: 3,
+    name: "Get Matched to a caregiver",
+    description: "If available in your location a caretaker is matched to you.",
+  },
+
+  {
+    step: 4,
     name: "Make payment",
     description: "Payment are in one click, and its easy to make.",
   },

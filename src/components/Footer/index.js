@@ -12,7 +12,7 @@ const footerList = [
       { name: "Doctor on Demand", href: "/doctor-on-demand" },
       { name: "Elderly Home Visit", href: "/elderly-care" },
       { name: "Teleconsultation Doctor", href: "/teleconsultation" },
-      { name: "Partner Services", href: "#" },
+
       { name: "Care Givers", href: "/care-giver" },
     ],
   },
@@ -21,9 +21,9 @@ const footerList = [
     category: "Quick Links",
     list: [
       { name: "Blogs", href: "#" },
-      { name: "User Registration", href: "#" },
-      { name: "Subscription Plan", href: "#" },
-      { name: "Contact Geocare", href: "#" },
+      { name: "Get Started", href: "/register" },
+      { name: "Pricing", href: "/pricing" },
+      { name: "Contact Us", href: "/contact" },
     ],
   },
 
@@ -31,9 +31,9 @@ const footerList = [
     category: "Payments Methods",
     list: [
       { name: "Blogs", href: "#" },
-      { name: "User Registration", href: "#" },
-      { name: "Subscription Plan", href: "#" },
-      { name: "Contact Geocare", href: "#" },
+      { name: "Get Started", href: "/register" },
+      { name: "Pricing", href: "/pricing" },
+      { name: "Contact Us", href: "/contact" },
     ],
   },
 ];

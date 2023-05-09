@@ -20,7 +20,9 @@ export default function Login() {
     password: Yup.string().min(8).required(),
   });
 
-  const onSubmit = (values, { reform }, onSubmitProps) => {};
+  const onSubmit = (values, { reform }, onSubmitProps) => {
+    // Server side logic goes where...
+  };
 
   return (
     <>

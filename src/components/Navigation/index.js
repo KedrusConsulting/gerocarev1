@@ -15,6 +15,12 @@ const Navigation = () => {
         <div className={`navbar__grp ${openMenu ? "active" : ""}`}>
           <ul className="navbar__list">
             <li className="navbar__item">
+              <Link href="/" className="navbar__link">
+                Home
+              </Link>
+            </li>
+
+            <li className="navbar__item">
               <Link href="/about" className="navbar__link">
                 About Us
               </Link>
@@ -79,20 +85,14 @@ const Navigation = () => {
                 Blog
               </Link>
             </li>
-
-            <li className="navbar__item">
-              <Link href="/contact" className="navbar__link">
-                Contact Us
-              </Link>
-            </li>
           </ul>
 
           <div className="navbar__actions">
             <a href="/login" className="btn btn--sec">
               Log In
             </a>
-            <a href="/register" className="btn btn--main">
-              Get Started
+            <a href="/request-form" className="btn btn--main">
+              Register as a doctor
             </a>
           </div>
         </div>

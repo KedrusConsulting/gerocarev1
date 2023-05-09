@@ -8,7 +8,7 @@ const services = [
   {
     icon: require("@/assets/img/doctor-on-demand.svg").default,
     name: "Doctor on Demand",
-    href: "/doc-on-demand",
+    href: "/doctor-on-demand",
     description:
       "Access urgent care from our top-rated doctors in minutes. Schedule a session with three simple steps.",
   },
@@ -22,14 +22,14 @@ const services = [
   {
     icon: require("@/assets/img/elderly-home-visits.svg").default,
     name: "Elderly home visits",
-    href: "/elderly-vistis",
+    href: "/elderly-care",
     description:
       "Subscribe to premium health care plans designed to proactively respond to the health and wellness needs of your elderly loved ones.",
   },
   {
     icon: require("@/assets/img/care-givers.svg").default,
     name: "Care Givers",
-    href: "/care-givers",
+    href: "/care-giver",
     description:
       "24/7 companionship and personal care services provided by qualified nurses and non-medical caregivers.",
   },

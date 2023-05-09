@@ -5,7 +5,11 @@ const pricing = [
   {
     plan: "Single",
     duration: ["Quarterly", "Annually"],
-    description: "For 1 Parent, 1 Address for 3 Visits valid for 3 Months.",
+    description: {
+      monthly: "For 1 Parent, 1 Address for 3 Visits valid for 3 Months.",
+      annually: "For 1 Parent, 1 Address for 12 Visits valid for 12 Months",
+    },
+
     amount: 45000,
     benefits: [
       "Doctor Visits",
@@ -19,7 +23,11 @@ const pricing = [
   {
     plan: "Couple",
     duration: ["Quarterly", "Annually"],
-    description: "For 2 Parents, 1 Address for 3 Visits valid for 3 Months",
+    description: {
+      monthly: "For 2 Parents, 1 Address for 3 Visits valid for 3 Months",
+      annually: "For 2 Parents, 1 Address for 12 Visits valid for 12 Months",
+    },
+
     amount: 81000,
     benefits: [
       "Doctor Visits",
@@ -56,7 +64,9 @@ const Tabs = () => {
             >
               <h4 className="heading--4">{price.plan}</h4>
 
-              <p>{price.description}</p>
+              <p>
+                {!tab ? price.description.monthly : price.description.annually}
+              </p>
 
               <div className="pricing__price">
                 <span className="pricing__amt">

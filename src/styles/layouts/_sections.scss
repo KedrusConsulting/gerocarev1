@@ -237,14 +237,5 @@
         margin: 0 auto 4rem;
       }
     }
-
-    .testimonial__video {
-      max-width: 56rem;
-      margin: 0 auto;
-
-      @include respond(phone-sm) {
-        width: 95%;
-      }
-    }
   }
 }

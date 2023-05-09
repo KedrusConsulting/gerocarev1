@@ -49,72 +49,8 @@ export default function Contact() {
 
       <Navigation />
 
-      <section className="section section--access">
-        <div className="row">
-          <div className="access__grid">
-            <div className="access__content">
-              <h2 className="heading heading--1">
-                Making access to health care convenient for the elderly.
-              </h2>
-
-              <p>
-                Gerocare teleconsultation service has revolutionized the way
-                healthcare is provided by increasing access to more clinicians,
-                responding to urgent patient concerns, lowering healthcare
-                costs, and offering more practical options for diagnosis and
-                treatment.
-              </p>
-
-              <ul className="access__list">
-                <li className="access__item">
-                  <Image
-                    src={require("@/assets/img/circled-check-mark.svg")}
-                    alt="Circled checked mark icon"
-                  />
-
-                  <span>
-                    You don't have to drive to the doctor's office or clinic.
-                  </span>
-                </li>
-
-                <li className="access__item">
-                  <Image
-                    src={require("@/assets/img/circled-check-mark.svg")}
-                    alt="Circled checked mark icon"
-                  />
-
-                  <span>
-                    You don’t have to sit in a waiting room for prolonged hours
-                    when you're sick.
-                  </span>
-                </li>
-
-                <li className="access__item">
-                  <Image
-                    src={require("@/assets/img/circled-check-mark.svg")}
-                    alt="Circled checked mark icon"
-                  />
-
-                  <span>
-                    You can access a doctor from the comfort of your own bed or
-                    sofa.
-                  </span>
-                </li>
-              </ul>
-
-              <a href="/register" className="btn btn--main">
-                Sign Up for Free
-              </a>
-            </div>
-
-            <div className="access__img">
-              <Image
-                src={require("@/assets/img/senior-woman-meeting-with-male-doctor-cosmetic-surgeon-office@4x.png")}
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      <SimpleSteps />
+      {/* <HMOPricingCard /> */}
 
       <Footer />
 
