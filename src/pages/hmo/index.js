@@ -5,6 +5,7 @@ import HeroCentered from "@/components/HeroCentered";
 import Image from "next/image";
 import Section from "@/Layout/Section";
 import Link from "next/link";
+import HMOPricingCard from "@/components/HMOPricingCard";
 
 const pricings = [
   {
@@ -125,6 +126,108 @@ const HMO = () => {
             ))}
           </tbody>
         </table>
+
+        <div className="hmo__pricing-grid">
+          <HMOPricingCard
+            title={"Basic Plan"}
+            subtitle={"Annual home Medical visits"}
+            prices={{
+              price_1: {
+                amt: 180000,
+                description: "Price for 12 Visits Annual Plan",
+              },
+              price_2: {
+                amt: 60000,
+                description: "Price for 4 Visits Annual Plan",
+              },
+            }}
+            href={"/hmo/basic"}
+          />
+
+          <HMOPricingCard
+            title={"Standard Plan"}
+            subtitle={"Everything in Basic + Annual comprehensive Check-up"}
+            prices={{
+              price_1: {
+                amt: 180000,
+                description: "Price for 12 Visits Annual Plan",
+              },
+              price_2: {
+                amt: 60000,
+                description: "Price for 4 Visits Annual Plan",
+              },
+            }}
+            href={"/hmo/basic"}
+          />
+
+          <HMOPricingCard
+            title={"Premium Plan"}
+            subtitle={
+              "Everything in Standard + Support services (includes Basic drugs and Test)"
+            }
+            prices={{
+              price_1: {
+                amt: 180000,
+                description: "Price for 12 Visits Annual Plan",
+              },
+              price_2: {
+                amt: 60000,
+                description: "Price for 4 Visits Annual Plan",
+              },
+            }}
+            href={"/hmo/basic"}
+          />
+
+          <HMOPricingCard
+            title={"Diamond Plan"}
+            subtitle={"Everything in Diamond + annual Comprehensive checkup."}
+            prices={{
+              price_1: {
+                amt: 180000,
+                description: "Price for 12 Visits Annual Plan",
+              },
+              price_2: {
+                amt: 60000,
+                description: "Price for 4 Visits Annual Plan",
+              },
+            }}
+            href={"/hmo/basic"}
+          />
+
+          <HMOPricingCard
+            title={"Platinum Plan"}
+            subtitle={"Everything in Diamond + annual Comprehensive checkup."}
+            prices={{
+              price_1: {
+                amt: 180000,
+                description: "Price for 12 Visits Annual Plan",
+              },
+              price_2: {
+                amt: 60000,
+                description: "Price for 4 Visits Annual Plan",
+              },
+            }}
+            href={"/hmo/basic"}
+          />
+
+          <HMOPricingCard
+            title={"Ultimate Plan"}
+            subtitle={
+              "Everything in Platinum + In-patient Care (Includes Admission Services)"
+            }
+            prices={{
+              price_1: {
+                amt: 180000,
+                description: "Price for 12 Visits Annual Plan",
+              },
+              price_2: {
+                amt: 60000,
+                description: "Price for 4 Visits Annual Plan",
+              },
+            }}
+            href={"/hmo/basic"}
+          />
+        </div>
 
         <div className="hmo__link">
           <Link href="/register" className="btn btn--main">

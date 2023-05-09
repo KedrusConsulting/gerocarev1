@@ -8,12 +8,12 @@ const HMOPricingCard = ({ title, subtitle, prices, href }) => {
       <p>{subtitle}</p>
       <div className="hmo__prices">
         <div className="hmo__prices--1">
-          <span></span>
-          <span></span>
+          <span className="hmo__prices-amt">N{prices.price_1.amt}</span>
+          <span className="hmo__prices-desc">{prices.price_1.description}</span>
         </div>
         <div className="hmo__prices--2">
-          <span></span>
-          <span></span>
+          <span className="hmo__prices-amt">N{prices.price_2.amt}</span>
+          <span className="hmo__prices-desc">{prices.price_2.description}</span>
         </div>
       </div>
 

@@ -42,7 +42,7 @@ const SimpleSteps = () => {
           </h2>
         </div>
 
-        <div className="simple-step__grid">
+        <div className="simple-step__grid simple-step__grid--4">
           {steps.map((step) => (
             <div className="simple-step__card">
               <span className="simple-step__badge">Step {step.step}</span>
@@ -60,7 +60,7 @@ const SimpleSteps = () => {
   );
 };
 
-export default function Contact() {
+export default function CareGiver() {
   return (
     <>
       <Head>
