@@ -1,8 +1,27 @@
 import Head from "next/head";
 import Navigation from "@/components/Navigation";
 import Logo from "@/components/Logo";
+import ProgressBar from "@/components/ProgressBar";
+import FormikStepper, { FormikStep } from "@/components/FormikStepper";
+import * as Yup from "yup";
+import { useContext } from "react";
+import { ProgressContext } from "@/context/progress";
 
-export default function Contact() {
+const Register = () => {
+  const { progress } = useContext(ProgressContext);
+
+  const initialValues = {
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+  };
+
+  const onSubmit = async (values, { resetForm }, onSubmitProps) => {
+    console.log(values);
+  };
+
   return (
     <>
       <Head>
@@ -19,12 +38,33 @@ export default function Contact() {
       </Head>
 
       <nav className="register__nav">
-        <Logo />
+        <div className="row">
+          <Logo />
 
-        <div className="register__progress"></div>
+          <div className="register__progress">
+            <ProgressBar value={progress} />
+          </div>
 
-        <div className="register__empty"></div>
+          <div className="register__empty"></div>
+        </div>
       </nav>
+
+      <FormikStepper initialValues={initialValues} onSubmit={onSubmit}>
+        <FormikStep
+          validationSchema={Yup.object({
+            firstName: Yup.string().required(),
+            lastName: Yup.string().required(),
+            email: Yup.string().email().required(),
+            password: Yup.string().min(8).required(),
+          })}
+        >
+          Step 1
+        </FormikStep>
+        <FormikStep>Step 2</FormikStep>
+        <FormikStep>Step 3</FormikStep>
+      </FormikStepper>
     </>
   );
-}
+};
+
+export default Register;

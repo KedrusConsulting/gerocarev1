@@ -239,14 +239,18 @@
       }
 
       &__right {
-        grid-row: 1;
-        text-align: center;
-        display: flex;
-        justify-content: center;
+        @include respond(tab-port) {
+          grid-row: 1;
+          text-align: center;
+          display: flex;
+          justify-content: center;
+        }
       }
 
       .btn--main {
-        margin: 0 auto;
+        @include respond(tab-port) {
+          margin: 0 auto;
+        }
       }
     }
   }
