@@ -6,6 +6,9 @@ import * as Yup from "yup";
 import { useContext, useState } from "react";
 import { ProgressContext } from "@/context/progress";
 import InputField from "@/components/InputField";
+import { FieldArray } from "formik";
+import Link from "next/link";
+import Image from "next/image";
 
 const Register = () => {
   const { progress } = useContext(ProgressContext);
@@ -21,6 +24,22 @@ const Register = () => {
     email: "",
     password: "",
     confirmPassword: "",
+    beneficiaryDetails: [
+      {
+        firstname: "",
+        lastname: "",
+        dateOfBirth: "",
+        gender: "",
+        phone: "",
+        state: "",
+        lga: "",
+        address: "",
+      },
+    ],
+    choosePlan: {
+      plan: "",
+      paymentMethod: "",
+    },
   };
 
   const onSubmit = async (values, { resetForm }, onSubmitProps) => {
@@ -58,13 +77,14 @@ const Register = () => {
 
       <FormikStepper initialValues={initialValues} onSubmit={onSubmit}>
         <FormikStep
-          validationSchema={Yup.object().shape({
-            firstname: Yup.string().required(),
-            lastname: Yup.string().required(),
-            email: Yup.string().email().required(),
-            password: Yup.string().required(),
-            confirmPassword: Yup.string().required(),
-          })}
+          // validationSchema={Yup.object().shape({
+          //   firstname: Yup.string().required(),
+          //   lastname: Yup.string().required(),
+          //   email: Yup.string().email().required(),
+          //   password: Yup.string().required(),
+          //   confirmPassword: Yup.string().required(),
+          // })}
+          getFormikState={getFormikState}
         >
           <div className="register__form">
             <div className="register__header">
@@ -119,8 +139,155 @@ const Register = () => {
             />
           </div>
         </FormikStep>
-        <FormikStep>Step 2</FormikStep>
-        <FormikStep>Step 3</FormikStep>
+        <FormikStep getFormikState={getFormikState}>
+          <div className="register__form">
+            <div className="register__header">
+              <h2 className="heading heading--2">Add Beneficiaries</h2>
+
+              <p>
+                It just takes a few minutes to sign up and get fast, easy access
+                to care, 24/7. No need for your insurance card yet.
+              </p>
+            </div>
+
+            <FieldArray
+              name="beneficiaryDetails"
+              render={({ push }) => (
+                <>
+                  {formikState?.values.beneficiaryDetails &&
+                  formikState?.values.beneficiaryDetails.length > 0 ? (
+                    <>
+                      {formikState?.values.beneficiaryDetails.length > 0 &&
+                        formikState?.values.beneficiaryDetails.map(
+                          (_, index) => (
+                            <>
+                              <div key={index}>
+                                <div className="form__flex">
+                                  <InputField
+                                    type={"text"}
+                                    id={"beneficiaryFirstname"}
+                                    name={`beneficiaryDetails.${index}.firstname`}
+                                    label={"Beneficiary's Fullname"}
+                                    placeholder={"First name"}
+                                  />
+
+                                  <InputField
+                                    type={"text"}
+                                    id={"beneficiaryLastname"}
+                                    name={`beneficiaryDetails.${index}.lastname`}
+                                    label={""}
+                                    placeholder={"Last name"}
+                                  />
+                                </div>
+
+                                <div className="form__flex">
+                                  <InputField
+                                    type={"date"}
+                                    id={"beneficiaryDateOfBirth"}
+                                    name={`beneficiaryDetails.${index}.dateOfBirth`}
+                                    label={"Beneficiary's Date of Birth"}
+                                    placeholder={"First name"}
+                                  />
+
+                                  <InputField
+                                    type={"text"}
+                                    id={"beneficiaryGender"}
+                                    name={`beneficiaryDetails.${index}.gender`}
+                                    label={"Beneficiary's Gender"}
+                                    placeholder={"Choose Gender"}
+                                  />
+                                </div>
+
+                                <InputField
+                                  type={"number"}
+                                  id={"beneficiaryPhone"}
+                                  name={`beneficiaryDetails.${index}.phone`}
+                                  label={"Beneficiary's Phone"}
+                                  placeholder={"+234"}
+                                />
+
+                                <div className="form__flex">
+                                  <InputField
+                                    type={"text"}
+                                    id={"beneficiaryState"}
+                                    name={`beneficiaryDetails.${index}.state`}
+                                    label={"Beneficiary State"}
+                                    placeholder={"State"}
+                                  />
+
+                                  <InputField
+                                    type={"text"}
+                                    id={"beneficiaryLga"}
+                                    name={`beneficiaryDetails.${index}.lga`}
+                                    label={"Beneficiary LGA"}
+                                    placeholder={"LGA"}
+                                  />
+                                </div>
+
+                                <InputField
+                                  type={"text"}
+                                  id={"beneficiaryAddress"}
+                                  name={`beneficiaryDetails.${index}.address`}
+                                  label={"Beneficiary Address"}
+                                  placeholder={"Address"}
+                                />
+                              </div>
+                            </>
+                          )
+                        )}
+                      <button
+                        onClick={() =>
+                          push({
+                            firstname: "",
+                            lastname: "",
+                            dateOfBirth: "",
+                            gender: "",
+                            phone: "",
+                            state: "",
+                            lga: "",
+                            address: "",
+                          })
+                        }
+                        type="button"
+                        className="btn register__text-link"
+                      >
+                        <Image
+                          src={require("@/assets/img/plus_icon.svg")}
+                          alt="plus icon"
+                        />
+                        <span>Add Beneficiary</span>
+                      </button>
+                    </>
+                  ) : (
+                    <button
+                      onClick={() =>
+                        push({
+                          firstname: "",
+                          lastname: "",
+                          dateOfBirth: "",
+                          gender: "",
+                          phone: "",
+                          state: "",
+                          lga: "",
+                          address: "",
+                        })
+                      }
+                      type="button"
+                      className="register__text-link"
+                    >
+                      <Image
+                        src={require("@/assets/img/plus_icon.svg")}
+                        alt="plus icon"
+                      />
+                      <span>Add Beneficiary</span>
+                    </button>
+                  )}
+                </>
+              )}
+            />
+          </div>
+        </FormikStep>
+        <FormikStep getFormikState={getFormikState}>Step 3</FormikStep>
       </FormikStepper>
     </>
   );

@@ -468,3 +468,27 @@
     margin: 0 auto;
   }
 }
+
+.service-tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: fit-content;
+  padding: 0.725361rem 2.53876rem;
+  background-color: #ffffff;
+  border-radius: 10rem;
+
+  span {
+    font-family: "Graphik M Trial";
+    font-size: 1.4rem;
+    color: get-color(primary);
+    line-height: 1.4rem;
+    transform: translateY(-1.5px);
+  }
+
+  img {
+    width: 2.4rem;
+    height: 2.4rem;
+    margin-right: 0.4rem;
+  }
+}

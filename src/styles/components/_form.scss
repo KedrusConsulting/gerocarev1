@@ -43,4 +43,30 @@
       margin-right: 2.4rem;
     }
   }
+
+  &__btns {
+    max-width: 50.5rem;
+    margin: 6.4rem auto 4.8rem;
+
+    .btn {
+      width: 80%;
+      margin: 0 auto;
+
+      @include respond(phone) {
+        width: 100%;
+        margin: 4.8rem auto;
+      }
+    }
+
+    & > *:not(:last-child) {
+      margin-bottom: 1.6rem;
+    }
+
+    .btn--text {
+      padding: 0;
+      background-color: transparent;
+      color: get-color(primary);
+      text-decoration: underline;
+    }
+  }
 }

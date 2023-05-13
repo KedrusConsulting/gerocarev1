@@ -15,4 +15,14 @@
     margin-bottom: 4.8rem;
     text-align: center;
   }
+
+  &__text-link {
+    font-family: "Graphik R Trial";
+    padding: 0;
+    background-color: transparent;
+    color: get-color(primary);
+
+    display: flex;
+    align-items: center;
+  }
 }

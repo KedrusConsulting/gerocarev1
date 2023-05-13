@@ -91,7 +91,7 @@ const Navigation = () => {
             <a href="/login" className="btn btn--sec">
               Log In
             </a>
-            <a href="/request-form" className="btn btn--main">
+            <a href="/doctors-registration" className="btn btn--main">
               Register as a doctor
             </a>
           </div>

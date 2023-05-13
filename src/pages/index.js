@@ -15,6 +15,7 @@ import Metrics from "@/components/Metrics";
 import SplitScreen from "@/Layout/SplitScreen";
 import Image from "next/image";
 import Root from "@/Layout/Root";
+import ServiceTag from "@/components/ServicesTag";
 // import "../styles/main.scss";
 
 export default function Home() {
@@ -52,11 +53,15 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="header__img">
+          <div className="header__img header__img--1">
             <Image
-              src={require("@/assets/img/hero-image-01@4x.png")}
+              src={require("@/assets/img/hero-image-03@4x.png")}
               alt={"Hero img"}
             />
+
+            <ServiceTag service={"Teleconsultation"} href="/teleconsultation" />
+            <ServiceTag service={"Doctor Home Visits"} href="/elderly-care" />
+            <ServiceTag service={"On-Demand Doctor"} href="/doctor-on-demand" />
           </div>
         </SplitScreen>
       </Header>

@@ -6,6 +6,7 @@ import OurServices from "@/components/OurServices";
 import SimpleSteps from "@/components/SimpleSteps";
 import Image from "next/image";
 import HMOPricingCard from "@/components/HMOPricingCard";
+import ServiceTag from "@/components/ServicesTag";
 
 const steps = [
   {
@@ -50,54 +51,8 @@ export default function Contact() {
 
       <Navigation />
 
-      <div className="hmo__pricing-grid">
-        <HMOPricingCard
-          title={"Basic Plan"}
-          subtitle={"Annual home Medical visits"}
-          prices={{
-            price_1: {
-              amt: 180000,
-              description: "Price for 12 Visits Annual Plan",
-            },
-            price_2: {
-              amt: 60000,
-              description: "Price for 4 Visits Annual Plan",
-            },
-          }}
-          href={"/hmo/basic"}
-        />
-
-        <HMOPricingCard
-          title={"Basic Plan"}
-          subtitle={"Annual home Medical visits"}
-          prices={{
-            price_1: {
-              amt: 180000,
-              description: "Price for 12 Visits Annual Plan",
-            },
-            price_2: {
-              amt: 60000,
-              description: "Price for 4 Visits Annual Plan",
-            },
-          }}
-          href={"/hmo/basic"}
-        />
-
-        <HMOPricingCard
-          title={"Basic Plan"}
-          subtitle={"Annual home Medical visits"}
-          prices={{
-            price_1: {
-              amt: 180000,
-              description: "Price for 12 Visits Annual Plan",
-            },
-            price_2: {
-              amt: 60000,
-              description: "Price for 4 Visits Annual Plan",
-            },
-          }}
-          href={"/hmo/basic"}
-        />
+      <div className="row">
+        <ServiceTag service={"Teleconsultation"} />
       </div>
 
       <Footer />
