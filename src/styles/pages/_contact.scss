@@ -1,0 +1,49 @@
+.contact {
+  &__details {
+    background-color: #f5faed;
+
+    padding: 7.2rem 4.8rem;
+    border-radius: 2.4rem;
+
+    @include respond(tab-port) {
+      padding: 5.6rem 2.4rem;
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+
+    .heading {
+      color: get-color(primary);
+      margin-bottom: 2.4rem;
+    }
+
+    p {
+      color: hsla(180, 0%, 46%, 1);
+
+      &:not(:last-child) {
+        margin-bottom: 1.6rem;
+      }
+    }
+  }
+
+  &__form {
+    @include respond(tab-port) {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+
+    .heading {
+      font-family: "Graphik M Trial";
+      font-size: 1.4rem;
+      color: get-color(primary);
+      margin-bottom: 2.4rem;
+    }
+
+    .inputfield:not(:last-child) {
+      margin-bottom: 1.6rem;
+    }
+
+    .btn--main {
+      margin-top: 3.2rem;
+    }
+  }
+}

@@ -263,4 +263,16 @@
       }
     }
   }
+
+  &--contact {
+    padding: 1.6rem 0 9.6rem;
+
+    @include respond(phone-lg) {
+      padding: 1.6rem 0 6.4rem;
+    }
+
+    .splitscreen {
+      gap: 6.4rem;
+    }
+  }
 }

@@ -28,6 +28,20 @@
     font-family: "Graphik R Trial";
   }
 
+  &__textarea {
+    border: 0.5px solid #b4b4b4;
+    padding: 1.2rem;
+    border-radius: 0.8rem;
+    font-size: 1.4rem;
+    font-family: "Graphik L Trial";
+    color: get-color(primary);
+
+    &:focus {
+      outline: none;
+      // border: none;
+    }
+  }
+
   &__error {
     color: hsla(0, 73%, 65%, 0.863);
     font-size: 1.4rem;
