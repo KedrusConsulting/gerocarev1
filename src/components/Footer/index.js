@@ -27,15 +27,15 @@ const footerList = [
     ],
   },
 
-  {
-    category: "Payments Methods",
-    list: [
-      { name: "Blogs", href: "#" },
-      { name: "Get Started", href: "/register" },
-      { name: "Pricing", href: "/pricing" },
-      { name: "Contact Us", href: "/contact" },
-    ],
-  },
+  // {
+  //   category: "Payments Methods",
+  //   list: [
+  //     { name: "Blogs", href: "#" },
+  //     { name: "Get Started", href: "/register" },
+  //     { name: "Pricing", href: "/pricing" },
+  //     { name: "Contact Us", href: "/contact" },
+  //   ],
+  // },
 ];
 
 const Footer = () => {
@@ -84,6 +84,37 @@ const Footer = () => {
             ))}
           </ul>
         ))}
+
+        <ul className="footer__list">
+          <h6 className="heading heading--6">Payment Partners</h6>
+
+          <li className="footer__item">
+            <a href={"#"} className="footer__link">
+              <Image
+                src={require("@/assets/img/paystack.svg")}
+                alt="paystack logo"
+              />
+            </a>
+          </li>
+
+          <li className="footer__item">
+            <a href={"#"} className="footer__link">
+              <Image
+                src={require("@/assets/img/stripe.svg")}
+                alt="Stripe logo"
+              />
+            </a>
+          </li>
+
+          <li className="footer__item">
+            <a href={"#"} className="footer__link">
+              <Image
+                src={require("@/assets/img/paypal.svg")}
+                alt="Paypal logo"
+              />
+            </a>
+          </li>
+        </ul>
 
         {/* <div className="footer__copyright">
           <p>Copyright © 2023 Gerocare, All rights reserved.</p>
