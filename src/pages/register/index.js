@@ -1,18 +1,23 @@
 import Head from "next/head";
-import Navigation from "@/components/Navigation";
 import Logo from "@/components/Logo";
 import ProgressBar from "@/components/ProgressBar";
 import FormikStepper, { FormikStep } from "@/components/FormikStepper";
 import * as Yup from "yup";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { ProgressContext } from "@/context/progress";
+import InputField from "@/components/InputField";
 
 const Register = () => {
   const { progress } = useContext(ProgressContext);
+  const [formikState, setFormikState] = useState();
+
+  const getFormikState = (values) => {
+    setFormikState(values);
+  };
 
   const initialValues = {
-    firstName: "",
-    lastName: "",
+    firstname: "",
+    lastname: "",
     email: "",
     password: "",
     confirmPassword: "",
@@ -45,20 +50,74 @@ const Register = () => {
             <ProgressBar value={progress} />
           </div>
 
-          <div className="register__empty"></div>
+          <div className="register__empty">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </div>
         </div>
       </nav>
 
       <FormikStepper initialValues={initialValues} onSubmit={onSubmit}>
         <FormikStep
-          validationSchema={Yup.object({
-            firstName: Yup.string().required(),
-            lastName: Yup.string().required(),
+          validationSchema={Yup.object().shape({
+            firstname: Yup.string().required(),
+            lastname: Yup.string().required(),
             email: Yup.string().email().required(),
-            password: Yup.string().min(8).required(),
+            password: Yup.string().required(),
+            confirmPassword: Yup.string().required(),
           })}
         >
-          Step 1
+          <div className="register__form">
+            <div className="register__header">
+              <h2 className="heading heading--2">Create an account for free</h2>
+
+              <p>
+                It just takes a few minutes to sign up and get fast, easy access
+                to care, 24/7. No need for your insurance card yet.
+              </p>
+            </div>
+
+            <div className="form__flex">
+              <InputField
+                type={"text"}
+                id={"firstname"}
+                name={"firstname"}
+                label={"Full name"}
+                placeholder={"First name"}
+              />
+
+              <InputField
+                type={"text"}
+                id={"lastname"}
+                name={"lastname"}
+                label={""}
+                placeholder={"Last name"}
+              />
+            </div>
+
+            <InputField
+              type={"email"}
+              id={"email"}
+              name={"email"}
+              label={"Email Address"}
+              placeholder={"same@gmail.com"}
+            />
+
+            <InputField
+              type={"password"}
+              id={"password"}
+              name={"password"}
+              label={"Create Password"}
+              placeholder={"**************"}
+            />
+
+            <InputField
+              type={"password"}
+              id={"confirmPassword"}
+              name={"confirmPassword"}
+              label={"Confirm Password"}
+              placeholder={"**************"}
+            />
+          </div>
         </FormikStep>
         <FormikStep>Step 2</FormikStep>
         <FormikStep>Step 3</FormikStep>

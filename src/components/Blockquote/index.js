@@ -1,15 +1,22 @@
-import Image from 'next/image'
-import React from 'react'
+import Image from "next/image";
+import React from "react";
 
-const Blockquote = ({ description, image_url, author_name, author_location }) => {
+const Blockquote = ({
+  description,
+  image_url,
+  author_name,
+  author_location,
+}) => {
   return (
     <blockquote className="testimonial">
-      <p>
-        {description}
-      </p>
+      <p>{description}</p>
 
       <div className="testimonial__author">
-        <Image src={image_url} alt={"Customer avatar"} />
+        <Image
+          className="testimonial__avatar"
+          src={image_url}
+          alt={"Customer avatar"}
+        />
 
         <div className="author__info">
           <span className="author__name">{author_name}</span>
@@ -17,7 +24,7 @@ const Blockquote = ({ description, image_url, author_name, author_location }) =>
         </div>
       </div>
     </blockquote>
-  )
-}
+  );
+};
 
-export default Blockquote
+export default Blockquote;

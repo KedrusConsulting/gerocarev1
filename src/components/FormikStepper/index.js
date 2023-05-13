@@ -1,5 +1,5 @@
 import { ProgressContext } from "@/context/progress";
-import { Form, Formik } from "formik";
+import { Form, Formik, useFormikContext } from "formik";
 import React, { useContext, useEffect, useState } from "react";
 
 export const FormikStep = ({ children }) => {
@@ -25,20 +25,20 @@ const FormikStepper = ({ children, ...props }) => {
     <div className="form__stepper">
       <Formik
         {...props}
-        // validationSchema={currentChild.props.validationSchema}
+        validationSchema={currentChild.props.validationSchema}
         onSubmit={async (values, helpers) => {
           console.log("Clicked submit button");
           if (isLastStep()) {
-            props.onSubmit(values, helpers);
+            await props.onSubmit(values, helpers);
             setCompleted(true);
           } else {
             step >= 3 ? setStep(2) : setStep((prev) => prev + 1);
-            // helpers.setTouched({});
+            helpers.setTouched({});
           }
         }}
       >
         {(formik) => (
-          <Form>
+          <form autoComplete="off" onSubmit={formik.handleSubmit}>
             {step >= 3 ? setStep(2) : currentChild}
 
             <div className="form__btns">
@@ -60,7 +60,7 @@ const FormikStepper = ({ children, ...props }) => {
                 </button>
               ) : null}
             </div>
-          </Form>
+          </form>
         )}
       </Formik>
     </div>
