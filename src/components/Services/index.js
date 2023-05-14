@@ -38,7 +38,7 @@ const services = [
     name: "HMO",
     href: "/hmo",
     description:
-      "Benefit from confidential video consultations with experienced practitioners specialized in diverse medical fields.",
+      "Access our HMO plans specially  packed for your Elderly Loved ones with adequate resources for improving their health and general well-being.",
   },
 ];
 

@@ -149,15 +149,15 @@ const HMO = () => {
             subtitle={"Everything in Basic + Annual comprehensive Check-up"}
             prices={{
               price_1: {
-                amt: 180000,
+                amt: 280000,
                 description: "Price for 12 Visits Annual Plan",
               },
               price_2: {
-                amt: 60000,
+                amt: 160000,
                 description: "Price for 4 Visits Annual Plan",
               },
             }}
-            href={"/hmo/basic"}
+            href={"/hmo/standard"}
           />
 
           <HMOPricingCard
@@ -167,15 +167,15 @@ const HMO = () => {
             }
             prices={{
               price_1: {
-                amt: 180000,
+                amt: 250000,
                 description: "Price for 12 Visits Annual Plan",
               },
               price_2: {
-                amt: 60000,
+                amt: 130000,
                 description: "Price for 4 Visits Annual Plan",
               },
             }}
-            href={"/hmo/basic"}
+            href={"/hmo/premium"}
           />
 
           <HMOPricingCard
@@ -183,15 +183,15 @@ const HMO = () => {
             subtitle={"Everything in Diamond + annual Comprehensive checkup."}
             prices={{
               price_1: {
-                amt: 180000,
+                amt: 280000,
                 description: "Price for 12 Visits Annual Plan",
               },
               price_2: {
-                amt: 60000,
+                amt: 160000,
                 description: "Price for 4 Visits Annual Plan",
               },
             }}
-            href={"/hmo/basic"}
+            href={"/hmo/diamond"}
           />
 
           <HMOPricingCard
@@ -199,15 +199,15 @@ const HMO = () => {
             subtitle={"Everything in Diamond + annual Comprehensive checkup."}
             prices={{
               price_1: {
-                amt: 180000,
+                amt: 380000,
                 description: "Price for 12 Visits Annual Plan",
               },
               price_2: {
-                amt: 60000,
+                amt: 260000,
                 description: "Price for 4 Visits Annual Plan",
               },
             }}
-            href={"/hmo/basic"}
+            href={"/hmo/platinum"}
           />
 
           <HMOPricingCard
@@ -217,15 +217,15 @@ const HMO = () => {
             }
             prices={{
               price_1: {
-                amt: 180000,
+                amt: 600000,
                 description: "Price for 12 Visits Annual Plan",
               },
               price_2: {
-                amt: 60000,
+                amt: 500000,
                 description: "Price for 4 Visits Annual Plan",
               },
             }}
-            href={"/hmo/basic"}
+            href={"/hmo/ultimate"}
           />
         </div>
 

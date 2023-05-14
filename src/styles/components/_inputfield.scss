@@ -10,13 +10,14 @@
     font-size: 1.4rem;
     font-family: "Graphik L Trial";
     color: get-color(primary);
+    transition: all 0.5s;
 
     &::placeholder {
       color: hsla(0, 0%, 71%, 0.288);
     }
 
     &:focus {
-      outline: none;
+      outline: 0.5px solid get-color(primary);
       // border: none;
     }
   }
@@ -37,7 +38,7 @@
     color: get-color(primary);
 
     &:focus {
-      outline: none;
+      outline: 0.5px solid get-color(primary);
       // border: none;
     }
   }
@@ -60,6 +61,20 @@
 
   &--dir-column {
     flex-direction: column;
+  }
+
+  &__select {
+    border: 0.5px solid #b4b4b4;
+    padding: 1.2rem;
+    border-radius: 0.8rem;
+    font-size: 1.4rem;
+    font-family: "Graphik L Trial";
+    transition: all 0.5s;
+
+    &:focus {
+      outline: 0.5px solid get-color(primary);
+      // border: none;
+    }
   }
 }
 

@@ -7,6 +7,7 @@ import * as Yup from "yup";
 import { useContext, useState } from "react";
 import { ProgressContext } from "@/context/progress";
 import InputField from "@/components/InputField";
+import Link from "next/link";
 
 const DoctorRegistration = () => {
   const { progress } = useContext(ProgressContext);
@@ -53,9 +54,79 @@ const DoctorRegistration = () => {
       </nav>
 
       <FormikStepper initialValues={initialValues} onSubmit={onSubmit}>
-        <FormikStep>Doctors 1</FormikStep>
-        <FormikStep>Doctors 1</FormikStep>
-        <FormikStep>Doctors 1</FormikStep>
+        <FormikStep>
+          <div className="register__form">
+            <div className="register__header">
+              <h2 className="heading heading--2">Register as a Doctor</h2>
+
+              <p className="text-sm">
+                If you are a qualified doctor or nurse, or a certified
+                healthcare provider looking for an opportunity to help deliver
+                quality medical services for the elderly, we welcome you to join
+                our growing family of committed medical professionals.
+              </p>
+            </div>
+
+            <div className="register__terms">
+              <p>
+                Read and agree with these{" "}
+                <Link href={"#"}>terms and conditions</Link> before registering:{" "}
+              </p>
+
+              <p>
+                <Link href={"#"}>1. Confidentiality Agreement</Link>
+              </p>
+
+              <p>
+                <Link href={"#"}>2. Role as a Doctor</Link>
+              </p>
+            </div>
+
+            <h4 className="heading heading--4">
+              Gerocare Doctor Application Form
+            </h4>
+
+            <h6 className="heading heading--6">Bio Data</h6>
+
+            <div className="form__flex">
+              <InputField
+                type={"text"}
+                id={"firstname"}
+                name={"firstname"}
+                label={"Full name"}
+                placeholder={"First name"}
+              />
+
+              <InputField
+                type={"text"}
+                id={"lastname"}
+                name={"lastname"}
+                label={""}
+                placeholder={"Last name"}
+              />
+            </div>
+
+            <InputField
+              type={"email"}
+              id={"email"}
+              name={"email"}
+              label={"Email Address"}
+              placeholder={"same@gmail.com"}
+            />
+
+            <InputField
+              type={"number"}
+              id={"phone"}
+              name={"phone"}
+              label={"Phone number"}
+              placeholder={"081**********"}
+            />
+
+            <div className="form__flex"></div>
+          </div>
+        </FormikStep>
+        <FormikStep>Doctors 2</FormikStep>
+        <FormikStep>Doctors 3</FormikStep>
       </FormikStepper>
     </>
   );

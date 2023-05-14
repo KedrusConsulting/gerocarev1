@@ -6,7 +6,9 @@ export const FormikStep = ({ children, getFormikState }) => {
   const formik = useFormikContext();
 
   useEffect(() => {
-    getFormikState(formik);
+    {
+      getFormikState && getFormikState(formik);
+    }
   }, [formik.values]);
 
   return <div className="form__step">{children}</div>;

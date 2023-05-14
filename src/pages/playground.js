@@ -7,33 +7,28 @@ import SimpleSteps from "@/components/SimpleSteps";
 import Image from "next/image";
 import HMOPricingCard from "@/components/HMOPricingCard";
 import ServiceTag from "@/components/ServicesTag";
+import SelectField from "@/components/SelectField";
 
-const steps = [
-  {
-    step: 1,
-    title: "Create an account",
-    description: "Input your credentials to setup your personal account",
-  },
-  {
-    step: 2,
-    title: "Add a Beneficiary",
-    description: "Provide the relevant details of your beneficiary",
-  },
+export default function Playground() {
+  const options = [
+    {
+      value: "Select",
+    },
 
-  {
-    step: 3,
-    title: "Select a plan",
-    description: "Choose a subscription plan that suits your needs",
-  },
+    {
+      value: "5 - 10 years",
+    },
+    {
+      value: "10 - 15 years",
+    },
+    {
+      value: "15 - 20 years",
+    },
+    {
+      value: "Above 20 years",
+    },
+  ];
 
-  {
-    step: 4,
-    title: "Make Payment",
-    description: "Proceed to payment and start enjoying our services",
-  },
-];
-
-export default function Contact() {
   return (
     <>
       <Head>
@@ -51,9 +46,12 @@ export default function Contact() {
 
       <Navigation />
 
-      <div className="row">
-        <ServiceTag service={"Teleconsultation"} />
-      </div>
+      <SelectField
+        options={options}
+        id={"duration"}
+        name={"duration"}
+        label={"How long have you been in Business"}
+      />
 
       <Footer />
 
