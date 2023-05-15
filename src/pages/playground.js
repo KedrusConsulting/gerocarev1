@@ -9,6 +9,7 @@ import HMOPricingCard from "@/components/HMOPricingCard";
 import ServiceTag from "@/components/ServicesTag";
 import SelectField from "@/components/SelectField";
 import RadioBtnGroup from "@/components/RadioBtnGroup";
+import CheckboxGroup from "@/components/CheckboxGroup";
 
 export default function Playground() {
   // const options = [
@@ -29,12 +30,6 @@ export default function Playground() {
   //     value: "Above 20 years",
   //   },
   // ];
-
-  const options = [
-    { id: "yes", label: "I am an existing customer" },
-    { id: "no", label: "I am a new customer" },
-    { id: "not-sure", label: "Not Sure" },
-  ];
 
   return (
     <>
@@ -60,11 +55,25 @@ export default function Playground() {
         label={"How long have you been in Business"}
       /> */}
 
-      <RadioBtnGroup
-        options={options}
+      {/* <RadioBtnGroup
+        options={existingConsumerOptions}
         label={"Are you an existing customer?"}
         name={"existingConsumer"}
       />
+
+      <RadioBtnGroup
+        options={bookingCapacityOptions}
+        label={"In what capacity are you booking a Caregiver?"}
+        name={"bookingCapacity"}
+      />
+
+      <CheckboxGroup
+        options={selectServicesOptions}
+        label={
+          "Which of the following home care services are you seeking? (Services to be provided by the Caregiver Please tick all that apply)"
+        }
+        name={"services"}
+      /> */}
 
       <Footer />
 

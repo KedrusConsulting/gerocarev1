@@ -2,7 +2,7 @@ import { ProgressContext } from "@/context/progress";
 import { Form, Formik, useFormikContext } from "formik";
 import React, { useContext, useEffect, useState } from "react";
 
-export const FormikStep = ({ children, getFormikState }) => {
+export const FormikStep = ({ children, getFormikState, className }) => {
   const formik = useFormikContext();
 
   useEffect(() => {
@@ -11,7 +11,9 @@ export const FormikStep = ({ children, getFormikState }) => {
     }
   }, [formik.values]);
 
-  return <div className="form__step">{children}</div>;
+  return (
+    <div className={`form__step ${className ? className : ""}`}>{children}</div>
+  );
 };
 
 const FormikStepper = ({ children, ...props }) => {

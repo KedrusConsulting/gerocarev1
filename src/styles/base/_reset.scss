@@ -40,5 +40,8 @@ ul {
   list-style: none;
 }
 
-button {
+input {
+  &::-webkit-inner-spin-button {
+    display: none;
+  }
 }

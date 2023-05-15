@@ -26,6 +26,19 @@
     .inputfield {
       margin-bottom: 2.4rem;
     }
+
+    .heading--5 {
+      font-family: "Graphik M Trial";
+      margin-bottom: 0.8rem;
+    }
+
+    .splitscreen {
+      align-items: start;
+    }
+
+    &-full {
+      max-width: 100rem;
+    }
   }
 
   &__flex {

@@ -7,6 +7,7 @@ import { Formik } from "formik";
 import * as Yup from "yup";
 import Section from "@/Layout/Section";
 import InputField from "@/components/InputField";
+import TextArea from "@/components/TextArea";
 
 export default function Contact() {
   const initialValues = {
@@ -110,16 +111,11 @@ export default function Contact() {
                       error={errors.email}
                     />
 
-                    <fieldset className="inputfield">
-                      <label className="inputfield__label" htmlFor="message">
-                        Message
-                      </label>
-                      <textarea
-                        className="inputfield__textarea"
-                        id="message"
-                        name="message"
-                      ></textarea>
-                    </fieldset>
+                    <TextArea
+                      id={"message"}
+                      name={"message"}
+                      label={"Message"}
+                    />
 
                     <button className="btn btn--main btn--full" type="submit">
                       Send Message
