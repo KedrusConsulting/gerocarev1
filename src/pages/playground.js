@@ -8,25 +8,32 @@ import Image from "next/image";
 import HMOPricingCard from "@/components/HMOPricingCard";
 import ServiceTag from "@/components/ServicesTag";
 import SelectField from "@/components/SelectField";
+import RadioBtnGroup from "@/components/RadioBtnGroup";
 
 export default function Playground() {
-  const options = [
-    {
-      value: "Select",
-    },
+  // const options = [
+  //   {
+  //     value: "Select",
+  //   },
 
-    {
-      value: "5 - 10 years",
-    },
-    {
-      value: "10 - 15 years",
-    },
-    {
-      value: "15 - 20 years",
-    },
-    {
-      value: "Above 20 years",
-    },
+  //   {
+  //     value: "5 - 10 years",
+  //   },
+  //   {
+  //     value: "10 - 15 years",
+  //   },
+  //   {
+  //     value: "15 - 20 years",
+  //   },
+  //   {
+  //     value: "Above 20 years",
+  //   },
+  // ];
+
+  const options = [
+    { id: "yes", label: "I am an existing customer" },
+    { id: "no", label: "I am a new customer" },
+    { id: "not-sure", label: "Not Sure" },
   ];
 
   return (
@@ -46,11 +53,17 @@ export default function Playground() {
 
       <Navigation />
 
-      <SelectField
+      {/* <SelectField
         options={options}
         id={"duration"}
         name={"duration"}
         label={"How long have you been in Business"}
+      /> */}
+
+      <RadioBtnGroup
+        options={options}
+        label={"Are you an existing customer?"}
+        name={"existingConsumer"}
       />
 
       <Footer />
