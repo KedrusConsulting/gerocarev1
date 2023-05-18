@@ -104,6 +104,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include respond(phone) {
+      flex-direction: column;
+    }
   }
 
   &--center {

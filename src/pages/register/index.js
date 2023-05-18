@@ -162,7 +162,7 @@ const Register = () => {
                 type={"text"}
                 id={"firstname"}
                 name={"firstname"}
-                label={"Full name"}
+                label={"First name"}
                 placeholder={"First name"}
               />
 
@@ -170,7 +170,7 @@ const Register = () => {
                 type={"text"}
                 id={"lastname"}
                 name={"lastname"}
-                label={""}
+                label={"Last name"}
                 placeholder={"Last name"}
               />
             </div>
@@ -228,7 +228,7 @@ const Register = () => {
                                     type={"text"}
                                     id={"beneficiaryFirstname"}
                                     name={`beneficiaryDetails.${index}.firstname`}
-                                    label={"Beneficiary's Fullname"}
+                                    label={"Beneficiary's Firstname"}
                                     placeholder={"First name"}
                                   />
 
@@ -236,7 +236,7 @@ const Register = () => {
                                     type={"text"}
                                     id={"beneficiaryLastname"}
                                     name={`beneficiaryDetails.${index}.lastname`}
-                                    label={""}
+                                    label={"Beneficiary's Lastname"}
                                     placeholder={"Last name"}
                                   />
                                 </div>
@@ -248,14 +248,6 @@ const Register = () => {
                                     name={`beneficiaryDetails.${index}.dateOfBirth`}
                                     label={"Beneficiary's Date of Birth"}
                                     placeholder={"First name"}
-                                  />
-
-                                  <InputField
-                                    type={"text"}
-                                    id={"beneficiaryGender"}
-                                    name={`beneficiaryDetails.${index}.gender`}
-                                    label={"Beneficiary's Gender"}
-                                    placeholder={"Choose Gender"}
                                   />
 
                                   <SelectField
