@@ -152,52 +152,70 @@ export const TeleConsultation = () => {
 };
 
 export const ElderlyHomeVisit = () => {
+  const [tab, setTab] = useState(false);
+
   return (
-    <div className="choose-plan__elderly">
-      <div>
-        <input
-          type="radio"
-          id="elderly-single"
-          name="elderly-home-visits"
-          className="inputfield__radio"
-        />
-
-        <label className="choose-plan__label" htmlFor="elderly-single">
-          <div className="choose-plan__elderly-single">
-            <span>Single</span>
-
-            <span className="choose-plan__amt">
-              N45,000<span>/Per Annual</span>
-            </span>
-          </div>
-          <p className="choose-plan__desc">
-            For 1 Parent, 1 Address for 3 Visits valid for 3 Months.
-          </p>
+    <>
+      <div className="tab choose-plan__tab">
+        <input type="checkbox" id="tab-switch" name="tab-switch" />
+        <label
+          className="tab__ctrl"
+          htmlFor="tab-switch"
+          onClick={() => setTab((prev) => !prev)}
+        >
+          <span>Annually</span>
+          <span>Quarterly</span>
         </label>
       </div>
 
-      <div>
-        <input
-          type="radio"
-          id="elderly-couple"
-          name="elderly-home-visits"
-          className="inputfield__radio"
-        />
+      <div className="choose-plan__elderly">
+        <div>
+          <input
+            type="radio"
+            id="elderly-single"
+            name="elderly-home-visits"
+            className="inputfield__radio"
+          />
 
-        <label className="choose-plan__label" htmlFor="elderly-couple">
-          <div className="choose-plan__elderly-single">
-            <span>Couple</span>
+          <label className="choose-plan__label" htmlFor="elderly-single">
+            <div className="choose-plan__elderly-single">
+              <span>Single</span>
 
-            <span className="choose-plan__amt">
-              N81,000<span>/Per Annual</span>
-            </span>
-          </div>
-          <p className="choose-plan__desc">
-            12 visits as needed in total valid for 12 months.
-          </p>
-        </label>
+              <span className="choose-plan__amt">
+                {!tab ? "N90,000" : "N45,000"}
+                <span>/Per {!tab ? "Annual" : "Quater"}</span>
+              </span>
+            </div>
+            <p className="choose-plan__desc">
+              For 1 Parent, 1 Address for 3 Visits valid for 3 Months.
+            </p>
+          </label>
+        </div>
+
+        <div>
+          <input
+            type="radio"
+            id="elderly-couple"
+            name="elderly-home-visits"
+            className="inputfield__radio"
+          />
+
+          <label className="choose-plan__label" htmlFor="elderly-couple">
+            <div className="choose-plan__elderly-single">
+              <span>Couple</span>
+
+              <span className="choose-plan__amt">
+                {!tab ? "N162,000" : "N81,000"}
+                <span>/Per {!tab ? "Annual" : "Quater"}</span>
+              </span>
+            </div>
+            <p className="choose-plan__desc">
+              12 visits as needed in total valid for 12 months.
+            </p>
+          </label>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

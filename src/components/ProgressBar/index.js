@@ -12,6 +12,18 @@ const ProgressBar = ({ value }) => {
       ></progress>
 
       <div className="progress-bar__progress">
+        <div className="progress-bar__mobile">
+          Step{" "}
+          {value > 0 && value <= 33.33336
+            ? "1"
+            : value >= 33.33336 && value <= 66.66667
+            ? "2"
+            : value >= 66.66667 && value <= 100
+            ? "3"
+            : "1"}{" "}
+          of 3
+        </div>
+
         <div
           className={`step ${value > 0 && value <= 100 ? "step--active" : ""}`}
         >

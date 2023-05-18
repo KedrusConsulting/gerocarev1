@@ -7,7 +7,17 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+
+      @include respond(phone) {
+        flex-direction: column;
+      }
     }
+
+    // .logo {
+    //   @include respond(phone) {
+    //     display: none;
+    //   }
+    // }
   }
 
   &__header {
@@ -50,6 +60,12 @@
     a:visited {
       font-family: "Graphik M Trial";
       color: get-color(primary);
+    }
+  }
+
+  &__empty {
+    @include respond(tab-port) {
+      display: none;
     }
   }
 }
