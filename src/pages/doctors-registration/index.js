@@ -8,6 +8,7 @@ import { useContext, useState } from "react";
 import { ProgressContext } from "@/context/progress";
 import InputField from "@/components/InputField";
 import Link from "next/link";
+import SelectField from "@/components/SelectField";
 
 const DoctorRegistration = () => {
   const { progress } = useContext(ProgressContext);
@@ -122,7 +123,9 @@ const DoctorRegistration = () => {
               placeholder={"081**********"}
             />
 
-            <div className="form__flex"></div>
+            <div className="form__flex">
+              <SelectField name={""} />
+            </div>
           </div>
         </FormikStep>
         <FormikStep>Doctors 2</FormikStep>
