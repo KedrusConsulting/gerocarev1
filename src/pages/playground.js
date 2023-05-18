@@ -2,32 +2,37 @@ import Head from "next/head";
 import Navigation from "@/components/Navigation";
 
 import Footer from "@/components/Footer";
-import OurServices from "@/components/OurServices";
-import SimpleSteps from "@/components/SimpleSteps";
+import PaymentMethod from "@/components/PaymentMethod";
 import Image from "next/image";
-import HMOPricingCard from "@/components/HMOPricingCard";
-import ServiceTag from "@/components/ServicesTag";
-import SelectField from "@/components/SelectField";
-import RadioBtnGroup from "@/components/RadioBtnGroup";
-import CheckboxGroup from "@/components/CheckboxGroup";
 
 export default function Playground() {
   // const options = [
   //   {
-  //     value: "Select",
-  //   },
-
-  //   {
-  //     value: "5 - 10 years",
-  //   },
-  //   {
-  //     value: "10 - 15 years",
-  //   },
-  //   {
-  //     value: "15 - 20 years",
+  //     id: "paystack",
+  //     paymentMethod: (
+  //       <Image
+  //         src={require("@/assets/img/paystack-2.png").default}
+  //         alt="Paystack Logo"
+  //       />
+  //     ),
   //   },
   //   {
-  //     value: "Above 20 years",
+  //     id: "paypal",
+  //     paymentMethod: (
+  //       <Image
+  //         src={require("@/assets/img/paypal-2.png").default}
+  //         alt="PayPal Logo"
+  //       />
+  //     ),
+  //   },
+  //   {
+  //     id: "stripe",
+  //     paymentMethod: (
+  //       <Image
+  //         src={require("@/assets/img/stripe.png").default}
+  //         alt="Stripe Logo"
+  //       />
+  //     ),
   //   },
   // ];
 
@@ -73,6 +78,12 @@ export default function Playground() {
           "Which of the following home care services are you seeking? (Services to be provided by the Caregiver Please tick all that apply)"
         }
         name={"services"}
+      /> */}
+
+      {/* <PaymentMethod
+        options={options}
+        label={"Select Payment Method"}
+        name={"paymentMethod"}
       /> */}
 
       <Footer />

@@ -1,0 +1,92 @@
+.choose-plan {
+  &__teleconsultation,
+  &__elderly,
+  &__on-demand-service {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #111212;
+    margin: 4rem 0;
+
+    & > div:not(:last-child) {
+      margin-right: 1.6rem;
+    }
+  }
+
+  &__hmo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    row-gap: 2.4rem;
+  }
+
+  &__tab {
+    margin: 4rem 0 2.4rem;
+  }
+
+  &__label {
+    display: inline-block;
+    border: 2px solid #ebebeb;
+    border-radius: 0.8rem;
+    padding: 2.4rem;
+    text-align: center;
+    position: relative;
+    max-width: 22rem;
+    cursor: pointer;
+
+    span {
+      font-family: "Graphik M Trial";
+      display: block;
+      font-size: 1.3rem;
+      line-height: 1.5rem;
+      margin-bottom: 1.6rem;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+
+    &::after {
+      content: url("../../assets/img/checked.svg");
+      display: block;
+      position: absolute;
+      top: 1.6rem;
+      left: 1.6rem;
+      opacity: 0;
+    }
+  }
+
+  &__amt {
+    font-size: 2.6rem !important;
+    line-height: 2.9rem !important;
+    color: #075450;
+
+    span {
+      display: inline;
+      font-size: 1rem;
+      font-family: "Graphik R Trial";
+      line-height: 1.5rem;
+      color: #a1a2a2;
+    }
+  }
+
+  &__duration {
+    font-family: "Graphik R Trial" !important;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    color: #a1a2a2;
+  }
+
+  .inputfield__radio {
+    display: flex;
+  }
+
+  .inputfield__radio:checked ~ &__label {
+    border: 2px solid get-color(primary);
+  }
+
+  .inputfield__radio:checked ~ &__label::after {
+    opacity: 1;
+  }
+}

@@ -3,19 +3,35 @@ import Logo from "@/components/Logo";
 import ProgressBar from "@/components/ProgressBar";
 import FormikStepper, { FormikStep } from "@/components/FormikStepper";
 import * as Yup from "yup";
-import { useContext, useState } from "react";
+import { useContext, useRef, useState } from "react";
 import { ProgressContext } from "@/context/progress";
 import InputField from "@/components/InputField";
 import { FieldArray } from "formik";
 import Link from "next/link";
 import Image from "next/image";
+import SelectField from "@/components/SelectField";
+import PaymentMethod from "@/components/PaymentMethod";
+import {
+  ElderlyHomeVisit,
+  HMO,
+  OnDemandService,
+  TeleConsultation,
+} from "@/components/ChoosePlan";
 
 const Register = () => {
   const { progress } = useContext(ProgressContext);
   const [formikState, setFormikState] = useState();
+  const [service, setService] = useState();
+
+  const serviceRef = useRef();
 
   const getFormikState = (values) => {
     setFormikState(values);
+  };
+
+  const handleServiceChange = (e) => {
+    setService(serviceRef.current.value);
+    console.log(serviceRef.current.value);
   };
 
   const initialValues = {
@@ -45,6 +61,51 @@ const Register = () => {
   const onSubmit = async (values, { resetForm }, onSubmitProps) => {
     console.log(values);
   };
+
+  const genderOptions = [
+    { value: "Select Gender" },
+    { value: "Male" },
+    { value: "Female" },
+    { value: "Others" },
+  ];
+
+  const choosePlanOptions = [
+    { value: "Select" },
+    { value: "Phone Consultation" },
+    { value: "Elderly Home Visits" },
+    { value: "On Demand Service" },
+    { value: "HMO" },
+  ];
+
+  const options = [
+    {
+      id: "paystack",
+      paymentMethod: (
+        <Image
+          src={require("@/assets/img/paystack-2.png").default}
+          alt="Paystack Logo"
+        />
+      ),
+    },
+    {
+      id: "paypal",
+      paymentMethod: (
+        <Image
+          src={require("@/assets/img/paypal-2.png").default}
+          alt="PayPal Logo"
+        />
+      ),
+    },
+    {
+      id: "stripe",
+      paymentMethod: (
+        <Image
+          src={require("@/assets/img/stripe.png").default}
+          alt="Stripe Logo"
+        />
+      ),
+    },
+  ];
 
   return (
     <>
@@ -196,6 +257,13 @@ const Register = () => {
                                     label={"Beneficiary's Gender"}
                                     placeholder={"Choose Gender"}
                                   />
+
+                                  <SelectField
+                                    options={genderOptions}
+                                    id={"beneficiaryGender"}
+                                    name={`beneficiaryDetails.${index}.gender`}
+                                    label={"Beneficiary's Gender"}
+                                  />
                                 </div>
 
                                 <InputField
@@ -287,7 +355,57 @@ const Register = () => {
             />
           </div>
         </FormikStep>
-        <FormikStep getFormikState={getFormikState}>Step 3</FormikStep>
+        <FormikStep getFormikState={getFormikState}>
+          <div className="register__form">
+            <div className="register__header">
+              <h2 className="heading heading--2">Choose a Plan</h2>
+
+              <p>
+                It just takes a few minutes to sign up and get fast, easy access
+                to care, 24/7. No need for your insurance card yet.
+              </p>
+            </div>
+
+            <SelectField
+              ref={serviceRef}
+              options={choosePlanOptions}
+              id={"choosePlan"}
+              name={`choosePlan`}
+              label={"Choose a Service"}
+              onChange={handleServiceChange}
+            />
+
+            {service === "Phone Consultation" && (
+              <div className="register__plan-options">
+                {<TeleConsultation />}
+              </div>
+            )}
+
+            {service === "Elderly Home Visits" && (
+              <div className="register__plan-options">
+                <ElderlyHomeVisit />
+              </div>
+            )}
+
+            {service === "On Demand Service" && (
+              <div className="register__plan-options">
+                <OnDemandService />
+              </div>
+            )}
+
+            {service === "HMO" && (
+              <div className="register__plan-options">
+                <HMO />
+              </div>
+            )}
+
+            <PaymentMethod
+              options={options}
+              label={"Select Payment Method"}
+              name={"paymentMethod"}
+            />
+          </div>
+        </FormikStep>
       </FormikStepper>
     </>
   );

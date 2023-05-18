@@ -1,0 +1,51 @@
+.payment-method {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  &__method {
+    display: flex;
+    justify-content: center;
+
+    @include respond(phone) {
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    text-decoration: underline !important;
+    margin-top: 0.8rem;
+  }
+
+  & * {
+    cursor: pointer;
+  }
+
+  .inputfield {
+    border: 0.5px solid #b4b4b4;
+    border-radius: 0.4rem;
+    padding: 1.2rem 1.6rem 0.7rem;
+    width: 16.4rem;
+
+    &:not(:last-child) {
+      margin-right: 1.2rem;
+
+      @include respond(phone) {
+        margin-bottom: 1.2rem !important;
+      }
+    }
+
+    &__label-radio {
+      display: flex;
+      align-items: center;
+    }
+
+    &__label-text {
+      position: relative;
+      top: 2.5px;
+    }
+  }
+}

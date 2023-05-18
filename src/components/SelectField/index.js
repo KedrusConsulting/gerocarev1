@@ -1,13 +1,19 @@
 import { ErrorMessage } from "formik";
-import React from "react";
+import React, { forwardRef } from "react";
 
-const SelectField = ({ name, id, label, error, ...others }) => {
+const SelectField = forwardRef(({ name, id, label, error, ...others }, ref) => {
   return (
     <fieldset className="inputfield">
       <label className="inputfield__label" htmlFor={id}>
         {label}
       </label>
-      <select className="inputfield__select" name={name} id={id}>
+      <select
+        ref={ref}
+        className="inputfield__select"
+        name={name}
+        id={id}
+        onChange={others?.onChange}
+      >
         {others?.options?.map((option, i) => (
           <option key={i} value={option.value}>
             {option.value}
@@ -22,6 +28,6 @@ const SelectField = ({ name, id, label, error, ...others }) => {
       )}
     </fieldset>
   );
-};
+});
 
 export default SelectField;
