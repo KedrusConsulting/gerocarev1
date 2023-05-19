@@ -10,8 +10,17 @@ import InputField from "@/components/InputField";
 import Link from "next/link";
 import SelectField from "@/components/SelectField";
 
+import banks from "../../../banks.json";
+import { StatesContext } from "@/context/states";
+
 const DoctorRegistration = () => {
   const { progress } = useContext(ProgressContext);
+  const {
+    nationalityOptions: countryOptions,
+    stateOptions,
+    lgasOptions,
+    setCurrentState,
+  } = useContext(StatesContext);
 
   const initialValues = {
     firstname: "",
@@ -24,6 +33,59 @@ const DoctorRegistration = () => {
   const onSubmit = async (values, { resetForm }, onSubmitProps) => {
     console.log(values);
   };
+
+  const generateYear = () => {
+    const years = [{ value: "Select Year" }];
+    const currentYear = new Date().getFullYear();
+
+    for (let i = currentYear; i >= currentYear - 70; i--) {
+      years.push({ value: i });
+    }
+
+    return years;
+  };
+
+  const bankNames = banks.map((bank) => {
+    return { value: bank.name };
+  });
+
+  const genderOptions = [
+    { value: "Select Gender" },
+    { value: "Male" },
+    { value: "Female" },
+    { value: "Others" },
+  ];
+
+  const maritalOptions = [
+    { value: "Select status" },
+    { value: "Single" },
+    { value: "Married" },
+    { value: "Others" },
+  ];
+
+  const religionOptions = [
+    { value: "Select Religion" },
+    { value: "Muslim" },
+    { value: "Christian" },
+    { value: "Others" },
+  ];
+
+  const accountTypeOptions = [
+    { value: "Select Account Type" },
+    { value: "Savings" },
+    { value: "Current" },
+    { value: "Default" },
+  ];
+
+  const yearGraduatedOptions = generateYear();
+
+  const bankOptions = [{ value: "Select Bank" }, ...bankNames];
+
+  // const countryOptions = [{ value: "Nigeria" }];
+
+  // const stateOptions = [{ value: "Select State" }];
+
+  // const lgaOptions = [{ value: "Select L.G.A" }];
 
   return (
     <>
@@ -83,9 +145,9 @@ const DoctorRegistration = () => {
               </p>
             </div>
 
-            <h4 className="heading heading--4">
+            <h5 className="heading heading--5">
               Gerocare Doctor Application Form
-            </h4>
+            </h5>
 
             <h6 className="heading heading--6">Bio Data</h6>
 
@@ -124,12 +186,200 @@ const DoctorRegistration = () => {
             />
 
             <div className="form__flex">
-              <SelectField name={""} />
+              <SelectField
+                name={"maritalStatus"}
+                id="marital-status"
+                label="Marital Status"
+                options={maritalOptions}
+              />
+
+              <SelectField
+                name={"gender"}
+                id="gender"
+                label="Gender"
+                options={genderOptions}
+              />
             </div>
           </div>
         </FormikStep>
-        <FormikStep>Doctors 2</FormikStep>
-        <FormikStep>Doctors 3</FormikStep>
+        <FormikStep>
+          <div className="register__form">
+            <div className="register__header">
+              <h2 className="heading heading--2">Register as a Doctor</h2>
+
+              <p className="text-sm">
+                If you are a qualified doctor or nurse, or a certified
+                healthcare provider looking for an opportunity to help deliver
+                quality medical services for the elderly, we welcome you to join
+                our growing family of committed medical professionals.
+              </p>
+            </div>
+
+            <h6 className="heading heading--6">Other Informations</h6>
+
+            <div className="form__flex">
+              <SelectField
+                name={"religion"}
+                id="religion"
+                label="Religion"
+                options={religionOptions}
+              />
+
+              <SelectField
+                name={"yearGraduated"}
+                id="yearGraduated"
+                label="Year Graduated"
+                options={yearGraduatedOptions}
+              />
+            </div>
+
+            <div className="form__flex">
+              <InputField
+                type={"text"}
+                id={"medical-school"}
+                name={"medicalSchool"}
+                label={"Medical School"}
+                placeholder={"Medical School"}
+              />
+
+              <InputField
+                type={"number"}
+                id={"mdcn-number"}
+                name={"mdcnNumber"}
+                label={"MDCN Number"}
+                placeholder={"MDCN Number"}
+              />
+            </div>
+
+            <div className="form__flex">
+              <SelectField
+                name={"accountType"}
+                id="account-type"
+                label="Account Type"
+                options={accountTypeOptions}
+              />
+
+              <SelectField
+                name={"bank"}
+                id="bank"
+                label="Bank"
+                options={bankOptions}
+              />
+            </div>
+
+            <InputField
+              type={"number"}
+              id={"account-number"}
+              name={"acountNumber"}
+              label={"Account Number"}
+              placeholder={"Account Number"}
+            />
+
+            <div className="form__flex">
+              <SelectField
+                name={"country"}
+                id="country"
+                label="Country"
+                options={countryOptions}
+              />
+
+              <SelectField
+                name={"state"}
+                id="state"
+                label="State"
+                options={stateOptions}
+                onChange={(e) => {
+                  setCurrentState(e.target.value);
+                }}
+              />
+            </div>
+
+            <div className="form__flex">
+              <InputField
+                type={"text"}
+                id={"city"}
+                name={"city"}
+                label={"City"}
+                placeholder={"Enter your city"}
+              />
+
+              <SelectField
+                name={"lga"}
+                id="lga"
+                label="L.G.A"
+                options={lgasOptions}
+              />
+            </div>
+          </div>
+        </FormikStep>
+        <FormikStep>
+          <div className="register__form">
+            <div className="register__header">
+              <h2 className="heading heading--2">Register as a Doctor</h2>
+
+              <p className="text-sm">
+                If you are a qualified doctor or nurse, or a certified
+                healthcare provider looking for an opportunity to help deliver
+                quality medical services for the elderly, we welcome you to join
+                our growing family of committed medical professionals.
+              </p>
+            </div>
+
+            <h6 className="heading heading--6">Guarantor Details</h6>
+
+            <div className="form__flex">
+              <InputField
+                type={"text"}
+                id={"firstname"}
+                name={"firstname"}
+                label={"First name"}
+                placeholder={"First name"}
+              />
+
+              <InputField
+                type={"text"}
+                id={"lastname"}
+                name={"lastname"}
+                label={"Last name"}
+                placeholder={"Last name"}
+              />
+            </div>
+
+            <InputField
+              type={"email"}
+              id={"email"}
+              name={"email"}
+              label={"Email"}
+              placeholder={"same@gmail.com"}
+            />
+
+            <InputField
+              type={"number"}
+              id={"phone"}
+              name={"phone"}
+              label={"Phone"}
+              placeholder={"081************"}
+            />
+
+            <InputField
+              type={"text"}
+              id={"address"}
+              name={"address"}
+              label={"Address"}
+              placeholder={"Address"}
+            />
+
+            <h6 className="heading heading--6">Credentials upload</h6>
+
+            <div className="form__flex"></div>
+
+            <div className="form__flex"></div>
+
+            <div className="form__flex"></div>
+
+            <div className="form__term"></div>
+          </div>
+        </FormikStep>
       </FormikStepper>
     </>
   );
