@@ -269,7 +269,7 @@ const RequestCare = () => {
                     type={"text"}
                     id={"sponsorDetailsFirstname"}
                     name={"sponsorDetails.firstname"}
-                    label={"Full name"}
+                    label={"First name"}
                     placeholder={"First name"}
                   />
 
@@ -277,7 +277,7 @@ const RequestCare = () => {
                     type={"text"}
                     id={"sponsorDetailsLastname"}
                     name={"sponsorDetails.lastname"}
-                    label={""}
+                    label={"Last name"}
                     placeholder={"Last name"}
                   />
                 </div>
@@ -343,7 +343,7 @@ const RequestCare = () => {
                     type={"text"}
                     id={"beneficiaryDetailsFirstname"}
                     name={"beneficiaryDetails.firstname"}
-                    label={"Beneficiary Fullname"}
+                    label={"Beneficiary's Firstname"}
                     placeholder={"First name"}
                   />
 
@@ -351,7 +351,7 @@ const RequestCare = () => {
                     type={"text"}
                     id={"beneficiaryDetailsLastname"}
                     name={"beneficiaryDetails.lastname"}
-                    label={""}
+                    label={"Beneficiary's Lastname"}
                     placeholder={"Last name"}
                   />
                 </div>
@@ -424,7 +424,7 @@ const RequestCare = () => {
                     type={"text"}
                     id={"emergencyDetailsFirstname"}
                     name={"emergencyDetails.firstname"}
-                    label={"Full name"}
+                    label={"Firstname"}
                     placeholder={"First name"}
                   />
 
@@ -432,7 +432,7 @@ const RequestCare = () => {
                     type={"text"}
                     id={"emergencyDetailsLastname"}
                     name={"emergencyDetails.lastname"}
-                    label={""}
+                    label={"Lastname"}
                     placeholder={"Last name"}
                   />
                 </div>
