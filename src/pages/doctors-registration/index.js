@@ -12,6 +12,7 @@ import SelectField from "@/components/SelectField";
 
 import banks from "../../../banks.json";
 import { StatesContext } from "@/context/states";
+import Checkbox from "@/components/Checkbox";
 
 const DoctorRegistration = () => {
   const { progress } = useContext(ProgressContext);
@@ -377,7 +378,20 @@ const DoctorRegistration = () => {
 
             <div className="form__flex"></div>
 
-            <div className="form__term"></div>
+            <div className="form__term text-center">
+              <div className="terms">
+                <Checkbox
+                  id={"terms"}
+                  name={"terms"}
+                  label={"Terms and Conditions"}
+                  // onChange={handleChange}
+                />
+
+                <p>
+                  I have read and agree to the following Terms and Conditions
+                </p>
+              </div>
+            </div>
           </div>
         </FormikStep>
       </FormikStepper>

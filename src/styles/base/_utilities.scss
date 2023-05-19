@@ -67,3 +67,22 @@
   animation: var(--bs-spinner-animation-speed) linear infinite
     var(--bs-spinner-animation-name);
 }
+
+.text-center {
+  text-align: center;
+}
+
+.terms {
+  max-width: 70rem;
+  margin: 4rem auto 0;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    margin-top: 0.8rem;
+  }
+}

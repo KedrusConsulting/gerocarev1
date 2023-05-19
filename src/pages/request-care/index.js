@@ -12,9 +12,17 @@ import CheckboxGroup from "@/components/CheckboxGroup";
 import TextArea from "@/components/TextArea";
 import SplitScreen from "@/Layout/SplitScreen";
 import SelectField from "@/components/SelectField";
+import Checkbox from "@/components/Checkbox";
+import { StatesContext } from "@/context/states";
 
 const RequestCare = () => {
   const { progress } = useContext(ProgressContext);
+  const {
+    nationalityOptions: countryOptions,
+    stateOptions,
+    lgasOptions,
+    setCurrentState,
+  } = useContext(StatesContext);
 
   const initialValues = {
     healthCondition: "",
@@ -289,6 +297,42 @@ const RequestCare = () => {
                   label={"Phone number"}
                   placeholder={"081**********"}
                 />
+
+                <div className="form__flex">
+                  <SelectField
+                    id="sponsorDetailsCountry"
+                    name={"sponsorDetails.country"}
+                    label="Country"
+                    options={countryOptions}
+                  />
+
+                  <SelectField
+                    name={"sponsorDetails.state"}
+                    id="sponsorDetailsState"
+                    label="State"
+                    options={stateOptions}
+                    onChange={(e) => {
+                      setCurrentState(e.target.value);
+                    }}
+                  />
+                </div>
+
+                <div className="form__flex">
+                  <SelectField
+                    name={"sponsorDetails.lga"}
+                    id="sponsorDetailsLga"
+                    label="L.G.A"
+                    options={lgasOptions}
+                  />
+
+                  <InputField
+                    type={"text"}
+                    id={"city"}
+                    name={"city"}
+                    label={"City"}
+                    placeholder={"Enter your city"}
+                  />
+                </div>
               </div>
 
               <div className="beneficiary__details">
@@ -394,6 +438,14 @@ const RequestCare = () => {
                 </div>
 
                 <InputField
+                  type={"number"}
+                  id={"sponsorDetailsPhone"}
+                  name={"sponsorDetails.phone"}
+                  label={"Phone number"}
+                  placeholder={"081**********"}
+                />
+
+                <InputField
                   type={"email"}
                   id={"emergencyDetailsEmail"}
                   name={"emergencyDetails.email"}
@@ -401,13 +453,24 @@ const RequestCare = () => {
                   placeholder={"same@gmail.com"}
                 />
 
-                <InputField
-                  type={"number"}
-                  id={"sponsorDetailsPhone"}
-                  name={"sponsorDetails.phone"}
-                  label={"Phone number"}
-                  placeholder={"081**********"}
-                />
+                <div className="form__flex">
+                  <SelectField
+                    name={"state"}
+                    id="state"
+                    label="State"
+                    options={stateOptions}
+                    onChange={(e) => {
+                      setCurrentState(e.target.value);
+                    }}
+                  />
+
+                  <SelectField
+                    name={"lga"}
+                    id="lga"
+                    label="L.G.A"
+                    options={lgasOptions}
+                  />
+                </div>
               </div>
 
               <div className="work__pattern">
@@ -420,6 +483,23 @@ const RequestCare = () => {
                 />
               </div>
             </SplitScreen>
+
+            <div className="form__term text-center">
+              <div className="terms">
+                <Checkbox
+                  id={"terms"}
+                  name={"terms"}
+                  label={"Terms and Conditions"}
+                  // onChange={handleChange}
+                />
+
+                <p>
+                  By clicking this, I agree that GeroCare can create an account
+                  for myself and the client so they can get reports and other
+                  information about care service to me on their platform.
+                </p>
+              </div>
+            </div>
           </div>
         </FormikStep>
       </FormikStepper>
