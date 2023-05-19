@@ -62,16 +62,7 @@ const Testimonials = () => {
             author_location={"Lagos"}
           />
         </SwiperSlide>
-        <SwiperSlide>
-          <Blockquote
-            description={
-              "“I nearly lost my dad to a heart failure because of a wrong prescription from the hospital he was admitted in. Thankfully your team came in at the right time and reviewed his treatment and prescribed a better approach. Your guys are the real MVP. Thank you!”"
-            }
-            image_url={require("@/assets/img/uka_eje.png").default}
-            author_name={"Uka Eje"}
-            author_location={"Lagos"}
-          />
-        </SwiperSlide>
+
         <SwiperSlide>
           <Blockquote
             description={
@@ -79,6 +70,17 @@ const Testimonials = () => {
             }
             image_url={require("@/assets/img/icon_user_avatar.svg").default}
             author_name={"Tega Samuel"}
+            author_location={"Lagos"}
+          />
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <Blockquote
+            description={
+              "“I nearly lost my dad to a heart failure because of a wrong prescription from the hospital he was admitted in. Thankfully your team came in at the right time and reviewed his treatment and prescribed a better approach. Your guys are the real MVP. Thank you!”"
+            }
+            image_url={require("@/assets/img/uka_eje.png").default}
+            author_name={"Uka Eje"}
             author_location={"Lagos"}
           />
         </SwiperSlide>
