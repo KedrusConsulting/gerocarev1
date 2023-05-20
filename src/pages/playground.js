@@ -3,7 +3,6 @@ import Navigation from "@/components/Navigation";
 
 import Footer from "@/components/Footer";
 import { useContext } from "react";
-import ModalProvider, { MoadlContext } from "@/context/modal";
 import Link from "next/link";
 
 export default function Playground() {
@@ -26,21 +25,19 @@ export default function Playground() {
 
       <Navigation />
 
-      <ModalProvider>
-        <Link href={"#"} onClick={handleOpen}>
-          Open Modal
-        </Link>
+      <Link href={"#"} onClick={handleOpen}>
+        Open Modal
+      </Link>
 
-        {open && (
-          <div className="modal">
-            <div className="modal__container">
-              <Link href={"#"} onClick={handleClose}>
-                Close Modal
-              </Link>
-            </div>
+      {open && (
+        <div className="modal">
+          <div className="modal__container">
+            <Link href={"#"} onClick={handleClose}>
+              Close Modal
+            </Link>
           </div>
-        )}
-      </ModalProvider>
+        </div>
+      )}
 
       <Footer />
 

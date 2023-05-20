@@ -458,7 +458,121 @@ const DoctorRegistration = () => {
           </div>
 
           <div className="modal__body">
-            <p>lorem</p>
+            <p>
+              It is the responsibility of all GeroCare workforce members, as
+              defined above, including GeroCare doctors, employees, medical
+              staff and house staff, to preserve and protect confidential
+              patient, employee and business information.
+            </p>
+
+            <p>
+              Confidential Patient Care Information includes: Any individually
+              identifiable information in possession or derived from a provider
+              of health care regarding a patient’s medical history, mental, or
+              physical condition or treatment, as well as the patient’s and/or
+              their family members records, test results, conversations,
+              research records and financial information. Examples include, but
+              are not limited to:
+            </p>
+
+            <ul>
+              <li>
+                Physical medical and psychiatric records including electronic,
+                paper, photo, video, diagnostic and therapeutic reports,
+                laboratory and pathology samples;
+              </li>
+              <li>Patient insurance and billing records;</li>
+              <li>
+                Mainframe and department based computerized patient data and
+                alphanumeric radio pager messages;
+              </li>
+              <li>
+                Visual observation of patients receiving medical care or
+                accessing services; and
+              </li>
+              <li>Verbal information provided by or about a patient.</li>
+            </ul>
+
+            <p>
+              Confidential Employee and Business Information include, but are
+              not limited to, the following:
+            </p>
+
+            <ul>
+              <li>Employee home telephone number and address;</li>
+              <li>Spouse or other relative names;</li>
+              <li>Information related to evaluation of performance;</li>
+              <li>
+                Disclosure of confidential business information that would cause
+                harm to GeroCare
+              </li>
+            </ul>
+
+            <p>I understand and acknowledge that:</p>
+
+            <ul>
+              <li>
+                I shall respect and maintain the confidentiality of all
+                discussions, deliberations, patient care records and any other
+                information generated in connection with individual patient
+                care, risk management and/or peer review activities.
+              </li>
+              <li>
+                It is my legal and ethical responsibility to protect the
+                privacy, confidentiality and security of all medical records,
+                proprietary information and other confidential information
+                relating to GeroCare and its affiliates, including business,
+                employment and medical information relating to our patients,
+                members, employees and health care providers.
+              </li>
+              <li>
+                I shall only access or disseminate patient care information in
+                the performance of my assigned duties and where required by or
+                permitted to by law, and in a manner which is consistent with
+                officially adopted policies of GeroCare, or where no officially
+                adopted policy exists, only with the express approval of my
+                supervisor or designee. I shall make no voluntary disclosure of
+                any discussion, deliberations, patient care records or any other
+                patient care, peer review or risk management information, except
+                to persons authorized to receive it in the conduct of GeroCare
+                affairs.
+              </li>
+              <li>
+                GEROCARE performs audits and reviews patient records in order to
+                identify inappropriate access.
+              </li>
+              <li>
+                My user ID is recorded when I access electronic records and that
+                I am the only one authorized to use my user ID. Use of my user
+                ID is my responsibility whether by me or anyone else. I will
+                only access the minimum necessary information to satisfy my job
+                role or the need of the request.
+              </li>
+              <li>
+                I agree to discuss confidential information only in the work
+                place and only for job related purposes and to not discuss such
+                information outside of the work place or within hearing of other
+                people who do not have a need to know about the information.
+              </li>
+              <li>
+                I understand that any and all references to HIV testing, such as
+                any clinical test or laboratory test used to identify HIV, a
+                component of HIV, or antibodies or antigens to HIV, are
+                specifically protected under law and unauthorized release of
+                confidential information may make me subject to legal and/or
+                disciplinary action.
+              </li>
+              <li>
+                I understand that the law specifically protects psychiatric and
+                drug abuse records, and that unauthorized release of such
+                information may make me subject to legal and/or disciplinary
+                action.
+              </li>
+              <li>
+                My obligation to safeguard patient confidentiality continues
+                after I am no longer a GEROCARE workforce member.
+              </li>
+            </ul>
           </div>
         </Modal>
       )}
@@ -481,7 +595,81 @@ const DoctorRegistration = () => {
           </div>
 
           <div className="modal__body">
-            <p>Role</p>
+            <p>REPORTS TO - Medical Services Team Lead</p>
+
+            <p>
+              JOB PURPOSE:A GeroCare doctors primary purpose is review
+              clients/patients assigned to them at least once a month in their
+              homes as a form of preventive care to help them maintain a healthy
+              state or prevent deteriorations in their health conditions if any.
+            </p>
+
+            <p>Duties and responsibilities:</p>
+
+            <ul>
+              <li>
+                Make use of the GeroCare Mobile Application while seeing
+                clients/patients
+              </li>
+              <li>
+                To submit patient reports within 6 hours of conclusion of the
+                visit.
+              </li>
+              <li>
+                To spend a minimum of 30 minutes with each client/patient on
+                each visit
+              </li>
+              <li>
+                Visit clients/patients assigned to them at least once a month
+                depending on the patient subscription
+              </li>
+              <li>
+                To make requests for drugs, tests and any other needs of the
+                patient via the GeroCare doctor app
+              </li>
+              <li>
+                Be available for telephone or whatsapp consultations for
+                assigned patients in between regular visits
+              </li>
+              <li>
+                To adhere to suggestions provided by the quality assurance team
+              </li>
+              <li>
+                To participate in update courses and quality assurance
+                activities
+              </li>
+            </ul>
+
+            <p>Qualifications:</p>
+
+            <ul>
+              <li> Degree in Medicine and Surgery</li>
+              <li>Post NYSC</li>
+              <li>GeroCare Certification</li>
+            </ul>
+
+            <p>Working conditions</p>
+
+            <ul>
+              <li>
+                Scheduled home visits that are convenient for both Client and
+                Doctor
+              </li>
+              <li>Number of visits dependent on patient subscription</li>
+              <li>Minimum of one visit per month</li>
+              <li>
+                Responsible for getting yourself to and from the home of the
+                client/patient
+              </li>
+              <li>
+                Doctors would be paid ₦5,000 per visit to a single patient in
+                one house or ₦8,000 to a couple in one house
+              </li>
+              <li>
+                Doctor would be paid 10,000 for urgent visits requested to be
+                done within 24 hours.
+              </li>
+            </ul>
           </div>
         </Modal>
       )}
