@@ -14,7 +14,8 @@
 
 # production
 /build
-/states.json
+
+states.json
 
 # misc
 .DS_Store
