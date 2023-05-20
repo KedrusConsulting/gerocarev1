@@ -1,0 +1,70 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(get-color(primary), 0.8);
+  // opacity: 0.8;
+  // backdrop-filter: blur(10px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 30;
+
+  &__container {
+    width: 70%;
+    height: 80vh;
+    background-color: #ffffff;
+    border-radius: 1.2rem;
+    opacity: 1;
+
+    @include respond(tab-port) {
+      width: 85%;
+    }
+
+    @include respond(phone) {
+      width: 95%;
+    }
+  }
+
+  &__header {
+    display: grid;
+    grid-template-columns: min-content 1fr max-content;
+    justify-items: center;
+    align-items: center;
+    padding: 2.4rem;
+
+    @include respond(tab-port) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: max-content max-content;
+      justify-items: stretch;
+      gap: 1.6rem;
+    }
+
+    .heading {
+      font-family: "Graphik M Trial";
+      color: get-color(primary);
+
+      @include respond(tab-port) {
+        // font-size: 2.4rem;
+        // line-height: 3.2rem;
+        grid-row: 2 / 3;
+        grid-column: 1 / -1;
+        justify-self: center;
+        text-align: center;
+      }
+    }
+
+    img {
+      @include respond(tab-port) {
+        justify-self: end;
+      }
+    }
+  }
+
+  &__body {
+    padding: 0 2.4rem;
+  }
+}

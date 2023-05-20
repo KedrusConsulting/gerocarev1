@@ -2,39 +2,12 @@ import Head from "next/head";
 import Navigation from "@/components/Navigation";
 
 import Footer from "@/components/Footer";
-import PaymentMethod from "@/components/PaymentMethod";
-import Image from "next/image";
+import { useContext } from "react";
+import ModalProvider, { MoadlContext } from "@/context/modal";
+import Link from "next/link";
 
 export default function Playground() {
-  // const options = [
-  //   {
-  //     id: "paystack",
-  //     paymentMethod: (
-  //       <Image
-  //         src={require("@/assets/img/paystack-2.png").default}
-  //         alt="Paystack Logo"
-  //       />
-  //     ),
-  //   },
-  //   {
-  //     id: "paypal",
-  //     paymentMethod: (
-  //       <Image
-  //         src={require("@/assets/img/paypal-2.png").default}
-  //         alt="PayPal Logo"
-  //       />
-  //     ),
-  //   },
-  //   {
-  //     id: "stripe",
-  //     paymentMethod: (
-  //       <Image
-  //         src={require("@/assets/img/stripe.png").default}
-  //         alt="Stripe Logo"
-  //       />
-  //     ),
-  //   },
-  // ];
+  const { open, handleOpen, handleClose } = useContext(MoadlContext);
 
   return (
     <>
@@ -53,38 +26,21 @@ export default function Playground() {
 
       <Navigation />
 
-      {/* <SelectField
-        options={options}
-        id={"duration"}
-        name={"duration"}
-        label={"How long have you been in Business"}
-      /> */}
+      <ModalProvider>
+        <Link href={"#"} onClick={handleOpen}>
+          Open Modal
+        </Link>
 
-      {/* <RadioBtnGroup
-        options={existingConsumerOptions}
-        label={"Are you an existing customer?"}
-        name={"existingConsumer"}
-      />
-
-      <RadioBtnGroup
-        options={bookingCapacityOptions}
-        label={"In what capacity are you booking a Caregiver?"}
-        name={"bookingCapacity"}
-      />
-
-      <CheckboxGroup
-        options={selectServicesOptions}
-        label={
-          "Which of the following home care services are you seeking? (Services to be provided by the Caregiver Please tick all that apply)"
-        }
-        name={"services"}
-      /> */}
-
-      {/* <PaymentMethod
-        options={options}
-        label={"Select Payment Method"}
-        name={"paymentMethod"}
-      /> */}
+        {open && (
+          <div className="modal">
+            <div className="modal__container">
+              <Link href={"#"} onClick={handleClose}>
+                Close Modal
+              </Link>
+            </div>
+          </div>
+        )}
+      </ModalProvider>
 
       <Footer />
 

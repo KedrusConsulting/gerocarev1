@@ -52,7 +52,7 @@ const SimpleSteps = () => {
           ))}
         </div>
 
-        <a href="/register" className="btn btn--main simple-step__btn">
+        <a href="/request-care" className="btn btn--main simple-step__btn">
           Get Started
         </a>
       </div>
@@ -89,7 +89,7 @@ export default function CareGiver() {
             live-in services for your elderly loved ones.
           </p>
 
-          <a href="/register" className="btn btn--main">
+          <a href="/request-care" className="btn btn--main">
             Get Started
           </a>
         </div>

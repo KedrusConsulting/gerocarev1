@@ -23,6 +23,10 @@
     @include respond(tab-port) {
       grid-column: 1 / -1;
     }
+
+    .logo {
+      z-index: 1;
+    }
   }
 
   &__text {

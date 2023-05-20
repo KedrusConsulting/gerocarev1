@@ -1,27 +1,51 @@
-import React from "react";
+import React, { useState } from "react";
 import Head from "next/head";
 import Logo from "@/components/Logo";
 import ProgressBar from "@/components/ProgressBar";
 import FormikStepper, { FormikStep } from "@/components/FormikStepper";
 import * as Yup from "yup";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { ProgressContext } from "@/context/progress";
+import { ModalContext } from "@/context/modal";
+import { StatesContext } from "@/context/states";
 import InputField from "@/components/InputField";
 import Link from "next/link";
 import SelectField from "@/components/SelectField";
 
 import banks from "../../../banks.json";
-import { StatesContext } from "@/context/states";
 import Checkbox from "@/components/Checkbox";
+import Modal from "@/components/Modal";
+import Image from "next/image";
 
 const DoctorRegistration = () => {
   const { progress } = useContext(ProgressContext);
+  const { open, handleOpen, handleClose } = useContext(ModalContext);
+
   const {
     nationalityOptions: countryOptions,
     stateOptions,
     lgasOptions,
     setCurrentState,
   } = useContext(StatesContext);
+
+  const [confidentiality, setConfidentiality] = useState(false);
+  const [role, setRole] = useState(false);
+
+  const handleConfidentialityOpen = () => {
+    setConfidentiality(true);
+  };
+
+  const handleConfidentialityClose = () => {
+    setConfidentiality(false);
+  };
+
+  const handleRoleOpen = () => {
+    setRole(true);
+  };
+
+  const handleRoleClose = () => {
+    setRole(false);
+  };
 
   const initialValues = {
     firstname: "",
@@ -82,12 +106,6 @@ const DoctorRegistration = () => {
 
   const bankOptions = [{ value: "Select Bank" }, ...bankNames];
 
-  // const countryOptions = [{ value: "Nigeria" }];
-
-  // const stateOptions = [{ value: "Select State" }];
-
-  // const lgaOptions = [{ value: "Select L.G.A" }];
-
   return (
     <>
       <Head>
@@ -138,11 +156,27 @@ const DoctorRegistration = () => {
               </p>
 
               <p>
-                <Link href={"#"}>1. Confidentiality Agreement</Link>
+                <Link
+                  href={"#"}
+                  onClick={() => {
+                    handleConfidentialityOpen();
+                    handleOpen();
+                  }}
+                >
+                  1. Confidentiality Agreement
+                </Link>
               </p>
 
               <p>
-                <Link href={"#"}>2. Role as a Doctor</Link>
+                <Link
+                  href={"#"}
+                  onClick={() => {
+                    handleRoleOpen();
+                    handleOpen();
+                  }}
+                >
+                  2. Role as a Doctor
+                </Link>
               </p>
             </div>
 
@@ -395,6 +429,62 @@ const DoctorRegistration = () => {
           </div>
         </FormikStep>
       </FormikStepper>
+
+      {open && confidentiality && (
+        <Modal>
+          {/* <Link
+            href={"#"}
+            onClick={() => {
+              handleConfidentialityClose();
+              handleClose();
+            }}
+          >
+            Close Modal
+          </Link> */}
+
+          <div className="modal__header">
+            <Logo />
+
+            <h5 className="heading heading--5">CONFIDENTIALITY AGREEMENT</h5>
+
+            <Image
+              src={require("@/assets/img/modal-close.svg")}
+              alt="Modal close icon"
+              onClick={() => {
+                handleConfidentialityClose();
+                handleClose();
+              }}
+            />
+          </div>
+
+          <div className="modal__body">
+            <p>lorem</p>
+          </div>
+        </Modal>
+      )}
+
+      {open && role && (
+        <Modal>
+          <div className="modal__header">
+            <Logo />
+
+            <h5 className="heading heading--5">ROLE OF A GEROCARE DOCTOR</h5>
+
+            <Image
+              src={require("@/assets/img/modal-close.svg")}
+              alt="Modal close icon"
+              onClick={() => {
+                handleRoleClose();
+                handleClose();
+              }}
+            />
+          </div>
+
+          <div className="modal__body">
+            <p>Role</p>
+          </div>
+        </Modal>
+      )}
     </>
   );
 };
