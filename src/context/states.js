@@ -1,7 +1,8 @@
 import React, { createContext, useEffect, useState } from "react";
-import data from "../../states.json";
+// import data from "../../states.json";
+import axios from "axios";
 
-console.log(data);
+// console.log(data);
 
 export const StatesContext = createContext({});
 
@@ -19,7 +20,11 @@ const StatesProvider = ({ children }) => {
 
   useEffect(() => {
     const getData = async () => {
-      const res = data;
+      const { data: res } = await axios.get(
+        "https://api.jsonbank.io/f/trapcodeio/countries/nigeria/states.json"
+      );
+
+      // console.log(res);
 
       const states = res.map((state) => {
         return { value: state.name };
