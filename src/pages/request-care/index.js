@@ -396,6 +396,25 @@ const RequestCare = () => {
                   label={"Beneficiary Address"}
                   placeholder={"Address"}
                 />
+
+                <div className="form__flex">
+                  <SelectField
+                    name={"beneficiaryDetails.state"}
+                    id="beneficiaryDetailsState"
+                    label="Beneficiary State"
+                    options={stateOptions}
+                    onChange={(e) => {
+                      setCurrentState(e.target.value);
+                    }}
+                  />
+
+                  <SelectField
+                    name={"beneficiaryDetails.lga"}
+                    id="beneficiaryDetailsLga"
+                    label="L.G.A"
+                    options={lgasOptions}
+                  />
+                </div>
               </div>
             </SplitScreen>
           </div>

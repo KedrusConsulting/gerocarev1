@@ -29,11 +29,13 @@ const StatesProvider = ({ children }) => {
 
       if (selectedState) {
         const state = res.find(({ name, lgas }) => selectedState === name);
-        const options = state.lgas.map((lga) => {
+        const options = state?.lgas?.map((lga) => {
           return { value: lga };
         });
 
-        setLgasOptions([{ value: "L.G.A" }, ...options]);
+        {
+          options && setLgasOptions([{ value: "L.G.A" }, ...options]);
+        }
       }
     };
 
