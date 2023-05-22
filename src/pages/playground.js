@@ -6,7 +6,7 @@ import { useContext } from "react";
 import Link from "next/link";
 
 export default function Playground() {
-  const { open, handleOpen, handleClose } = useContext(MoadlContext);
+  // const { open, handleOpen, handleClose } = useContext(MoadlContext);
 
   return (
     <>
