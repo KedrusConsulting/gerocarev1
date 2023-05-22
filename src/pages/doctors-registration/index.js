@@ -406,11 +406,59 @@ const DoctorRegistration = () => {
 
             <h6 className="heading heading--6">Credentials upload</h6>
 
-            <div className="form__flex"></div>
+            <div className="form__flex">
+              <InputField
+                type={"file"}
+                id={"profile-picture"}
+                name={"profilePicture"}
+                label={"Profile Picture"}
+                placeholder={"Profile Picture"}
+              />
 
-            <div className="form__flex"></div>
+              <InputField
+                type={"file"}
+                id={"nysc-cert"}
+                name={"nyscCert"}
+                label={"NYSC Certificate"}
+                placeholder={"NYSC Certificate"}
+              />
+            </div>
 
-            <div className="form__flex"></div>
+            <div className="form__flex">
+              <InputField
+                type={"file"}
+                id={"medical-cert"}
+                name={"medicalCert"}
+                label={"Medical Certificate "}
+                placeholder={"Medical Certificate"}
+              />
+
+              <InputField
+                type={"file"}
+                id={"mdcn-current-license"}
+                name={"mdcnCurrentLicense"}
+                label={"MDCN Current License"}
+                placeholder={"MDCN Current License"}
+              />
+            </div>
+
+            <div className="form__flex">
+              <InputField
+                type={"file"}
+                id={"cv"}
+                name={"cv"}
+                label={"CV"}
+                placeholder={"CV"}
+              />
+
+              <InputField
+                type={"file"}
+                id={"other-relevant-document"}
+                name={"otherRelevantDocument"}
+                label={"Other Relevant Document"}
+                placeholder={"Other Relevant Document"}
+              />
+            </div>
 
             <div className="form__term text-center">
               <div className="terms">
