@@ -20,7 +20,7 @@ const footerList = [
   {
     category: "Quick Links",
     list: [
-      { name: "Blogs", href: "#" },
+      { name: "Blogs", href: "https://blog.gerocare.org" },
       { name: "Get Started", href: "/register" },
       { name: "Pricing", href: "/pricing" },
       { name: "Contact Us", href: "/contact" },
@@ -57,12 +57,12 @@ const Footer = () => {
             <div className="footer__award-b">
               <figure className="footer__award">
                 <Image
-                  src={image_url_1}
+                  src={require("@/assets/img/top-awards-2x.png").default}
                   alt="Top 30 African Health Innovation"
                   className="footer__award-img"
                 />
                 <Image
-                  src={image_url_2}
+                  src={require("@/assets/img/top-awards2-2x.png").default}
                   alt="Top 50 African Innovation"
                   className="footer__award-img"
                 />
@@ -115,10 +115,6 @@ const Footer = () => {
             </a>
           </li>
         </ul>
-
-        {/* <div className="footer__copyright">
-          <p>Copyright © 2023 Gerocare, All rights reserved.</p>
-        </div> */}
       </div>
     </footer>
   );

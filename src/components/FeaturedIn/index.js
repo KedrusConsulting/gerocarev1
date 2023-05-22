@@ -12,41 +12,44 @@ const FeaturedIn = () => {
         <div className="featured-in__logos">
           <Link href="https://www.vanguardngr.com/2022/08/gerocare-seeks-improved-care-for-elderly">
             <Image
-              src={require("@/assets/img/vanguard@2x.png")}
+              src={require("@/assets/img/vanguard@2x.png").default}
               alt={"Vanguard Logo"}
             />
           </Link>
 
           <Link href="https://smepeaks.com/2018/05/21/gerocare-ais-rwanda">
             <Image
-              src={require("@/assets/img/smepeaks@2x.png")}
+              src={require("@/assets/img/smepeaks@2x.png").default}
               alt={"SME peaks logo"}
             />
           </Link>
 
           <Link href="https://accounteer.com/en/">
             <Image
-              src={require("@/assets/img/accounteer@2x.png")}
+              src={require("@/assets/img/accounteer@2x.png").default}
               alt={"Accounteer logo"}
             />
           </Link>
 
           <Link href="https://smepeaks.com/2019/01/09/dofrey-ebi-gerocare-slush-gia-experience-feature">
             <Image
-              src={require("@/assets/img/slush@2x.png")}
+              src={require("@/assets/img/slush@2x.png").default}
               alt={"Slush logo"}
             />
           </Link>
 
           <Link href="https://techpoint.africa/2017/06/12/gerocare-profile">
             <Image
-              src={require("@/assets/img/techpoint@2x.png")}
+              src={require("@/assets/img/techpoint@2x.png").default}
               alt={"Techpoint logo"}
             />
           </Link>
 
           <Link href="https://www.bbc.com/news/av/business-52667793">
-            <Image src={require("@/assets/img/bbc@2x.png")} alt={"BBC logo"} />
+            <Image
+              src={require("@/assets/img/bbc@2x.png").default}
+              alt={"BBC logo"}
+            />
           </Link>
         </div>
       </div>

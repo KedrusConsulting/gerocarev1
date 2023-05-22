@@ -67,14 +67,14 @@ export default function Testimonials() {
               author_location={"Lagos"}
             />
 
-            <Blockquote
+            {/* <Blockquote
               description={
                 "“I enrolled my Dad in Gerocare's services in 2020, and I must attest to the excellent ease of subscription, payment, and responsiveness from their staff. My family appreciates the high-quality service, respect, and dignity shown to my Dad, along with the prompt reports and added benefits like at-home investigations. We've noticed a positive difference in my Dad's healthcare since joining Gerocare. They offer flexible services, reasonable pricing, and listen to our needs in providing top-notch home visits and support. I'm proud that such a service is available in Nigeria and will surely recommend it to my elderly relatives and friends' parents. It's a pleasure to work with an organization that values my personal and cultural beliefs.”"
               }
               image_url={require("@/assets/img/icon_user_avatar.svg").default}
               author_name={"Mojee A"}
               author_location={"Lagos"}
-            />
+            /> */}
 
             <Blockquote
               description={
@@ -88,6 +88,25 @@ export default function Testimonials() {
         </Section>
 
         <GetStarted />
+
+        <Section sectionName={"cta"}>
+          <div className="cta customers-stories__cta">
+            <h2 className="heading heading--display">
+              Gift your Elderly Loved Ones Monthly Medical Checkup{" "}
+            </h2>
+
+            <p>
+              GeroCare provides elderly patients with the entire spectrum of
+              primary health care services in the comfort of their home. We make
+              it extremely easy for you to provide medical care for your parents
+              and elderly loved ones anywhere in Nigeria.
+            </p>
+
+            <a href="/register" className="btn btn--main cta__btn">
+              Get Started
+            </a>
+          </div>
+        </Section>
       </main>
     </Root>
   );

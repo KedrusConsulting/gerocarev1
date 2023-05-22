@@ -12,7 +12,7 @@ const pricings = [
     plan: "Basic",
     description: "Annual home medical visits",
     price_1: "N180,000",
-    price_2: "N180,000",
+    price_2: "N60,000",
     route: "/hmo/basic",
   },
 

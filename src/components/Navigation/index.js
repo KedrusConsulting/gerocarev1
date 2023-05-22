@@ -81,7 +81,11 @@ const Navigation = () => {
             </li>
 
             <li className="navbar__item">
-              <Link href="#" className="navbar__link">
+              <Link
+                href="https://blog.gerocare.org"
+                target="_blank"
+                className="navbar__link"
+              >
                 Blog
               </Link>
             </li>
