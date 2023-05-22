@@ -25,7 +25,7 @@ export default function Playground() {
 
       <Navigation />
 
-      <Link href={"#"} onClick={handleOpen}>
+      {/* <Link href={"#"} onClick={handleOpen}>
         Open Modal
       </Link>
 
@@ -37,7 +37,7 @@ export default function Playground() {
             </Link>
           </div>
         </div>
-      )}
+      )} */}
 
       <Footer />
 
