@@ -152,7 +152,7 @@ export const TeleConsultation = () => {
 };
 
 export const ElderlyHomeVisit = () => {
-  const [tab, setTab] = useState(false);
+  const [tab, setTab] = useState(true);
 
   return (
     <>
@@ -163,8 +163,8 @@ export const ElderlyHomeVisit = () => {
           htmlFor="tab-switch"
           onClick={() => setTab((prev) => !prev)}
         >
-          <span>Annually</span>
           <span>Quarterly</span>
+          <span>Annually</span>
         </label>
       </div>
 
