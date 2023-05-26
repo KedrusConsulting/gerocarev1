@@ -36,8 +36,14 @@ const Vision = () => {
         <SplitScreen>
           <div className="vision__statement">
             <div>
-              <h5 className="heading heading--5">Our Mission</h5>
-              <p>
+              <h5
+                className="heading heading--5"
+                data-aos="fade-up"
+                data-aos-duration="2000"
+              >
+                Our Mission
+              </h5>
+              <p data-aos="fade-up" data-aos-duration="2000">
                 Our Mission is to pioneer medical inclusion by leveraging
                 technology to provide access to medical care to underserved
                 segments of people across Africa.
@@ -45,8 +51,14 @@ const Vision = () => {
             </div>
 
             <div>
-              <h5 className="heading heading--5">Our Vision</h5>
-              <p>
+              <h5
+                className="heading heading--5"
+                data-aos="fade-up"
+                data-aos-duration="2000"
+              >
+                Our Vision
+              </h5>
+              <p data-aos="fade-up" data-aos-duration="2000">
                 To be the most loved, used, sustainable and easily accessible
                 home medical service
               </p>
@@ -55,7 +67,11 @@ const Vision = () => {
 
           <div className="vision__about">
             {details.map((detail) => (
-              <div className="vision__grp">
+              <div
+                className="vision__grp"
+                data-aos="fade-up"
+                data-aos-duration="2000"
+              >
                 <Image src={detail.icon} alt={detail.name} />
 
                 <div>

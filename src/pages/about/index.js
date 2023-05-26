@@ -14,10 +14,15 @@ export default function About() {
     <Root title={"About"}>
       <Header className={"about"}>
         <HeroCentered>
-          <h1 className="heading heading--display">
+          <h1
+            className="heading heading--display"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          >
             We provide regular doctor home visits.
           </h1>
-          <p>
+
+          <p data-aos="fade-up" data-aos-duration="2000">
             Our Mission is to pioneer medical inclusion by leveraging technology
             to provide access to medical care to underserved segments of people
             across Africa.

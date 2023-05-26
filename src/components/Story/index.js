@@ -5,8 +5,14 @@ const Story = () => {
     <section className="section section--story">
       <div className="row">
         <div className="story__caption">
-          <h2 className="heading heading--display">Who We are</h2>
-          <p>
+          <h2
+            className="heading heading--display"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          >
+            Who We are
+          </h2>
+          <p data-aos="fade-up" data-aos-duration="2000">
             GeroCare was developed as a subscription-based service for parents
             and the elderly that gives them access to regular doctor home visits
             to ensure any threats to their health is discovered early and taken
@@ -18,7 +24,7 @@ const Story = () => {
             more efficient way to manage conditions they might have.
           </p>
 
-          <p>
+          <p data-aos="fade-up" data-aos-duration="2000">
             As you subscribe to our service for your parents or elderly loved
             ones, we at GeroCare make the promise to give your parents the best
             care that they deserve, as we do understand that their welfare
@@ -28,10 +34,18 @@ const Story = () => {
         </div>
 
         <div className="story__story">
-          <h2 className="heading heading--display">Our Story</h2>
+          <h2
+            className="heading heading--display"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          >
+            Our Story
+          </h2>
 
           <div className="story__grp">
             <iframe
+              data-aos="fade-up"
+              data-aos-duration="2000"
               // width="560"
               // height="315"
               src="https://www.youtube.com/embed/xfnOIvSXVlI"
@@ -42,10 +56,18 @@ const Story = () => {
             ></iframe>
 
             <div className="story__content">
-              <h4 className="heading--4">Dr. Ebi Ofrey [CEO]</h4>
-              <span>Chief Executive Officer</span>
+              <h4
+                className="heading--4"
+                data-aos="fade-up"
+                data-aos-duration="2000"
+              >
+                Dr. Ebi Ofrey [CEO]
+              </h4>
+              <span data-aos="fade-up" data-aos-duration="2000">
+                Chief Executive Officer
+              </span>
 
-              <p>
+              <p data-aos="fade-up" data-aos-duration="2000">
                 Dr. Ebi Ofrey has been a medical doctor for over 19 years and a
                 strategic innovation consultant for 10 years. He also has an MBA
                 for which he graduated with a distinction and is also an expert
@@ -53,7 +75,7 @@ const Story = () => {
                 Regional Centre for South East Asia in Malaysia.
               </p>
 
-              <p>
+              <p data-aos="fade-up" data-aos-duration="2000">
                 He was a former Medical Director of a state-owned hospital in
                 Bayelsa and most recently the Head of Medical Services and
                 Quality Assurance, Bayelsa Health Insurance Scheme.
@@ -63,10 +85,18 @@ const Story = () => {
 
           <div className="story__grp">
             <div className="story__content">
-              <h4 className="heading--4">Ajibola a Meraiyebu</h4>
-              <span>Chief Executive Officer</span>
+              <h4
+                className="heading--4"
+                data-aos="fade-up"
+                data-aos-duration="2000"
+              >
+                Ajibola a Meraiyebu
+              </h4>
+              <span data-aos="fade-up" data-aos-duration="2000">
+                Chief Executive Officer
+              </span>
 
-              <p>
+              <p data-aos="fade-up" data-aos-duration="2000">
                 Ajibola Bart Meraiyebu is a Health Management Consultant and an
                 expert in nationwide systemic deployment of Health Service
                 schemes. He has handled underwriting and policy implementation
@@ -75,7 +105,7 @@ const Story = () => {
                 Insurance Scheme (NHIS).
               </p>
 
-              <p>
+              <p data-aos="fade-up" data-aos-duration="2000">
                 He has been a Dean, Head of Department in Bingham University,
                 Nigeria and is research oriented with published Books and
                 Journals. He is a Lecturer/Research associate and also a
@@ -84,6 +114,8 @@ const Story = () => {
             </div>
 
             <iframe
+              data-aos="fade-up"
+              data-aos-duration="2000"
               // width="560"
               // height="315"
               src="https://www.youtube.com/embed/W2xZrctyE3w"

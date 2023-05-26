@@ -16,13 +16,21 @@ const images = [
 import "swiper/css";
 import "swiper/css/navigation";
 
-import { Navigation } from "swiper";
+import { Navigation, Autoplay } from "swiper";
 import Image from "next/image";
 
 const AboutImgSlider = () => {
   return (
     <div className="about-us__slider">
-      <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
+      <Swiper
+        autoplay={{
+          delay: 4000,
+          disableOnInteraction: false,
+        }}
+        navigation={true}
+        modules={[Navigation, Autoplay]}
+        className="mySwiper"
+      >
         {images.map((image) => (
           <SwiperSlide>
             <Image src={image.image_url} alt={"Swiper"} />
