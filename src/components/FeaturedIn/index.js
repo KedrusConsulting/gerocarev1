@@ -7,9 +7,19 @@ const FeaturedIn = () => {
   return (
     <Section sectionName={"featured-in"}>
       <div className="featured-in">
-        <span className="featured-in__caption">As Featured in</span>
+        <span
+          className="featured-in__caption"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        >
+          As Featured in
+        </span>
 
-        <div className="featured-in__logos">
+        <div
+          className="featured-in__logos"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        >
           <Link href="https://www.vanguardngr.com/2022/08/gerocare-seeks-improved-care-for-elderly">
             <Image
               src={require("@/assets/img/vanguard@2x.png").default}

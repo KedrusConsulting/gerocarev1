@@ -31,7 +31,11 @@ const steps = [
 const GetStarted = () => {
   return (
     <Section sectionName={"get-started"}>
-      <div className="get-started__caption">
+      <div
+        className="get-started__caption"
+        data-aos="fade-up"
+        data-aos-duration="2000"
+      >
         <h2 className="heading heading--display">How to Get Started</h2>
         <p>
           Our onboarding process is as easy as breathing. Complete four simple
@@ -40,7 +44,11 @@ const GetStarted = () => {
       </div>
 
       <SplitScreen>
-        <div className="get-started__img">
+        <div
+          className="get-started__img"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        >
           <Image
             src={require("@/assets/img/get-started-img@4x.png")}
             alt="get started img"
@@ -48,7 +56,11 @@ const GetStarted = () => {
         </div>
         <div className="get-started__steps">
           {steps.map((step) => (
-            <div className="get-started__step">
+            <div
+              className="get-started__step"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+            >
               <span>{step.step}</span>
 
               <div className="step">

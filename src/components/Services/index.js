@@ -45,7 +45,12 @@ const services = [
 const Services = () => {
   return (
     <Section sectionName={"services"}>
-      <div className="services__caption">
+      <div
+        className="services__caption"
+        data-aos="fade-up"
+        data-aos-duration="2000"
+        // data-aos-once="true"
+      >
         <h2 className="heading heading--display">Our Services</h2>
         <p>
           Explore our bouquet of Premium health care services designed to
@@ -56,7 +61,12 @@ const Services = () => {
 
       <div className="services grid grid--3-col">
         {services.map((service) => (
-          <div className="services__service">
+          <div
+            className="services__service"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+            // data-aos-once="true"
+          >
             <Image
               className="services__icon"
               src={service.icon}

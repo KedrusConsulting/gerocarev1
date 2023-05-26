@@ -24,7 +24,11 @@ export default function Home() {
       <Header className="home">
         <SplitScreen>
           <div className="header__text">
-            <div className="header__text-sub">
+            <div
+              className="header__text-sub"
+              data-aos="fade-right"
+              data-aos-duration="2000"
+            >
               <Image
                 src={require("@/assets/img/check-icon.svg")}
                 alt={"Check icon"}
@@ -34,16 +38,31 @@ export default function Home() {
               </span>
             </div>
 
-            <h1 className="heading heading--display">
+            <h1
+              data-aos="fade-up"
+              data-aos-duration="2000"
+              className="heading heading--display"
+            >
               Give your Parents the gift of a Healthy, Long Life.
             </h1>
 
-            <p>
+            <p
+              data-aos="fade-up"
+              data-aos-duration="2000"
+              data-aos-once="true"
+              data-aos-offset="-100"
+            >
               Subscribe them for regular doctor home visits for under $25 per
               month
             </p>
 
-            <div className="header__cta">
+            <div
+              className="header__cta"
+              data-aos="fade-left"
+              data-aos-duration="2000"
+              data-aos-once="true"
+              data-aos-offset="-100"
+            >
               <a href="/register" className="btn btn--main">
                 Get Started
               </a>
@@ -57,6 +76,9 @@ export default function Home() {
             <Image
               src={require("@/assets/img/hero-image-03@4x.png")}
               alt={"Hero img"}
+              data-aos="fade-up"
+              data-aos-duration="2000"
+              data-aos-once="true"
             />
 
             <ServiceTag service={"Teleconsultation"} href="/teleconsultation" />

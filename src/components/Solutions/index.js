@@ -10,14 +10,23 @@ import Section from "@/Layout/Section";
 const Solutions = () => {
   return (
     <Section sectionName={"solutions"}>
-      <div className="solution__caption">
+      <div
+        className="solution__caption"
+        data-aos="fade-up"
+        data-aos-duration="2000"
+        // data-aos-once="true"
+      >
         <h2 className="heading heading--display">
           A complete health solution for the Elderly
         </h2>
       </div>
 
       <div className="solution grid grid--2-col-reverse grid--center-v">
-        <div className="solution__text-box">
+        <div
+          className="solution__text-box"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        >
           <h2 className="heading heading--display">Home Doctor Visits</h2>
           <p className="solution__text">
             Once you add a beneficiary, we assign them a doctor who visits
@@ -27,7 +36,11 @@ const Solutions = () => {
           </p>
         </div>
 
-        <div className="solution__img">
+        <div
+          className="solution__img"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        >
           <Image
             className="uti-pr-0"
             src={home_doc_visits}
@@ -37,7 +50,11 @@ const Solutions = () => {
       </div>
 
       <div className="solution grid grid--2-col grid--center-v">
-        <div className="solution__img">
+        <div
+          className="solution__img"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        >
           <Image
             className="uti-pl-0"
             src={get_reports}
@@ -45,7 +62,11 @@ const Solutions = () => {
           />
         </div>
 
-        <div className="solution__text-box">
+        <div
+          className="solution__text-box"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        >
           <h2 className="heading heading--display">Get Reports Monthly</h2>
           <p className="solution__text">
             Oh yes! You get reports for every visit. You’ll see the test results
@@ -56,7 +77,11 @@ const Solutions = () => {
       </div>
 
       <div className="solution grid grid--2-col-reverse grid--center-v">
-        <div className="solution__text-box">
+        <div
+          className="solution__text-box"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        >
           <h2 className="heading heading--display">Home Medication</h2>
           <p className="solution__text">
             At your request, we can administer prescriptions to the patient at
@@ -64,7 +89,11 @@ const Solutions = () => {
           </p>
         </div>
 
-        <div className="solution__img">
+        <div
+          className="solution__img"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        >
           <Image
             className="uti-pl-0"
             src={home_meds}
@@ -74,7 +103,11 @@ const Solutions = () => {
       </div>
 
       <div className="solution grid grid--2-col grid--center-v">
-        <div className="solution__img">
+        <div
+          className="solution__img"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        >
           <Image
             className="uti-pl-0"
             src={home_samples}
@@ -82,7 +115,11 @@ const Solutions = () => {
           />
         </div>
 
-        <div className="solution__text-box">
+        <div
+          className="solution__text-box"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        >
           <h2 className="heading heading--display">Home Sample Collections</h2>
           <p className="solution__text">
             No need to step an inch outside your home. We perform home-based

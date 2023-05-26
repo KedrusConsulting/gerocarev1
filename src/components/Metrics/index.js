@@ -5,7 +5,11 @@ const Metrics = () => {
   return (
     <Section sectionName={"metrics"}>
       <div className="metrics">
-        <div className="metrics__caption">
+        <div
+          className="metrics__caption"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        >
           <h2 className="heading heading--display">Gerocare in Numbers</h2>
           <p>
             You can trust our team of outstanding professionals. In the last 5
@@ -15,22 +19,38 @@ const Metrics = () => {
         </div>
 
         <div className="metrics__grid">
-          <div className="metrics__stat">
+          <div
+            className="metrics__stat"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          >
             <span>750+</span>
             <h6 className="heading heading--6">Doctors Nationwide </h6>
           </div>
 
-          <div className="metrics__stat">
+          <div
+            className="metrics__stat"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          >
             <span>54+</span>
             <h6 className="heading heading--6">Cities Covered</h6>
           </div>
 
-          <div className="metrics__stat">
+          <div
+            className="metrics__stat"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          >
             <span>1000+</span>
             <h6 className="heading heading--6">Pharmacies & labs</h6>
           </div>
 
-          <div className="metrics__stat">
+          <div
+            className="metrics__stat"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          >
             <span>3</span>
             <h6 className="heading heading--6">Regional Offices</h6>
           </div>

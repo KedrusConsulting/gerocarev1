@@ -29,13 +29,21 @@ const Benefits = () => {
   return (
     <Section sectionName={"benefits"}>
       <div className="benefits">
-        <h2 className="heading heading--display">
+        <h2
+          className="heading heading--display"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        >
           Why Our Paitents Love Gerocare Services
         </h2>
 
         <div className="benefits__grid">
           {benefits.map((benefit) => (
-            <div className="benefits__card">
+            <div
+              className="benefits__card"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+            >
               <Image
                 className="benefits__icon"
                 src={benefit.icon}

@@ -11,7 +11,12 @@ import Section from "@/Layout/Section";
 const Testimonials = () => {
   return (
     <Section sectionName={"testimonials"}>
-      <div className="testimonial__caption">
+      <div
+        className="testimonial__caption"
+        data-aos="fade-up"
+        data-aos-duration="2000"
+        // data-aos-once="true"
+      >
         <h2 className="heading heading--display">
           Don’t take our word for it...
         </h2>
