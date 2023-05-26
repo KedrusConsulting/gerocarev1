@@ -13,11 +13,15 @@ const HMOPremium = () => {
     <Root title={"HMO Premium"}>
       <Header className={"hmo-premium"}>
         <HeroCentered>
-          <h1 className="heading heading--display">
+          <h1
+            className="heading heading--display"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          >
             Premium HMO Services for the Elderly.
           </h1>
 
-          <p>
+          <p data-aos="fade-up" data-aos-duration="2000">
             At Gerocare, we have developed a HMO service program designed to
             enhance the health and wellness of the elderly.
           </p>
@@ -37,11 +41,17 @@ const HMOPremium = () => {
             <Image
               src={require("@/assets/img/hmo-premium.png")}
               alt="Married couple smiling and holding each others"
+              data-aos="fade-up"
+              data-aos-duration="2000"
             />
           </div>
 
           <div className="plan-prices__content">
-            <div className="plan-prices__price">
+            <div
+              className="plan-prices__price"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+            >
               <div className="plan-prices__price--1">
                 <span className="plan-prices__amt">₦250,000</span>
                 <p>Price for 12 Visits Annual Plan</p>
@@ -52,7 +62,12 @@ const HMOPremium = () => {
               </div>
             </div>
 
-            <a href="/register" className="btn btn--main">
+            <a
+              href="/register"
+              className="btn btn--main"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+            >
               Get Started
             </a>
           </div>
