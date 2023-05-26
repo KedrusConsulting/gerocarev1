@@ -24,8 +24,15 @@ export default function Pricing() {
 
       <header className="header header--pricing">
         <div className="row">
-          <h1 className="heading heading--display">Pricing Page</h1>
-          <p>
+          <h1
+            className="heading heading--display"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          >
+            Pricing Page
+          </h1>
+
+          <p data-aos="fade-up" data-aos-duration="2000">
             Subscription entitles patient to one doctor visit per month as a
             routine as needed valid for the subscribed duration. Time line for
             first appointment - 3 Working days for patient to be matched to a

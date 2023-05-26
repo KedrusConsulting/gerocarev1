@@ -10,8 +10,14 @@ export default function Testimonials() {
     <Root title={"Customer Stories"}>
       <Header className={"testimonials"}>
         <HeroCentered>
-          <h1 className="heading heading--display">Customer’s Stories</h1>
-          <p>
+          <h1
+            className="heading heading--display"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          >
+            Customer’s Stories
+          </h1>
+          <p data-aos="fade-up" data-aos-duration="2000">
             We asked our customer what it was like to enjoy the services of
             Gerocare amd a few of them tell us their experiences. A wow
             experience!
@@ -91,18 +97,27 @@ export default function Testimonials() {
 
         <Section sectionName={"cta"}>
           <div className="cta customers-stories__cta">
-            <h2 className="heading heading--display">
+            <h2
+              className="heading heading--display"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+            >
               Gift your Elderly Loved Ones Monthly Medical Checkup{" "}
             </h2>
 
-            <p>
+            <p data-aos="fade-up" data-aos-duration="2000">
               GeroCare provides elderly patients with the entire spectrum of
               primary health care services in the comfort of their home. We make
               it extremely easy for you to provide medical care for your parents
               and elderly loved ones anywhere in Nigeria.
             </p>
 
-            <a href="/register" className="btn btn--main cta__btn">
+            <a
+              href="/register"
+              className="btn btn--main cta__btn"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+            >
               Get Started
             </a>
           </div>

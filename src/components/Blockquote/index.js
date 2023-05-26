@@ -8,7 +8,11 @@ const Blockquote = ({
   author_location,
 }) => {
   return (
-    <blockquote className="testimonial">
+    <blockquote
+      className="testimonial"
+      data-aos="fade-up"
+      data-aos-duration="2000"
+    >
       <p>{description}</p>
 
       <div className="testimonial__author">

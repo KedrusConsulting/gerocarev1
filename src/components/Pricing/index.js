@@ -6,14 +6,26 @@ const Prices = () => {
   return (
     <section className="section section--pricing">
       <div className="row">
-        <h2 className="heading heading--display">Elder Home Care</h2>
+        <h2
+          className="heading heading--display"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        >
+          Elder Home Care
+        </h2>
 
         <div className="pricing__tab">
           <Tabs />
 
           <div className="pricing__tele">
-            <h2 className="heading heading--display">Teleconsultation</h2>
-            <p>
+            <h2
+              className="heading heading--display"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+            >
+              Teleconsultation
+            </h2>
+            <p data-aos="fade-up" data-aos-duration="2000">
               We also offer One-Time subscription at the best affordable rates
             </p>
 
@@ -39,8 +51,14 @@ const Prices = () => {
           </div>
 
           <div className="pricing__doc">
-            <h2 className="heading heading--display">Doctor on Demand</h2>
-            <p>
+            <h2
+              className="heading heading--display"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+            >
+              Doctor on Demand
+            </h2>
+            <p data-aos="fade-up" data-aos-duration="2000">
               We also offer One-Time subscription at the best affordable rates
             </p>
 

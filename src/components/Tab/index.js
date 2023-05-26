@@ -44,7 +44,7 @@ const Tabs = () => {
 
   return (
     <>
-      <div className="tab">
+      <div className="tab" data-aos="fade-up" data-aos-duration="2000">
         <input type="checkbox" id="tab-switch" name="tab-switch" />
         <label
           className="tab__ctrl"
@@ -61,6 +61,8 @@ const Tabs = () => {
           {pricing.map((price) => (
             <div
               className={`pricing__plan pricing__${price.plan.toLowerCase()}`}
+              data-aos="fade-up"
+              data-aos-duration="2000"
             >
               <h4 className="heading--4">{price.plan}</h4>
 

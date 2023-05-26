@@ -2,7 +2,7 @@ import React from "react";
 
 const PriceCard = ({ title, description, amt, label }) => {
   return (
-    <div className="price__card">
+    <div className="price__card" data-aos="fade-up" data-aos-duration="2000">
       <h4 className="heading--4">{title}</h4>
       <p>{description}</p>
 
