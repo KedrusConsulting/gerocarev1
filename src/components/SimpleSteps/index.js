@@ -45,14 +45,22 @@ const SimpleSteps = () => {
     <section className="section section--simple-step">
       <div className="row">
         <div className="simple-step__caption">
-          <h2 className="heading heading--display">
+          <h2
+            className="heading heading--display"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          >
             Get Started in simple Steps
           </h2>
         </div>
 
         <div className="simple-step__grid">
           {steps.map((step) => (
-            <div className="simple-step__card">
+            <div
+              className="simple-step__card"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+            >
               <span className="simple-step__badge">Step {step.step}</span>
               <h5 className="heading--5">{step.name}</h5>
               <p>{step.description}</p>

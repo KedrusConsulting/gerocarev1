@@ -65,16 +65,25 @@ const HMO = () => {
     <Root title={"HMO"}>
       <Header className={"hmo"}>
         <HeroCentered>
-          <h1 className="heading heading--display">
+          <h1
+            className="heading heading--display"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          >
             Get a HMO plan for your elderly ones.
           </h1>
 
-          <p>
+          <p data-aos="fade-up" data-aos-duration="2000">
             Our plans offer your elderly loved ones access to annual medical
             care and support services at an affordable rate.
           </p>
 
-          <a href="/register" className="btn btn--main">
+          <a
+            href="/register"
+            className="btn btn--main"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          >
             Get Started
           </a>
         </HeroCentered>
@@ -84,15 +93,27 @@ const HMO = () => {
         <Image
           src={require("@/assets/img/hmo-img.png")}
           alt="Happy Man and his wife with sitting in the living room"
+          data-aos="fade-up"
+          data-aos-duration="2000"
         />
       </section>
 
       <Section sectionName={"hmo-pricing"}>
         <div className="hmo__pricing-caption">
-          <h2 className="heading heading--display">HMO Pricing</h2>
+          <h2
+            className="heading heading--display"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          >
+            HMO Pricing
+          </h2>
         </div>
 
-        <table className="hmo__table">
+        <table
+          className="hmo__table"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        >
           <thead>
             <tr>
               <td>Plans</td>

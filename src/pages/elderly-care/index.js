@@ -27,16 +27,25 @@ export default function Contact() {
       <header className="header header--elderly">
         <div className="row">
           <div className="header__elderly-text">
-            <h1 className="heading heading--1">
+            <h1
+              className="heading heading--1"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+            >
               Premium Health Care Services for the Elderly
             </h1>
 
-            <p>
+            <p data-aos="fade-up" data-aos-duration="2000">
               At Gerocare, we have developed an elderly care program designed to
               enhance the health and wellness of the elderly.
             </p>
 
-            <a href="/register" className="btn btn--main">
+            <a
+              href="/register"
+              className="btn btn--main"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+            >
               Get Started
             </a>
           </div>
@@ -45,6 +54,8 @@ export default function Contact() {
             <Image
               src={require("@/assets/img/elderly-care.png")}
               alt={"Elderly care"}
+              data-aos="fade-up"
+              data-aos-duration="2000"
             />
           </div>
         </div>
@@ -58,11 +69,15 @@ export default function Contact() {
           <div className="row">
             <div className="access__grid">
               <div className="access__content">
-                <h2 className="heading heading--1">
+                <h2
+                  className="heading heading--1"
+                  data-aos="fade-up"
+                  data-aos-duration="2000"
+                >
                   Making access to health care convenient for the elderly.
                 </h2>
 
-                <p>
+                <p data-aos="fade-up" data-aos-duration="2000">
                   Gerocare teleconsultation service has revolutionized the way
                   healthcare is provided by increasing access to more
                   clinicians, responding to urgent patient concerns, lowering
@@ -71,7 +86,11 @@ export default function Contact() {
                 </p>
 
                 <ul className="access__list">
-                  <li className="access__item">
+                  <li
+                    className="access__item"
+                    data-aos="fade-up"
+                    data-aos-duration="2000"
+                  >
                     <Image
                       src={require("@/assets/img/circled-check-mark.svg")}
                       alt="Circled checked mark icon"
@@ -82,7 +101,11 @@ export default function Contact() {
                     </span>
                   </li>
 
-                  <li className="access__item">
+                  <li
+                    className="access__item"
+                    data-aos="fade-up"
+                    data-aos-duration="2000"
+                  >
                     <Image
                       src={require("@/assets/img/circled-check-mark.svg")}
                       alt="Circled checked mark icon"
@@ -94,7 +117,11 @@ export default function Contact() {
                     </span>
                   </li>
 
-                  <li className="access__item">
+                  <li
+                    className="access__item"
+                    data-aos="fade-up"
+                    data-aos-duration="2000"
+                  >
                     <Image
                       src={require("@/assets/img/circled-check-mark.svg")}
                       alt="Circled checked mark icon"
@@ -107,7 +134,12 @@ export default function Contact() {
                   </li>
                 </ul>
 
-                <a href="/register" className="btn btn--main">
+                <a
+                  href="/register"
+                  className="btn btn--main"
+                  data-aos="fade-up"
+                  data-aos-duration="2000"
+                >
                   Sign Up for Free
                 </a>
               </div>
@@ -115,6 +147,8 @@ export default function Contact() {
               <div className="access__img">
                 <Image
                   src={require("@/assets/img/senior-woman-meeting-with-male-doctor-cosmetic-surgeon-office@4x.png")}
+                  data-aos="fade-up"
+                  data-aos-duration="2000"
                 />
               </div>
             </div>
@@ -124,8 +158,15 @@ export default function Contact() {
         <section className="section section--subscription">
           <div className="row">
             <div className="subscription__caption">
-              <h2 className="heading heading--display">Subscription Plans</h2>
-              <p>
+              <h2
+                className="heading heading--display"
+                data-aos="fade-up"
+                data-aos-duration="2000"
+              >
+                Subscription Plans
+              </h2>
+
+              <p data-aos="fade-up" data-aos-duration="2000">
                 We also offer flexible subscription plans at affordable rates
               </p>
             </div>

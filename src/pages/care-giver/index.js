@@ -37,14 +37,22 @@ const SimpleSteps = () => {
     <section className="section section--simple-step">
       <div className="row">
         <div className="simple-step__caption">
-          <h2 className="heading heading--display">
+          <h2
+            className="heading heading--display"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          >
             Get Started in simple Steps
           </h2>
         </div>
 
         <div className="simple-step__grid simple-step__grid--4">
           {steps.map((step) => (
-            <div className="simple-step__card">
+            <div
+              className="simple-step__card"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+            >
               <span className="simple-step__badge">Step {step.step}</span>
               <h6 className="heading--6">{step.name}</h6>
               <p>{step.description}</p>
@@ -52,7 +60,12 @@ const SimpleSteps = () => {
           ))}
         </div>
 
-        <a href="/request-care" className="btn btn--main simple-step__btn">
+        <a
+          href="/request-care"
+          className="btn btn--main simple-step__btn"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        >
           Get Started
         </a>
       </div>
@@ -80,16 +93,25 @@ export default function CareGiver() {
 
       <Header className={"care-giver"}>
         <div className="header__hire">
-          <h1 className="heading heading--display">
+          <h1
+            className="heading heading--display"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          >
             Hire a Caregiver for your elderly loved ones.
           </h1>
 
-          <p>
+          <p data-aos="fade-up" data-aos-duration="2000">
             We’ll provide access to In-home care, companionship, and 24/7
             live-in services for your elderly loved ones.
           </p>
 
-          <a href="/request-care" className="btn btn--main">
+          <a
+            href="/request-care"
+            className="btn btn--main"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          >
             Get Started
           </a>
         </div>
@@ -100,14 +122,24 @@ export default function CareGiver() {
           <Image
             src={require("@/assets/img/care-givers-bg.png")}
             alt="Care givers background"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+            data-aos-delay="100"
           />
         </section>
 
         <section className="section section--key-features">
           <div className="row">
             <div className="key-features__caption">
-              <h2 className="heading heading--display">Key Features</h2>
-              <p>
+              <h2
+                className="heading heading--display"
+                data-aos="fade-up"
+                data-aos-duration="2000"
+              >
+                Key Features
+              </h2>
+
+              <p data-aos="fade-up" data-aos-duration="2000">
                 We work with qualified nurses and well trained non-medical
                 caregivers  We ensure your Elderly loved one always have the
                 care and companionship they need.
@@ -115,7 +147,11 @@ export default function CareGiver() {
             </div>
 
             <div className="key-features__grid">
-              <div className="key-features__feature">
+              <div
+                className="key-features__feature"
+                data-aos="fade-up"
+                data-aos-duration="2000"
+              >
                 <Image
                   src={require("@/assets/img/home-help.svg")}
                   alt="Home help icon"
@@ -123,7 +159,11 @@ export default function CareGiver() {
                 <p>Home Help</p>
               </div>
 
-              <div className="key-features__feature">
+              <div
+                className="key-features__feature"
+                data-aos="fade-up"
+                data-aos-duration="2000"
+              >
                 <Image
                   src={require("@/assets/img/personal-care.svg")}
                   alt="Personal Care icon"
@@ -131,7 +171,11 @@ export default function CareGiver() {
                 <p>Personal Care</p>
               </div>
 
-              <div className="key-features__feature">
+              <div
+                className="key-features__feature"
+                data-aos="fade-up"
+                data-aos-duration="2000"
+              >
                 <Image
                   src={require("@/assets/img/companionship.svg")}
                   alt="Companionship icon"
@@ -147,11 +191,17 @@ export default function CareGiver() {
         <section className="section section--video">
           <div className="row">
             <div className="testimonial-video">
-              <h2 className="heading heading--display">
+              <h2
+                className="heading heading--display"
+                data-aos="fade-up"
+                data-aos-duration="2000"
+              >
                 Don’t take our word for it
               </h2>
 
               <iframe
+                data-aos="fade-up"
+                data-aos-duration="2000"
                 className="testimonial__video"
                 src="https://www.youtube.com/embed/dp4iW4hZkm0"
                 title="YouTube video player"

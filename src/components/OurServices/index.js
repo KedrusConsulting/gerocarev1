@@ -7,13 +7,21 @@ const OurServices = () => {
       <div className="row">
         <div className="our-services">
           <div className="our-services__caption">
-            <h2 className="heading heading--display">
+            <h2
+              className="heading heading--display"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+            >
               Our Elderly Care Services
             </h2>
           </div>
 
           <div className="our-services__grid">
-            <div className="our-services__card">
+            <div
+              className="our-services__card"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+            >
               <Image
                 src={require("@/assets/img/home-visits.svg")}
                 alt="Home visits"
@@ -22,7 +30,11 @@ const OurServices = () => {
               <p>Regular home visits by Doctors</p>
             </div>
 
-            <div className="our-services__card">
+            <div
+              className="our-services__card"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+            >
               <Image
                 src={require("@/assets/img/personal-health.svg")}
                 alt="Personal Health"
@@ -31,7 +43,11 @@ const OurServices = () => {
               <p>Personalised health records</p>
             </div>
 
-            <div className="our-services__card">
+            <div
+              className="our-services__card"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+            >
               <Image
                 src={require("@/assets/img/medicine-home.svg")}
                 alt="Medicine Home"
@@ -40,7 +56,11 @@ const OurServices = () => {
               <p>Medicine Home delivery</p>
             </div>
 
-            <div className="our-services__card">
+            <div
+              className="our-services__card"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+            >
               <Image
                 src={require("@/assets/img/labs-investations.svg")}
                 alt="Labs Investation"

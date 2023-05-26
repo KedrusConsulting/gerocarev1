@@ -13,17 +13,26 @@ export default function Contact() {
       <Header className={"doc-on-demand"}>
         <SplitScreen>
           <div className="header__text">
-            <h1 className="heading heading--display">
+            <h1
+              className="heading heading--display"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+            >
               Get access to Home doctor visit in Less than 24 hrs.
             </h1>
 
-            <p>
+            <p data-aos="fade-up" data-aos-duration="2000">
               We understand that a person’s health can fail at any time and it
               is crucial that quality health care services are available to
               everyone whenever the need arises.
             </p>
 
-            <a href="/register" className="btn btn--main">
+            <a
+              href="/register"
+              className="btn btn--main"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+            >
               Get Started
             </a>
           </div>
@@ -32,6 +41,8 @@ export default function Contact() {
             <Image
               src={require("@/assets/img/access-to-home.png")}
               alt="Access to a home doctor"
+              data-aos="fade-up"
+              data-aos-duration="2000"
             />
           </div>
         </SplitScreen>
@@ -44,17 +55,21 @@ export default function Contact() {
           <div className="row">
             <div className="access__grid">
               <div className="access__content">
-                <h2 className="heading heading--1">
+                <h2
+                  className="heading heading--1"
+                  data-aos="fade-up"
+                  data-aos-duration="2000"
+                >
                   Doctor on Demand service.
                 </h2>
 
-                <p>
+                <p data-aos="fade-up" data-aos-duration="2000">
                   With With our Doctor on Demand service, we make it possible
                   for anyone in Nigeria, no matter where you are located to get
                   access to a medical doctor right at your home within 24hrs.
                 </p>
 
-                <p>
+                <p data-aos="fade-up" data-aos-duration="2000">
                   We make this happen by matching your request to the closest
                   medical doctor in your location. And in not more than 24hrs, a
                   qualified medical doctor arrives at your home and attends to
@@ -62,7 +77,11 @@ export default function Contact() {
                 </p>
 
                 <ul className="access__list">
-                  <li className="access__item">
+                  <li
+                    className="access__item"
+                    data-aos="fade-up"
+                    data-aos-duration="2000"
+                  >
                     <Image
                       src={require("@/assets/img/circled-check-mark.svg")}
                       alt="Circled checked mark icon"
@@ -74,7 +93,11 @@ export default function Contact() {
                     </span>
                   </li>
 
-                  <li className="access__item">
+                  <li
+                    className="access__item"
+                    data-aos="fade-up"
+                    data-aos-duration="2000"
+                  >
                     <Image
                       src={require("@/assets/img/circled-check-mark.svg")}
                       alt="Circled checked mark icon"
@@ -83,7 +106,11 @@ export default function Contact() {
                     <span>Transparent price.</span>
                   </li>
 
-                  <li className="access__item">
+                  <li
+                    className="access__item"
+                    data-aos="fade-up"
+                    data-aos-duration="2000"
+                  >
                     <Image
                       src={require("@/assets/img/circled-check-mark.svg")}
                       alt="Circled checked mark icon"
@@ -96,7 +123,11 @@ export default function Contact() {
 
               <div className="access__price">
                 <div className="pricing__table">
-                  <div className={`pricing__plan`}>
+                  <div
+                    className={`pricing__plan`}
+                    data-aos="fade-up"
+                    data-aos-duration="2000"
+                  >
                     <h4 className="heading--4">On-Demand</h4>
 
                     <p>Starting from</p>

@@ -14,16 +14,25 @@ export default function Contact() {
       <Header className={"teleconsultation"}>
         <SplitScreen>
           <div className="header__text">
-            <h1 className="heading heading--display">
+            <h1
+              className="heading heading--display"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+            >
               Speak with a Doctor at your convenience
             </h1>
 
-            <p>
+            <p data-aos="fade-up" data-aos-duration="2000">
               Avoid the long distance to hospitals, high consultation cost, long
               waiting period and hassles of appointment booking.
             </p>
 
-            <a href="/register" className="btn btn--main">
+            <a
+              href="/register"
+              className="btn btn--main"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+            >
               Get Started
             </a>
           </div>
@@ -32,6 +41,9 @@ export default function Contact() {
             <Image
               src={require("@/assets/img/speak-with-a-doc.png")}
               alt="Speak with a doctor"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+              data-aos-delay="50"
             />
           </div>
         </SplitScreen>
@@ -44,25 +56,33 @@ export default function Contact() {
           <div className="row">
             <div className="access__grid">
               <div className="access__content">
-                <h2 className="heading heading--1">
+                <h2
+                  className="heading heading--1"
+                  data-aos="fade-up"
+                  data-aos-duration="2000"
+                >
                   Committed to making access to health care convenient for the
                   elderly.
                 </h2>
 
-                <p>
+                <p data-aos="fade-up" data-aos-duration="2000">
                   No matter where you are in Nigeria, you can book a
                   consultation call with a certified medical doctor from the
                   comfort of your home.
                 </p>
 
-                <p>
+                <p data-aos="fade-up" data-aos-duration="2000">
                   Our teleconsultation service makes it easy for anyone to
                   consult with a doctor at their convenience and also get a
                   medical report afterwards.
                 </p>
 
                 <ul className="access__list">
-                  <li className="access__item">
+                  <li
+                    className="access__item"
+                    data-aos="fade-up"
+                    data-aos-duration="2000"
+                  >
                     <Image
                       src={require("@/assets/img/circled-check-mark.svg")}
                       alt="Circled checked mark icon"
@@ -71,7 +91,11 @@ export default function Contact() {
                     <span>Instant access to doctor consultation.</span>
                   </li>
 
-                  <li className="access__item">
+                  <li
+                    className="access__item"
+                    data-aos="fade-up"
+                    data-aos-duration="2000"
+                  >
                     <Image
                       src={require("@/assets/img/circled-check-mark.svg")}
                       alt="Circled checked mark icon"
@@ -80,7 +104,11 @@ export default function Contact() {
                     <span>Lower consultation fees.</span>
                   </li>
 
-                  <li className="access__item">
+                  <li
+                    className="access__item"
+                    data-aos="fade-up"
+                    data-aos-duration="2000"
+                  >
                     <Image
                       src={require("@/assets/img/circled-check-mark.svg")}
                       alt="Circled checked mark icon"
@@ -90,7 +118,12 @@ export default function Contact() {
                   </li>
                 </ul>
 
-                <a href="/register" className="btn btn--main">
+                <a
+                  href="/register"
+                  className="btn btn--main"
+                  data-aos="fade-up"
+                  data-aos-duration="2000"
+                >
                   Get Started
                 </a>
               </div>
@@ -98,6 +131,9 @@ export default function Contact() {
               <div className="access__img">
                 <Image
                   src={require("@/assets/img/senior-woman-meeting-with-male-doctor-cosmetic-surgeon.png")}
+                  data-aos="fade-up"
+                  data-aos-duration="2000"
+                  data-aos-delay="50"
                 />
               </div>
             </div>
@@ -107,8 +143,15 @@ export default function Contact() {
         <section className="section section--subscription">
           <div className="row">
             <div className="subscription__caption">
-              <h2 className="heading heading--display">Subscription Plans</h2>
-              <p>
+              <h2
+                className="heading heading--display"
+                data-aos="fade-up"
+                data-aos-duration="2000"
+              >
+                Subscription Plans
+              </h2>
+
+              <p data-aos="fade-up" data-aos-duration="2000">
                 We also offer flexible subscription plans at affordable rates
               </p>
             </div>

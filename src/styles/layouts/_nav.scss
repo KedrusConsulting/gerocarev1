@@ -137,6 +137,7 @@
     width: 24rem;
     padding: 0.8rem;
     border-radius: 0.2rem;
+    z-index: 50000;
 
     @include respond(tab-port) {
       position: relative;
