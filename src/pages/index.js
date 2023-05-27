@@ -16,6 +16,11 @@ import SplitScreen from "@/Layout/SplitScreen";
 import Image from "next/image";
 import Root from "@/Layout/Root";
 import ServiceTag from "@/components/ServicesTag";
+import { useEffect, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import { EffectFade, Autoplay } from "swiper";
+
 // import "../styles/main.scss";
 
 export default function Home() {
@@ -73,17 +78,58 @@ export default function Home() {
           </div>
 
           <div className="header__img header__img--1">
-            <Image
-              src={require("@/assets/img/hero-image-03@4x.png")}
-              alt={"Hero img"}
-              data-aos="fade-up"
-              data-aos-duration="2000"
-              data-aos-once="true"
-            />
+            <div className="header__img-swiper">
+              <Swiper
+                // centeredSlides={true}
+                autoplay={{
+                  delay: 10000,
+                  disableOnInteraction: false,
+                }}
+                loop={true}
+                effect={"fade"}
+                modules={[Autoplay]}
+              >
+                <SwiperSlide>
+                  <div className="header__img--1">
+                    <Image
+                      src={require("@/assets/img/hero-image-03@4x.png")}
+                      alt={"Hero img"}
+                      data-aos="fade-up"
+                      data-aos-duration="2000"
+                      data-aos-once="true"
+                    />
 
-            <ServiceTag service={"Teleconsultation"} href="/teleconsultation" />
-            <ServiceTag service={"Doctor Home Visits"} href="/elderly-care" />
-            <ServiceTag service={"On-Demand Doctor"} href="/doctor-on-demand" />
+                    <ServiceTag
+                      service={"Teleconsultation"}
+                      href="/teleconsultation"
+                    />
+                    <ServiceTag
+                      service={"Doctor Home Visits"}
+                      href="/elderly-care"
+                    />
+                    <ServiceTag
+                      service={"On-Demand Doctor"}
+                      href="/doctor-on-demand"
+                    />
+                  </div>
+                </SwiperSlide>
+
+                <SwiperSlide>
+                  <div className="header__img--1">
+                    <Image
+                      src={require("@/assets/img/hero-image-02@4x.png")}
+                      alt={"Hero img"}
+                      data-aos="fade-up"
+                      data-aos-duration="2000"
+                      data-aos-once="true"
+                    />
+
+                    <ServiceTag service={"Care Givers"} href="/care-giver" />
+                    <ServiceTag service={"HMO Plans"} href="/hmo" />
+                  </div>
+                </SwiperSlide>
+              </Swiper>
+            </div>
           </div>
         </SplitScreen>
       </Header>
