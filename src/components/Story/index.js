@@ -61,7 +61,7 @@ const Story = () => {
                 data-aos="fade-up"
                 data-aos-duration="2000"
               >
-                Dr. Ebi Ofrey [CEO]
+                Dr. Ebi Ofrey (CEO)
               </h4>
               <span data-aos="fade-up" data-aos-duration="2000">
                 Chief Executive Officer
