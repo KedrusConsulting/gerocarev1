@@ -90,10 +90,10 @@ const Story = () => {
                 data-aos="fade-up"
                 data-aos-duration="2000"
               >
-                Ajibola a Meraiyebu
+                Ajibola a Meraiyebu (COO)
               </h4>
               <span data-aos="fade-up" data-aos-duration="2000">
-                Chief Executive Officer
+                Chief Operation Officer
               </span>
 
               <p data-aos="fade-up" data-aos-duration="2000">
