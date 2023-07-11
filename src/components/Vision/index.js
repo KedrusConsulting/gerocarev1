@@ -13,13 +13,13 @@ const details = [
   {
     icon: require("@/assets/img/cities-covered.svg"),
     name: "Cities Covered",
-    stat: "45+",
+    stat: "54+",
   },
 
   {
     icon: require("@/assets/img/phamacies-labs.svg"),
     name: "Pharmacies & Labs",
-    stat: "800+",
+    stat: "1000+",
   },
 
   {

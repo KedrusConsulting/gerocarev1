@@ -69,6 +69,17 @@ const GetStarted = () => {
               </div>
             </div>
           ))}
+
+          <div
+            data-aos="fade-up"
+            data-aos-duration="2000"
+            // data-aos-once="true"
+            style={{ marginTop: "3.2rem" }}
+          >
+            <a href="/register" className="btn btn--main">
+              Get Started
+            </a>
+          </div>
         </div>
       </SplitScreen>
     </Section>

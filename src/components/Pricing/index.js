@@ -35,7 +35,8 @@ const Prices = () => {
                 description={
                   "Book a voice call with a doctor. Medical Report inclusive."
                 }
-                amt={2500}
+                nairaAmtAmt={2500}
+                dollarAmt={5}
                 label="Get Started"
               />
 
@@ -44,7 +45,8 @@ const Prices = () => {
                 description={
                   "Book a voice call with a doctor. Medical Report inclusive."
                 }
-                amt={3500}
+                nairaAmt={3500}
+                dollarAmt={7}
                 label="Get Started"
               />
             </div>
@@ -68,7 +70,8 @@ const Prices = () => {
                 description={
                   "1 Person, 1 Address for a Single visit within 24 hours."
                 }
-                amt={25000}
+                dollarAmt={50}
+                nairaAmt={25000}
                 label="Get Started"
               />
             </div>

@@ -37,7 +37,7 @@ const HMOBasic = () => {
         <SplitScreen>
           <div className="plan-prices__img">
             <Image
-              src={require("@/assets/img/hmo-basic.png")}
+              src={require("@/assets/img/hmo-basic.png").default}
               alt="Married couple smiling and holding each others"
               data-aos="fade-up"
               data-aos-duration="2000"
@@ -51,11 +51,17 @@ const HMOBasic = () => {
               data-aos-duration="2000"
             >
               <div className="plan-prices__price--1">
-                <span className="plan-prices__amt">₦180,000</span>
+                <span className="plan-prices__amt">
+                  ₦180,000
+                  <span className="pricing__amt-dollar">($100.00)</span>
+                </span>
                 <p>Price for 12 Visits Annual Plan</p>
               </div>
               <div className="plan-prices__price--2">
-                <span className="plan-prices__amt">₦60,000</span>
+                <span className="plan-prices__amt">
+                  ₦60,000
+                  <span className="pricing__amt-dollar">($100.00)</span>
+                </span>
                 <p>Price for 4 Visits Annual Plan</p>
               </div>
             </div>

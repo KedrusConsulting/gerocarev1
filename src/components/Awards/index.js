@@ -56,16 +56,18 @@ const Awards = () => {
         >
           <SwiperSlide>
             <Award
-              award_logo={require("@/assets/img/google-startup@2x.png").default}
-              award_desc={"Google Awardees for StartUps selected across Africa"}
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Award
               award_logo={require("@/assets/img/who@2x.png").default}
               award_desc={"Top 30 African Healthcare Innovations 2019"}
             />
           </SwiperSlide>
+
+          <SwiperSlide>
+            <Award
+              award_logo={require("@/assets/img/google-startup@2x.png").default}
+              award_desc={"Google Awardees for StartUps selected across Africa"}
+            />
+          </SwiperSlide>
+
           <SwiperSlide>
             <Award
               award_logo={require("@/assets/img/as@2x.png").default}
@@ -88,16 +90,18 @@ const Awards = () => {
               award_desc={"Best of Nigerian Tech Echosystem"}
             />
           </SwiperSlide>
-          <SwiperSlide>
-            <Award
-              award_logo={require("@/assets/img/google-startup@2x.png").default}
-              award_desc={"Google Awardees for StartUps selected across Africa"}
-            />
-          </SwiperSlide>
+
           <SwiperSlide>
             <Award
               award_logo={require("@/assets/img/who@2x.png").default}
               award_desc={"Top 30 African Healthcare Innovations 2019"}
+            />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <Award
+              award_logo={require("@/assets/img/google-startup@2x.png").default}
+              award_desc={"Google Awardees for StartUps selected across Africa"}
             />
           </SwiperSlide>
         </Swiper>

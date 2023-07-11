@@ -11,16 +11,17 @@ const pricings = [
   {
     plan: "Basic",
     description: "Annual home medical visits",
-    price_1: "N180,000",
-    price_2: "N60,000",
+    price_1: { naira: "N180,000", dollar: "100.00" },
+    price_2: { naira: "N60,000", dollar: "100.00" },
+
     route: "/hmo/basic",
   },
 
   {
     plan: "Standard",
     description: "Everything in Basic + Annual comprehensive Check-up",
-    price_1: "N280,000",
-    price_2: "N160,000",
+    price_1: { naira: "N280,000", dollar: "560.00" },
+    price_2: { naira: "N160,000", dollar: "320.00" },
     route: "/hmo/standard",
   },
 
@@ -28,8 +29,9 @@ const pricings = [
     plan: "Premium",
     description:
       "Everything in Standard + Support services (includes Basic drugs and Test)",
-    price_1: "N250,000",
-    price_2: "N160,000",
+    price_1: { naira: "N250,000", dollar: "500.00" },
+    price_2: { naira: "N130,000", dollar: "260.00" },
+
     route: "/hmo/premium",
   },
 
@@ -37,16 +39,18 @@ const pricings = [
     plan: "Diamond",
     description:
       "Everything in Premium + Chronic Care (Includes Medication for Chronic Cases)",
-    price_1: "N280,000",
-    price_2: "N130,000",
+    price_1: { naira: "N280,000", dollar: "560.00" },
+    price_2: { naira: "N160,000", dollar: "320.00" },
+
     route: "/hmo/diamond",
   },
 
   {
     plan: "Platinum",
     description: "Everything in Diamond + annual Comprehensive checkup",
-    price_1: "N380,000",
-    price_2: "N260,000",
+    price_1: { naira: "N380,000", dollar: "760.00" },
+    price_2: { naira: "N260,000", dollar: "520.00" },
+
     route: "/hmo/platinum",
   },
 
@@ -54,8 +58,9 @@ const pricings = [
     plan: "Ultimate",
     description:
       "Everything in Platinum + In-patient Care (Includes Admission Services)",
-    price_1: "N600,000",
-    price_2: "N500,000",
+    price_1: { naira: "N600,000", dollar: "1200.00" },
+    price_2: { naira: "N500,000", dollar: "1000.00" },
+
     route: "/hmo/ultimate",
   },
 ];
@@ -91,7 +96,7 @@ const HMO = () => {
 
       <section className="section section--full-width-img">
         <Image
-          src={require("@/assets/img/hmo-img.png")}
+          src={require("@/assets/img/hmo-img.png").default}
           alt="Happy Man and his wife with sitting in the living room"
           data-aos="fade-up"
           data-aos-duration="2000"
@@ -133,10 +138,16 @@ const HMO = () => {
                   <span className="hmo__text">{price.description}</span>
                 </td>
                 <td>
-                  <span className="hmo__amt">{price.price_1}</span>
+                  <span className="hmo__amt">{price.price_1.naira}</span>
+                  <span className="pricing__amt-dollar">
+                    {`($${price.price_1.dollar})`}
+                  </span>
                 </td>
                 <td>
-                  <span className="hmo__amt">{price.price_2}</span>
+                  <span className="hmo__amt">{price.price_2.naira}</span>
+                  <span className="pricing__amt-dollar">
+                    (${price.price_2.dollar})
+                  </span>
                 </td>
                 <td>
                   <Link href={price.route} className="btn btn--table">
@@ -154,11 +165,11 @@ const HMO = () => {
             subtitle={"Annual home Medical visits"}
             prices={{
               price_1: {
-                amt: 180000,
+                amt: { naira: 180000, dollar: 100 },
                 description: "Price for 12 Visits Annual Plan",
               },
               price_2: {
-                amt: 60000,
+                amt: { naira: 60000, dollar: 100 },
                 description: "Price for 4 Visits Annual Plan",
               },
             }}
@@ -170,11 +181,11 @@ const HMO = () => {
             subtitle={"Everything in Basic + Annual comprehensive Check-up"}
             prices={{
               price_1: {
-                amt: 280000,
+                amt: { naira: 280000, dollar: 560 },
                 description: "Price for 12 Visits Annual Plan",
               },
               price_2: {
-                amt: 160000,
+                amt: { naira: 160000, dollar: 320 },
                 description: "Price for 4 Visits Annual Plan",
               },
             }}
@@ -188,11 +199,12 @@ const HMO = () => {
             }
             prices={{
               price_1: {
-                amt: 250000,
+                amt: { naira: 250000, dollar: 500 },
+
                 description: "Price for 12 Visits Annual Plan",
               },
               price_2: {
-                amt: 130000,
+                amt: { naira: 130000, dollar: 260 },
                 description: "Price for 4 Visits Annual Plan",
               },
             }}
@@ -204,11 +216,11 @@ const HMO = () => {
             subtitle={"Everything in Diamond + annual Comprehensive checkup."}
             prices={{
               price_1: {
-                amt: 280000,
+                amt: { naira: 280000, dollar: 560 },
                 description: "Price for 12 Visits Annual Plan",
               },
               price_2: {
-                amt: 160000,
+                amt: { naira: 160000, dollar: 320 },
                 description: "Price for 4 Visits Annual Plan",
               },
             }}
@@ -220,11 +232,11 @@ const HMO = () => {
             subtitle={"Everything in Diamond + annual Comprehensive checkup."}
             prices={{
               price_1: {
-                amt: 380000,
+                amt: { naira: 380000, dollar: 760 },
                 description: "Price for 12 Visits Annual Plan",
               },
               price_2: {
-                amt: 260000,
+                amt: { naira: 260000, dollar: 520 },
                 description: "Price for 4 Visits Annual Plan",
               },
             }}
@@ -238,11 +250,11 @@ const HMO = () => {
             }
             prices={{
               price_1: {
-                amt: 600000,
+                amt: { naira: 600000, dollar: 1200 },
                 description: "Price for 12 Visits Annual Plan",
               },
               price_2: {
-                amt: 500000,
+                amt: { naira: 500000, dollar: 1000 },
                 description: "Price for 4 Visits Annual Plan",
               },
             }}

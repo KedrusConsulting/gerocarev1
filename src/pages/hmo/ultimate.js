@@ -49,11 +49,17 @@ const HMOUltimate = () => {
               data-aos-duration="2000"
             >
               <div className="plan-prices__price--1">
-                <span className="plan-prices__amt">₦600,000</span>
+                <span className="plan-prices__amt">
+                  ₦600,000
+                  <span className="pricing__amt-dollar">($1200.00)</span>
+                </span>
                 <p>Price for 12 Visits Annual Plan</p>
               </div>
               <div className="plan-prices__price--2">
-                <span className="plan-prices__amt">₦500,000</span>
+                <span className="plan-prices__amt">
+                  ₦500,000
+                  <span className="pricing__amt-dollar">($1000.00)</span>
+                </span>
                 <p>Price for 4 Visits Annual Plan</p>
               </div>
             </div>

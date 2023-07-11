@@ -4,13 +4,18 @@ import React, { useState } from "react";
 const pricing = [
   {
     plan: "Single",
-    duration: ["Quarterly", "Annually"],
+    duration: ["Quarterly", "BI Annually", "Annually"],
     description: {
       monthly: "For 1 Parent, 1 Address for 3 Visits valid for 3 Months.",
+      biannually: "For 1 Parent, 1 Address for 6 Visits valid for 6 Months.",
       annually: "For 1 Parent, 1 Address for 12 Visits valid for 12 Months",
     },
 
-    amount: 45000,
+    amount: {
+      quaterly: ["45,000", "90.00"],
+      biannually: ["90,000", "180.00"],
+      annually: ["162,000", "324.00"],
+    },
     benefits: [
       "Doctor Visits",
       "Doctor takes Calls",
@@ -22,13 +27,18 @@ const pricing = [
 
   {
     plan: "Couple",
-    duration: ["Quarterly", "Annually"],
+    duration: ["Quarterly", "BI Annually", "Annually"],
     description: {
       monthly: "For 2 Parents, 1 Address for 3 Visits valid for 3 Months",
+      biannually: "For 2 Parents, 1 Address for 6 Visits valid for 6 Months",
       annually: "For 2 Parents, 1 Address for 12 Visits valid for 12 Months",
     },
 
-    amount: 81000,
+    amount: {
+      quaterly: ["81,000", "160.00"],
+      biannually: ["162,000", "324.00"],
+      annually: ["292,000", "584.00"],
+    },
     benefits: [
       "Doctor Visits",
       "Doctor takes Calls",
@@ -40,20 +50,37 @@ const pricing = [
 ];
 
 const Tabs = () => {
-  const [tab, setTab] = useState(false);
+  const [tab, setTab] = useState(0);
 
   return (
     <>
       <div className="tab" data-aos="fade-up" data-aos-duration="2000">
-        <input type="checkbox" id="tab-switch" name="tab-switch" />
-        <label
-          className="tab__ctrl"
-          htmlFor="tab-switch"
-          onClick={() => setTab((prev) => !prev)}
-        >
-          <span>Quarterly Payment</span>
-          <span>Annually Payment</span>
-        </label>
+        <div className="tab__ctrl">
+          <button
+            className={`tab__btn tab__btn--1 ${
+              tab === 0 ? "tab__btn--active" : ""
+            }`}
+            onClick={() => setTab(0)}
+          >
+            Quarterly Payment
+          </button>
+          <button
+            className={`tab__btn tab__btn--2 ${
+              tab === 1 ? "tab__btn--active" : ""
+            }`}
+            onClick={() => setTab(1)}
+          >
+            BI Annual Payment
+          </button>
+          <button
+            className={`tab__btn tab__btn--3 ${
+              tab === 2 ? "tab__btn--active" : ""
+            }`}
+            onClick={() => setTab(2)}
+          >
+            Annually Payment
+          </button>
+        </div>
       </div>
 
       <div className="tab__panel">
@@ -67,15 +94,27 @@ const Tabs = () => {
               <h4 className="heading--4">{price.plan}</h4>
 
               <p>
-                {!tab ? price.description.monthly : price.description.annually}
+                {tab === 0 && price.description.monthly}
+                {tab === 1 && price.description.biannually}
+                {tab === 2 && price.description.annually}
               </p>
 
               <div className="pricing__price">
                 <span className="pricing__amt">
-                  ₦{!tab ? price.amount : price.amount * 2}
+                  ₦{tab === 0 && price.amount.quaterly[0]}
+                  {tab === 1 && price.amount.biannually[0]}
+                  {tab === 2 && price.amount.annually[0]}
                 </span>
                 <span className="pricing__duration">
-                  {!tab ? "/Quarterly" : "/Annually"}
+                  {tab === 0 && "/Quarterly"}
+                  {tab === 1 && "/BIannually"}
+                  {tab === 2 && "/Annually"}
+                </span>
+
+                <span className="pricing__amt-dollar">
+                  (${tab === 0 && price.amount.quaterly[1]}
+                  {tab === 1 && price.amount.biannually[1]}
+                  {tab === 2 && price.amount.annually[1]})
                 </span>
               </div>
 

@@ -290,6 +290,16 @@
       }
     }
   }
+
+  &__steps {
+    .btn--main {
+      width: 25rem;
+
+      @include respond(tab-port) {
+        margin: 0 auto;
+      }
+    }
+  }
 }
 
 .benefits {

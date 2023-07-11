@@ -73,7 +73,7 @@ const Testimonials = () => {
             description={
               "“Thank u Gerocare for building a platform so wonderful as this to be able to care for our aged parents and love ones. I had a beautiful experience the first time a doctor from Gerocare came to visit with my parents especially my Dad, I felt proud been able to care for my parents at home, My dad was so happy his son sent a doctor over to the house to check on his health status. It was really a beautiful experience for them, and I do hope I keep caring for them continuously with the help of Gerocare, thank u Gerocare.”"
             }
-            image_url={require("@/assets/img/icon_user_avatar.svg").default}
+            image_url={require("@/assets/img/tega_samuel.png").default}
             author_name={"Tega Samuel"}
             author_location={"Lagos"}
           />

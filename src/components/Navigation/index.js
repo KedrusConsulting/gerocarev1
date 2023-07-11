@@ -95,8 +95,8 @@ const Navigation = () => {
             <a href="/login" className="btn btn--sec">
               Log In
             </a>
-            <a href="/doctors-registration" className="btn btn--main">
-              Register as a doctor
+            <a href="/register" className="btn btn--main">
+              Sign Up
             </a>
           </div>
         </div>

@@ -219,6 +219,10 @@
     }
   }
 
+  &--doc-on-demand {
+    padding: 10vh 0 5vh;
+  }
+
   &--teleconsultation,
   &--doc-on-demand {
     @include respond(tab-port) {
@@ -320,6 +324,15 @@
     .btn--main {
       margin: 0 auto;
     }
+  }
+
+  &--hmo-basic,
+  &--hmo-standard,
+  &--hmo-premium,
+  &--hmo-diamond,
+  &--hmo-platinum,
+  &--hmo-utimate {
+    padding: 13vh 0 0;
   }
 }
 

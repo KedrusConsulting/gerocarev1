@@ -57,8 +57,8 @@ export default function Home() {
               data-aos-once="true"
               data-aos-offset="-100"
             >
-              Subscribe them for regular doctor home visits for under $25 per
-              month
+              Subscribe them for regular doctor home visits for under $30 per
+              month.
             </p>
 
             <div

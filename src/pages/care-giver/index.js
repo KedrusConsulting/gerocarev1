@@ -120,7 +120,7 @@ export default function CareGiver() {
       <main>
         <section className="section section--full-bg">
           <Image
-            src={require("@/assets/img/care-givers-bg.png")}
+            src={require("@/assets/img/care-givers-bg.png").default}
             alt="Care givers background"
             data-aos="fade-up"
             data-aos-duration="2000"

@@ -52,7 +52,7 @@ export default function Contact() {
 
           <div className="header__elderly-img">
             <Image
-              src={require("@/assets/img/elderly-care.png")}
+              src={require("@/assets/img/elderly-care.png").default}
               alt={"Elderly care"}
               data-aos="fade-up"
               data-aos-duration="2000"
@@ -62,7 +62,28 @@ export default function Contact() {
       </header>
 
       <main>
-        <OurServices />
+        <section className="section section--subscription">
+          <div className="row">
+            <div className="subscription__caption">
+              <h2
+                className="heading heading--display"
+                data-aos="fade-up"
+                data-aos-duration="2000"
+              >
+                Subscription Plans
+              </h2>
+
+              <p data-aos="fade-up" data-aos-duration="2000">
+                We also offer flexible subscription plans at affordable rates
+              </p>
+            </div>
+
+            <div className="subscription__pricing">
+              <Tabs />
+            </div>
+          </div>
+        </section>
+
         <SimpleSteps />
 
         <section className="section section--access">
@@ -155,27 +176,7 @@ export default function Contact() {
           </div>
         </section>
 
-        <section className="section section--subscription">
-          <div className="row">
-            <div className="subscription__caption">
-              <h2
-                className="heading heading--display"
-                data-aos="fade-up"
-                data-aos-duration="2000"
-              >
-                Subscription Plans
-              </h2>
-
-              <p data-aos="fade-up" data-aos-duration="2000">
-                We also offer flexible subscription plans at affordable rates
-              </p>
-            </div>
-
-            <div className="subscription__pricing">
-              <Tabs />
-            </div>
-          </div>
-        </section>
+        <OurServices />
       </main>
 
       <Footer />

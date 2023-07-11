@@ -253,16 +253,33 @@ export const HMO = () => {
 
   return (
     <>
-      <div className="tab choose-plan__tab">
-        <input type="checkbox" id="tab-switch" name="tab-switch" />
-        <label
-          className="tab__ctrl"
-          htmlFor="tab-switch"
-          onClick={() => setTab((prev) => !prev)}
-        >
-          <span>Annually</span>
-          <span>Quarterly</span>
-        </label>
+      <div className="tab">
+        <div className="tab__ctrl">
+          <button
+            className={`tab__btn tab__btn--1 ${
+              tab === 0 ? "tab__btn--active" : ""
+            }`}
+            onClick={() => setTab(0)}
+          >
+            Quarterly Payment
+          </button>
+          <button
+            className={`tab__btn tab__btn--2 ${
+              tab === 1 ? "tab__btn--active" : ""
+            }`}
+            onClick={() => setTab(1)}
+          >
+            BI Annually Payment
+          </button>
+          <button
+            className={`tab__btn tab__btn--3 ${
+              tab === 2 ? "tab__btn--active" : ""
+            }`}
+            onClick={() => setTab(2)}
+          >
+            Annually Payment
+          </button>
+        </div>
       </div>
 
       <div className="choose-plan__hmo">

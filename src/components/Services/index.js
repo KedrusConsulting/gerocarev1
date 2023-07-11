@@ -6,6 +6,14 @@ import Section from "@/Layout/Section";
 
 const services = [
   {
+    icon: require("@/assets/img/elderly-home-visits.svg").default,
+    name: "Regular Doctor Home Visits",
+    href: "/elderly-care",
+    description:
+      "Subscribe to premium health care plans designed to proactively respond to the health and wellness needs of your elderly loved ones.",
+  },
+
+  {
     icon: require("@/assets/img/doctor-on-demand.svg").default,
     name: "Doctor on Demand",
     href: "/doctor-on-demand",
@@ -19,13 +27,7 @@ const services = [
     description:
       "Benefit from confidential video consultations with experienced practitioners specialized in diverse medical fields.",
   },
-  {
-    icon: require("@/assets/img/elderly-home-visits.svg").default,
-    name: "Elderly home visits",
-    href: "/elderly-care",
-    description:
-      "Subscribe to premium health care plans designed to proactively respond to the health and wellness needs of your elderly loved ones.",
-  },
+
   {
     icon: require("@/assets/img/care-givers.svg").default,
     name: "Care Givers",

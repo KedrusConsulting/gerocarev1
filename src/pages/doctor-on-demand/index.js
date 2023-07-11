@@ -39,7 +39,7 @@ export default function Contact() {
 
           <div className="header__img">
             <Image
-              src={require("@/assets/img/access-to-home.png")}
+              src={require("@/assets/img/access-to-home.png").default}
               alt="Access to a home doctor"
               data-aos="fade-up"
               data-aos-duration="2000"
@@ -49,8 +49,6 @@ export default function Contact() {
       </Header>
 
       <main>
-        <SimpleSteps />
-
         <section className="section section--access">
           <div className="row">
             <div className="access__grid">
@@ -134,6 +132,7 @@ export default function Contact() {
 
                     <div className="pricing__price">
                       <span className="pricing__amt">₦25,000</span>
+                      <span className="pricing__amt-dollar">($50.00)</span>
                     </div>
 
                     <ul className="pricing__list">
@@ -171,6 +170,8 @@ export default function Contact() {
             </div>
           </div>
         </section>
+
+        <SimpleSteps />
       </main>
     </Root>
   );

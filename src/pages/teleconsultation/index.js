@@ -50,6 +50,50 @@ export default function Contact() {
       </Header>
 
       <main>
+        <section className="section section--subscription">
+          <div className="row">
+            <div className="subscription__caption">
+              <h2
+                className="heading heading--display"
+                data-aos="fade-up"
+                data-aos-duration="2000"
+              >
+                Subscription Plans
+              </h2>
+
+              <p data-aos="fade-up" data-aos-duration="2000">
+                We also offer flexible subscription plans at affordable rates
+              </p>
+            </div>
+
+            <div className="subscription__pricing">
+              <div className="pricing__tele">
+                <div className="pricing__tele-grp">
+                  <PriceCard
+                    title="Voice Calls"
+                    description={
+                      "Book a voice call with a doctor. Medical Report inclusive."
+                    }
+                    nairaAmt={2500}
+                    dollarAmt={5}
+                    label="Book Now"
+                  />
+
+                  <PriceCard
+                    title="Voice Calls"
+                    description={
+                      "Book a voice call with a doctor. Medical Report inclusive."
+                    }
+                    nairaAmt={3500}
+                    dollarAmt={7}
+                    label="Book Now"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <SimpleSteps />
 
         <section className="section section--access">
@@ -135,48 +179,6 @@ export default function Contact() {
                   data-aos-duration="2000"
                   data-aos-delay="50"
                 />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="section section--subscription">
-          <div className="row">
-            <div className="subscription__caption">
-              <h2
-                className="heading heading--display"
-                data-aos="fade-up"
-                data-aos-duration="2000"
-              >
-                Subscription Plans
-              </h2>
-
-              <p data-aos="fade-up" data-aos-duration="2000">
-                We also offer flexible subscription plans at affordable rates
-              </p>
-            </div>
-
-            <div className="subscription__pricing">
-              <div className="pricing__tele">
-                <div className="pricing__tele-grp">
-                  <PriceCard
-                    title="Voice Calls"
-                    description={
-                      "Book a voice call with a doctor. Medical Report inclusive."
-                    }
-                    amt={2500}
-                    label="Book Now"
-                  />
-
-                  <PriceCard
-                    title="Voice Calls"
-                    description={
-                      "Book a voice call with a doctor. Medical Report inclusive."
-                    }
-                    amt={3500}
-                    label="Book Now"
-                  />
-                </div>
               </div>
             </div>
           </div>

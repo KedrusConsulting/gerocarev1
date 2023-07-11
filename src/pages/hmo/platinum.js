@@ -51,11 +51,17 @@ const HMOPlatium = () => {
               data-aos-duration="2000"
             >
               <div className="plan-prices__price--1">
-                <span className="plan-prices__amt">₦360,000</span>
+                <span className="plan-prices__amt">
+                  ₦380,000
+                  <span className="pricing__amt-dollar">($760.00)</span>
+                </span>
                 <p>Price for 12 Visits Annual Plan</p>
               </div>
               <div className="plan-prices__price--2">
-                <span className="plan-prices__amt">₦260,000</span>
+                <span className="plan-prices__amt">
+                  ₦260,000
+                  <span className="pricing__amt-dollar">($520.00)</span>
+                </span>
                 <p>Price for 4 Visits Annual Plan</p>
               </div>
             </div>

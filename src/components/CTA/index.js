@@ -10,18 +10,18 @@ const CTA = () => {
           data-aos="fade-up"
           data-aos-duration="2000"
         >
-          Have A Passion To Serve the Elderly?{" "}
+          Work as a Gerocare Doctor{" "}
         </h2>
 
-        <p data-aos="fade-up" data-aos-duration="2000">
+        {/* <p data-aos="fade-up" data-aos-duration="2000">
           If you are a qualified doctor or nurse, or a certified healthcare
           provider looking for an opportunity to help deliver quality medical
           services for the elderly, we welcome you to join our growing family of
           committed medical professionals
-        </p>
+        </p> */}
 
         <a
-          href="/register"
+          href="/doctors-registration"
           className="btn btn--main cta__btn"
           data-aos="fade-up"
           data-aos-duration="2000"
