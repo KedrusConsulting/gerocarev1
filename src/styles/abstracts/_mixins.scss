@@ -1,0 +1,134 @@
+@mixin d-flex($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin caption($width, $bottom) {
+  max-width: $width;
+  margin: 0 auto $bottom;
+  text-align: center;
+  color: get-color(primary);
+}
+
+@mixin grid-template-col($cols) {
+  grid-template-columns: $cols;
+}
+
+@mixin swiper {
+  .swiper {
+    height: 100%;
+  }
+
+  .swiper-pagination {
+    max-width: fit-content !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    bottom: 4rem !important;
+  }
+
+  .swiper-pagination-bullet {
+    background-color: hsla(177, 85%, 18%, 1);
+    opacity: 10%;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: hsla(177, 85%, 18%, 1);
+    opacity: 100%;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: hsla(177, 85%, 18%, 1);
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: #e6eeee;
+
+    &::after {
+      font-size: 1.6rem;
+      font-weight: 900;
+    }
+  }
+
+  .swiper-button-next {
+    &::after {
+      transform: translateX(1px);
+    }
+  }
+
+  .swiper-button-prev {
+    &::after {
+      transform: translateX(-1px);
+    }
+  }
+}
+
+@mixin border($color: hsl(80, 56%, 75%)) {
+  border: 1.5px solid $color;
+}
+
+// MEDIA QUERY MANAGER
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone-sm {
+    @media only screen and (max-width: 23.43em) {
+      @content;
+    } //375px
+  }
+
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    } //600px
+  }
+
+  @if $breakpoint == phone-lg {
+    @media only screen and (max-width: 45em) {
+      @content;
+    } //720px
+  }
+
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 60em) {
+      @content;
+    } //960px
+  }
+
+  @if $breakpoint == tab-md {
+    @media only screen and (max-width: 68.75rem) {
+      @content;
+    } //1100px
+  }
+
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 75em) {
+      @content;
+    } //1200px
+  }
+
+  @if $breakpoint == big-desktop {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    } //1800
+  }
+}

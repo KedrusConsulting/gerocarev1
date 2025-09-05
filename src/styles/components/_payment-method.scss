@@ -1,0 +1,49 @@
+.payment-method {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  &__method {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 1.6rem;
+  }
+
+  &__link {
+    display: inline-block;
+    margin-top: 2.4rem;
+    width: fit-content;
+  }
+
+  & * {
+    cursor: pointer;
+  }
+
+  .inputfield {
+    border-radius: 0.4rem;
+    padding: 0 1.2rem;
+    width: 16.4rem;
+
+    &__label {
+      font-family: "Graphik M Trial";
+      font-weight: 500;
+    }
+
+    &__label-radio {
+      display: flex;
+      align-items: center;
+    }
+
+    &__label-text {
+      position: relative;
+      top: 2.5px;
+    }
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+  }
+}

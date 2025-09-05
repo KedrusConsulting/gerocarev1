@@ -1,0 +1,181 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  height: 9.6rem;
+  background-color: #fff;
+  position: relative;
+
+  & > .row {
+    flex: 1;
+    @include d-flex(flex-start, center);
+  }
+
+  &__grp {
+    flex: 1;
+    margin-left: 10%;
+    @include d-flex(space-between, center);
+  }
+
+  &__list {
+    flex: 1;
+    @include d-flex(space-between, center);
+
+    @include respond(tab-md) {
+      @include d-flex(flex-end, center);
+    }
+
+    @include respond(tab-port) {
+      display: none;
+    }
+  }
+
+  &__grp.active {
+    @include respond(tab-port) {
+      flex-direction: column;
+      align-items: flex-start;
+      background-color: get-color(primary);
+      position: absolute;
+      width: 100%;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      margin-left: 0;
+      z-index: 10;
+    }
+  }
+
+  &__grp.active &__list {
+    @include respond(tab-port) {
+      display: flex;
+      flex-direction: column;
+      padding: 3.2rem;
+      align-items: flex-start;
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    position: relative;
+    @include respond(tab-md) {
+      &:not(:last-child) {
+        margin-right: 2.4rem;
+      }
+    }
+
+    @include respond(tab-port) {
+      &:not(:last-child) {
+        margin-bottom: 4rem;
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__link {
+    &:hover,
+    &:active {
+      color: #b0dfca;
+    }
+  }
+
+  &__grp.active &__link {
+    @include respond(tab-port) {
+      color: #fff;
+      font-family: "Graphik L Trial";
+      font-size: 2.4rem;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    margin-left: 10%;
+
+    @include respond(tab-md) {
+      display: none;
+    }
+
+    & > *:not(:last-child) {
+      margin-right: 2.4rem;
+    }
+
+    .btn--sec {
+      @include respond(tab-port) {
+        border: 1.5px solid #ffffff;
+        color: hsl(0, 0%, 100%);
+      }
+    }
+  }
+
+  &__grp.active &__actions {
+    @include respond(tab-port) {
+      display: flex;
+      position: relative;
+      z-index: 11;
+      bottom: 10%;
+      margin-left: 0;
+      padding-left: 3.2rem;
+    }
+  }
+
+  &__menu {
+    display: none;
+
+    @include respond(tab-port) {
+      display: block;
+      position: relative;
+      z-index: 11;
+      margin-left: auto;
+    }
+  }
+}
+
+.dropdown {
+  &__list {
+    display: none;
+  }
+
+  &__list.active {
+    display: block;
+    position: absolute;
+    top: 3.2rem;
+    left: -2.4rem;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 6px -2px #1018280d, 0px 12px 16px -4px #1018281a;
+    width: 24rem;
+    padding: 0.8rem;
+    border-radius: 0.2rem;
+    z-index: 50000;
+
+    @include respond(tab-port) {
+      position: relative;
+      box-shadow: none;
+      top: 0;
+      left: 0;
+      background-color: get-color(primary);
+      width: 100%;
+    }
+  }
+
+  &__item {
+    padding: 1rem 1.6rem;
+    transition: background-color 0.2s;
+  }
+
+  &__item:hover {
+    background-color: #eff6f5;
+    cursor: pointer;
+  }
+
+  &__link {
+    display: inline-block;
+    width: 100%;
+  }
+
+  &__list.active &__link {
+    @include respond(tab-port) {
+      color: #fff;
+      font-family: "Graphik L Trial";
+      font-size: 2.4rem;
+    }
+  }
+}

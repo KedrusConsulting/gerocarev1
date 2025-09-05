@@ -1,0 +1,47 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  font-size: 62.5%;
+
+  @include respond(tab-land) {
+    font-size: 56.25%;
+  }
+
+  @include respond(tab-md) {
+    font-size: 50%;
+  }
+
+  @include respond(tab-port) {
+    font-size: 56.25%;
+  }
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+}
+
+a {
+  &,
+  &:link,
+  &:visited {
+    text-decoration: none;
+    color: get-color(primary);
+    transition: all 0.3s;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+input {
+  &::-webkit-inner-spin-button {
+    display: none;
+  }
+}

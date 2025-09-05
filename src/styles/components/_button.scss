@@ -1,0 +1,65 @@
+.btn {
+  font-family: "Graphik M Trial";
+  font-weight: 500;
+  @include d-flex(center, center);
+  border: none;
+  border-radius: 4.8rem;
+  padding: 1.45rem 2.4rem;
+  cursor: pointer;
+
+  img {
+    margin-right: 0.4rem;
+  }
+
+  &--main {
+    width: fit-content;
+    padding: 1.45rem 3.2rem;
+    background-color: hsla(94, 71%, 68%, 1);
+  }
+
+  &--primary {
+    width: fit-content;
+    padding: 1.45rem 3.2rem;
+    background-color: hsl(154, 100%, 9%);
+    color: hsl(0, 0%, 100%);
+  }
+
+  &--sec {
+    width: 12rem;
+    border: 1.5px solid get-color(primary);
+    background-color: transparent;
+    transition: all 0.5s ease-in-out;
+
+    &:hover {
+      background-color: hsla(83, 57%, 95%, 1);
+      border: 1.5px solid transparent;
+    }
+  }
+
+  &--full {
+    width: 100%;
+  }
+
+  &--outline {
+    border: 1.5px solid hsla(94, 71%, 68%, 1);
+    background-color: transparent;
+    color: get-color(primary);
+  }
+
+  &--text {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  &--icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.8rem;
+    height: 2.8rem;
+    @include border(#009b55);
+    border-radius: 10rem;
+  }
+}

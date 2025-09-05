@@ -1,0 +1,88 @@
+.uti-pl-0 {
+  padding-left: 0 !important;
+}
+
+.uti-pr-0 {
+  padding-right: 0 !important;
+}
+
+.uti-mb-sm {
+  margin-bottom: 1.6rem !important;
+}
+
+.uti-mb-md {
+  margin-bottom: 2.4rem !important;
+}
+
+.uti-mb-lg {
+  margin-bottom: 3.2rem !important;
+}
+
+.uti-mb-xl {
+  margin-bottom: 4rem !important;
+}
+
+.uti-mb-xxl {
+  margin-bottom: 4.8rem !important;
+}
+
+.uti-mt-sm {
+  margin-top: 1.6rem !important;
+}
+
+.uti-mt-md {
+  margin-top: 2.4rem !important;
+}
+
+.uti-mt-lg {
+  margin-top: 3.2rem !important;
+}
+
+.uti-mt-xl {
+  margin-top: 4rem !important;
+}
+
+.uti-mt-xxl {
+  margin-top: 4.8rem !important;
+}
+
+.spinner-border {
+  --bs-spinner-width: 2rem;
+  --bs-spinner-height: 2rem;
+  --bs-spinner-vertical-align: -0.125em;
+  --bs-spinner-border-width: 0.25em;
+  --bs-spinner-animation-speed: 0.75s;
+  --bs-spinner-animation-name: spinner-border;
+  border: var(--bs-spinner-border-width) solid currentcolor;
+  border-right-color: transparent;
+}
+
+.spinner-border,
+.spinner-grow {
+  display: inline-block;
+  width: var(--bs-spinner-width);
+  height: var(--bs-spinner-height);
+  vertical-align: var(--bs-spinner-vertical-align);
+  border-radius: 50%;
+  animation: var(--bs-spinner-animation-speed) linear infinite
+    var(--bs-spinner-animation-name);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.terms {
+  max-width: 70rem;
+  margin: 4rem auto 0;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    margin-top: 0.8rem;
+  }
+}

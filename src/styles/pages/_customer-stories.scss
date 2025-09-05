@@ -1,0 +1,34 @@
+.customers-stories {
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    max-width: 96rem;
+    margin: 0 auto;
+    gap: 6.4rem;
+
+    @include respond(tab-port) {
+      gap: 4rem;
+    }
+
+    @include respond(phone-lg) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__cta {
+    .heading {
+      max-width: 76.4rem;
+      margin: 4.8rem auto 2.4rem;
+
+      @include respond(phone) {
+        line-height: 4rem;
+        margin: 3.2rem auto 2.4rem;
+      }
+    }
+
+    p {
+      max-width: 76rem;
+    }
+  }
+}

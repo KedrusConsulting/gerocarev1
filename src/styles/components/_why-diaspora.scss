@@ -1,0 +1,35 @@
+.why-diaspora {
+  &__caption {
+    text-align: center;
+    margin-bottom: 4rem;
+
+    .heading--1 {
+      color: #075450;
+    }
+  }
+
+  &__table {
+    border-collapse: collapse;
+    width: 100%;
+    border-radius: 1.6rem;
+    border: 1px solid #00542f;
+
+    .d-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__table th,
+  &__table td {
+    border: 1px solid #00542f;
+    padding: 1.6rem;
+    text-align: left;
+  }
+
+  &__table th {
+    background-color: #f5fdf8;
+    color: #00542f;
+  }
+}

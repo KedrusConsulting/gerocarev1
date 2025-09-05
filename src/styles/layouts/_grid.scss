@@ -1,0 +1,333 @@
+.row {
+  max-width: 120rem;
+  margin: 0 auto;
+
+  @include respond(tab-land) {
+    padding: 2.4rem;
+  }
+}
+
+.grid {
+  display: grid;
+
+  &--2-col {
+    @include grid-template-col(55% 45%);
+
+    @include respond(tab-port) {
+      @include grid-template-col(1fr);
+    }
+  }
+
+  &--2-col-reverse {
+    @include grid-template-col(45% 55%);
+
+    @include respond(tab-port) {
+      @include grid-template-col(1fr);
+    }
+  }
+
+  &--3-col {
+    @include grid-template-col(1fr 1fr 1fr);
+    gap: 3.2rem;
+
+    @include respond(tab-port) {
+      @include grid-template-col(1fr 1fr);
+    }
+
+    @include respond(phone) {
+      @include grid-template-col(1fr);
+    }
+  }
+
+  &--4-col {
+  }
+
+  &--center-v {
+    align-items: center;
+  }
+}
+
+.auth {
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    // align-items: center;
+    height: 100vh;
+
+    @include respond(phone) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__left {
+    background-image: url("../../assets/img/auth-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include respond(phone) {
+      display: none;
+    }
+  }
+
+  &__right {
+    padding: 3.2rem;
+    // align-self: center;
+    position: relative;
+
+    width: 80%;
+    margin: 0 auto;
+
+    @include respond(phone-lg) {
+      width: 95%;
+    }
+
+    @include respond(phone-sm) {
+      width: 97%;
+    }
+  }
+
+  &__header {
+    margin: 2.4rem 0;
+    color: get-color(primary);
+
+    @include respond(phone) {
+      max-width: 40rem;
+      margin: 3.2rem auto;
+    }
+  }
+
+  &__logo-box {
+    margin-bottom: 10vh;
+    position: relative;
+    left: -1.2rem;
+  }
+}
+
+.hmo {
+  &__pricing-caption {
+    color: get-color(primary);
+    margin-bottom: 6.4rem;
+    // text-align: center;
+
+    .heading {
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+
+  &__pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.4rem;
+
+    @include respond(phone-lg) {
+      grid-template-columns: 1fr;
+      gap: 3.2rem;
+    }
+  }
+
+  &__pricing-card {
+    display: none;
+
+    @include respond(tab-port) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #4c4e4e;
+      border-radius: 1.6rem;
+      background-color: #ffffff;
+      padding: 3.2rem 1.6rem;
+    }
+
+    .heading {
+      color: get-color(primary);
+    }
+
+    p {
+      text-align: center;
+      color: #33ad77;
+    }
+  }
+
+  &__prices {
+    display: flex;
+    justify-content: center;
+    margin: 2.4rem 0;
+
+    & > *:not(:last-child) {
+      margin-right: 1.6rem;
+    }
+
+    &-amt,
+    &-desc {
+      display: block;
+      text-align: center;
+    }
+
+    &-amt {
+      font-family: "Graphik M Trial";
+      font-size: 2.4rem;
+      line-height: 3.2rem;
+      border: 1px solid #075450;
+      letter-spacing: -0.02em;
+      color: #075450;
+      padding: 1rem 2rem;
+      margin-bottom: 0.8rem;
+
+      @include respond(phone-sm) {
+        font-size: 2rem;
+        padding: 1rem 1.6;
+      }
+    }
+
+    &-desc {
+      font-family: "Graphik R Trial";
+      font-size: 1.6rem;
+      line-height: 2rem;
+      color: #33ad77;
+
+      @include respond(phone-sm) {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  &__table {
+    width: 100%;
+    // border: 1px solid get-color(primary);
+    border-collapse: collapse;
+    border-radius: 0.8rem;
+
+    @include respond(tab-port) {
+      display: none;
+    }
+
+    thead {
+      background-color: get-color(primary);
+      color: #fff;
+      border-radius: 0.8rem;
+    }
+
+    td {
+      text-align: center;
+      padding: 5.6rem 1.6rem;
+      border: 1px solid get-color(primary);
+    }
+
+    .headings {
+      background-color: #f5faed;
+      color: get-color(primary);
+    }
+
+    .btn--table {
+      border: 1.5px solid get-color(primary);
+      background-color: #f5faed;
+      color: get-color(primary);
+    }
+  }
+
+  &__text {
+    display: block;
+    color: get-color(primary);
+    text-align: center;
+    max-width: 23.2rem;
+  }
+
+  &__amt {
+    font-family: "Graphik M Trial";
+    font-size: 3.2rem;
+    color: get-color(primary);
+  }
+
+  &__link {
+    margin-top: 4.8rem;
+
+    .btn--main {
+      width: max-content;
+      margin: 0 auto;
+    }
+  }
+}
+
+[class$="plan-details"] {
+  // &__caption {
+
+  // }
+
+  .table__container {
+    @include respond(tab-port) {
+      overflow-x: auto;
+    }
+  }
+
+  table {
+    width: 100%;
+    border: 1px solid get-color(primary);
+    border-collapse: collapse;
+  }
+
+  thead {
+    // text-align: center;
+
+    .heading {
+      font-family: "Graphik M Trial";
+      color: get-color(primary);
+    }
+
+    // @include respond(tab-port) {
+    //   display: none;
+    // }
+  }
+
+  td {
+    border-collapse: collapse;
+    border: 1px solid get-color(primary);
+    padding: 1.6rem 2.4rem;
+  }
+
+  // tbody,
+  // tr,
+  // td {
+  //   @include respond(tab-port) {
+  //     display: grid;
+  //     // grid-template-columns: max-content auto;
+  //     width: 100%;
+  //   }
+  // }
+
+  // td:nth-of-type(1)::before {
+  //   // display: block;
+  //   content: "Membership";
+  //   text-transform: uppercase;
+  //   font-size: 1.6rem;
+  //   font-family: "Graphik M Trial";
+  //   color: get-color(primary);
+  // }
+
+  .table {
+    &__item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__item-name {
+      display: block;
+      color: get-color(primary);
+      max-width: 27rem;
+      margin-right: 1.6rem;
+    }
+
+    &__item-name.heading {
+      font-family: "Graphik M Trial";
+    }
+
+    &__icon {
+      width: 2.2rem;
+      height: 2.2rem;
+      transform: translateY(2px);
+    }
+  }
+}

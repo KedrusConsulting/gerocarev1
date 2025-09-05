@@ -1,0 +1,101 @@
+.footer {
+  background-color: get-color(primary);
+  color: get-color(white);
+  padding: 8rem 0;
+
+  &__grid {
+    @include grid-template-col(max(55rem) 1fr 1fr 1fr);
+
+    @include respond(tab-port) {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 6.4rem;
+    }
+
+    @include respond(phone) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+      gap: 6.4rem 3.2rem;
+    }
+  }
+
+  &__summary {
+    @include respond(tab-port) {
+      grid-column: 1 / -1;
+    }
+
+    .logo {
+      z-index: 1;
+    }
+  }
+
+  &__text {
+    font-family: "Graphik L Trial";
+    max-width: 42.6rem;
+    margin-top: 2.4rem;
+    margin-bottom: 4.8rem;
+  }
+
+  &__award {
+    display: flex;
+
+    & > * {
+      height: 6rem;
+      width: max-content;
+      object-fit: contain;
+    }
+  }
+
+  &__caption {
+    margin-bottom: 8.8rem;
+
+    h4,
+    p {
+      font-family: "Graphik L Trial";
+      text-align: center;
+    }
+
+    form,
+    h4 {
+      max-width: 56rem;
+      margin-inline: auto;
+    }
+
+    h4 {
+      font-size: 2.4rem;
+      line-height: 3.2rem;
+      font-weight: 500;
+      margin-bottom: 0.8rem;
+    }
+
+    p {
+      font-size: 1.5rem;
+      margin-bottom: 2.4rem;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 1.2rem;
+  }
+
+  &__list {
+    .heading {
+      // font-family: "Graphik M Trial";
+      // font-weight: 500;
+      margin-bottom: 1.6rem;
+    }
+  }
+
+  &__item {
+    margin-bottom: 1.6rem;
+  }
+
+  &__link {
+    &,
+    &:link,
+    &:visited {
+      color: get-color(white);
+      font-family: "Graphik L Trial";
+    }
+  }
+}

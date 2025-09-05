@@ -1,0 +1,285 @@
+.section {
+  padding: 9.6rem 0;
+
+  @include respond(phone-lg) {
+    padding: 7.2rem 0;
+  }
+
+  &--awards {
+    height: 30rem;
+    cursor: grab;
+    padding: 0;
+
+    @include respond(tab-land) {
+      height: 40rem;
+    }
+
+    .row:last-of-type {
+      height: 79%;
+
+      @include respond(phone) {
+        height: 75%;
+      }
+    }
+
+    .row .row {
+      @include respond(phone) {
+        padding: 0;
+      }
+    }
+
+    .swiper {
+      height: 100%;
+      // overflow: visible;
+      overflow-x: hidden;
+    }
+
+    .swiper-pagination {
+      max-width: fit-content !important;
+      left: 50% !important;
+      transform: translateX(-50%) !important;
+      bottom: 1rem !important;
+
+      @include respond(tab-md) {
+        bottom: -0.5rem !important;
+      }
+    }
+
+    .swiper-pagination-bullet {
+      background-color: hsla(177, 85%, 18%, 1);
+      opacity: 10%;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: hsla(177, 85%, 18%, 1);
+      opacity: 100%;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: hsla(177, 85%, 18%, 1);
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+      background-color: #e6eeee;
+
+      &::after {
+        font-size: 1.6rem;
+        font-weight: 900;
+      }
+    }
+
+    .swiper-button-next {
+      &::after {
+        transform: translateX(1px);
+      }
+    }
+
+    .swiper-button-prev {
+      &::after {
+        transform: translateX(-1px);
+      }
+    }
+  }
+
+  &--testimonials {
+    padding: 14rem 3.2rem 8.8rem;
+
+    .row {
+      margin: 0;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .swiper-wrapper {
+      max-width: 120rem;
+      margin: 0 auto;
+      cursor: grab;
+      margin-right: 55rem;
+    }
+
+    @include swiper();
+  }
+
+  &--get-started {
+    background-image: linear-gradient(
+      to bottom,
+      hsl(0, 0%, 100%),
+      hsl(95, 100%, 94%)
+    );
+  }
+
+  &--our-services {
+    padding: 4.8rem 0 9.6rem;
+
+    @include respond(phone) {
+      padding: 4.8rem 0;
+    }
+  }
+
+  &--solutions {
+    background-image: linear-gradient(
+      180deg,
+      hsl(95, 100%, 94%),
+      hsl(0, 0%, 100%)
+    );
+  }
+
+  &--metrics {
+    background: #f5faed;
+    // padding: 9.6rem 0;
+  }
+
+  &--cta {
+    padding: 4.8rem 0 0;
+    overflow: hidden;
+  }
+
+  &--vision {
+    background-color: get-color(primary);
+    // padding: 9.6rem 0;
+  }
+
+  // &--story {
+  //   padding: 9.6rem 0;
+  // }
+
+  &--pricing {
+    padding: 0 0 9.6rem;
+
+    .heading {
+      text-align: center;
+      color: get-color(primary);
+      margin-bottom: 2.4rem;
+    }
+  }
+
+  &--simple-step {
+    background-color: #f5faed;
+    // padding: 9.6rem 0;
+
+    @include respond(phone-lg) {
+      padding: 4.8rem 0;
+    }
+  }
+
+  // &--subscription {
+  //   padding: 9.6rem 0;
+  // }
+
+  &--access {
+    padding: 16.4rem 0;
+
+    @include respond(tab-port) {
+      padding: 9.6rem 0;
+    }
+
+    @include respond(phone) {
+      padding: 6.4rem 0;
+    }
+  }
+
+  &--full-bg {
+    @include respond(tab-port) {
+      padding: 0;
+    }
+
+    img {
+      display: block;
+      height: fit-content;
+    }
+  }
+
+  // &--key-features {
+  //   padding: 9.6rem 0;
+  // }
+
+  // &--video {
+  //   padding: 9.6rem 0;
+  // }
+
+  &--customers-stories {
+    background-color: get-color(primary);
+    padding: 12rem 0;
+
+    @include respond(phone-lg) {
+      padding: 7.2rem 0;
+    }
+  }
+
+  &--full-width-img {
+    padding: 0;
+
+    img {
+      display: block;
+      height: fit-content;
+    }
+  }
+
+  &--plan-details {
+    background-color: #f5faed;
+
+    .heading--display {
+      text-align: center;
+      color: get-color(primary);
+      margin-bottom: 2.4rem;
+    }
+  }
+
+  &--plan-prices {
+    padding: 9.6rem 0;
+
+    @include respond(tab-port) {
+      padding: 6.4rem 0;
+    }
+
+    .splitscreen {
+      @include respond(tab-port) {
+        gap: 6.4rem;
+      }
+
+      &__right {
+        @include respond(tab-port) {
+          grid-row: 1;
+          text-align: center;
+          display: flex;
+          justify-content: center;
+        }
+      }
+
+      .btn--main {
+        @include respond(tab-port) {
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+
+  &--video {
+    .heading {
+      @include respond(phone) {
+        max-width: 30rem;
+        margin: 0 auto 4rem;
+      }
+    }
+  }
+
+  &--contact {
+    padding: 1.6rem 0 9.6rem;
+
+    @include respond(phone-lg) {
+      padding: 1.6rem 0 6.4rem;
+    }
+
+    .splitscreen {
+      gap: 6.4rem;
+    }
+  }
+
+  &--faqs {
+    background-color: #e0efc6;
+  }
+}

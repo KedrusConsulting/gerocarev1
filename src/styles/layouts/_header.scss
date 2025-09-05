@@ -1,0 +1,426 @@
+.header {
+  padding: 13vh 0 15vh;
+
+  @include respond(tab-md) {
+    padding: 10vh 0 15vh;
+  }
+
+  .heading,
+  p {
+    color: get-color(primary);
+  }
+
+  .heading {
+    margin-bottom: 1.6rem;
+  }
+
+  p {
+    font-size: get-text-size(lg);
+    margin-bottom: 5.6rem;
+
+    @include respond(phone) {
+      ont-size: get-text-size(md);
+    }
+  }
+
+  img {
+    margin-right: 1.2rem;
+  }
+
+  span {
+    color: get-color(primary);
+    font-size: get-text-size(sm);
+
+    @include respond(tab-md) {
+      font-size: 1.2rem;
+    }
+  }
+
+  .btn--text span {
+    color: #009855;
+    font-size: 1.2rem;
+  }
+
+  &__text-sub {
+    display: flex;
+    align-items: center;
+
+    padding: 0.8rem 1.4rem;
+    max-width: fit-content;
+    background-color: hsla(51, 65%, 84%, 1);
+    border-radius: 10rem;
+    margin-bottom: 3.2rem;
+
+    @include respond(phone) {
+      padding: 0.8rem 1.2rem;
+    }
+
+    img {
+      @include respond(phone) {
+        width: 1.6rem;
+      }
+    }
+  }
+
+  &--home {
+    .heading {
+      max-width: 54rem;
+      margin: 0 0 1.6rem;
+    }
+
+    p {
+      max-width: 40rem;
+    }
+
+    .splitscreen {
+      grid-template-columns: 50% 50%;
+
+      @include respond(tab-port) {
+        grid-template-columns: 100%;
+      }
+    }
+  }
+
+  &--testimonials {
+    @include respond(phone) {
+      padding: 5vh 0;
+    }
+
+    p {
+      max-width: 70rem;
+    }
+  }
+
+  &__img {
+    position: relative;
+
+    img {
+      height: fit-content;
+      border-radius: 0.8rem;
+      max-width: 85%;
+      margin: 0 auto;
+
+      @include respond(tab-md) {
+        display: block;
+        max-width: 80%;
+        margin: 0 auto;
+      }
+
+      @include respond(phone) {
+        max-width: 95%;
+      }
+    }
+
+    .service-tag {
+      position: absolute;
+      transform: scale(0.9);
+      cursor: pointer;
+      z-index: 7;
+
+      // top: 0;
+
+      &:nth-of-type(1) {
+        top: 6.4rem;
+        right: 2.4rem;
+
+        @include respond(phone-sm) {
+          right: -2.4rem;
+          transform: scale(0.7);
+        }
+      }
+
+      &:nth-of-type(2) {
+        bottom: 14rem;
+
+        @include respond(phone-sm) {
+          left: -1.2rem;
+          bottom: 6.4rem;
+          transform: scale(0.7);
+        }
+      }
+
+      &:nth-of-type(3) {
+        bottom: 22rem;
+        right: 2.4rem;
+
+        @include respond(phone-sm) {
+          bottom: 11rem;
+          right: -2.4rem;
+          transform: scale(0.7);
+        }
+      }
+
+      &:nth-of-type(4) {
+        top: 12rem;
+        left: -1.6rem;
+
+        @include respond(phone-sm) {
+          top: 8.8rem;
+          transform: scale(0.7);
+        }
+      }
+
+      &:nth-of-type(5) {
+        bottom: 6.4rem;
+        left: 24rem;
+
+        @include respond(phone-sm) {
+          bottom: 2.4rem;
+          left: 12rem;
+          transform: scale(0.7);
+        }
+      }
+    }
+  }
+
+  &__cta {
+    display: flex;
+    align-items: center;
+
+    @include respond(tab-md) {
+      margin-bottom: 4.8rem;
+    }
+
+    & > *:not(:last-child) {
+      margin-right: 0.8rem;
+    }
+
+    @include respond(phone-lg) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2.4rem;
+    }
+
+    & > a {
+      @include respond(phone-lg) {
+        width: 70%;
+      }
+
+      @include respond(phone) {
+        width: 90%;
+      }
+
+      @include respond(phone-sm) {
+        width: 100%;
+      }
+    }
+
+    & > a.btn--text {
+      @include respond(phone-lg) {
+        text-align: left;
+        justify-content: flex-start;
+      }
+    }
+  }
+
+  .mySwiper {
+    cursor: grab;
+    width: 100%;
+  }
+
+  &--about {
+    padding-bottom: 0;
+
+    .row {
+      max-width: 100%;
+
+      @include respond(tab-land) {
+        padding: 0;
+      }
+    }
+
+    .heading {
+      max-width: 72.3rem;
+
+      @include respond(tab-land) {
+        max-width: 95%;
+        margin: 0 auto 1.6rem;
+      }
+    }
+
+    p {
+      max-width: 56.6rem;
+
+      @include respond(tab-land) {
+        max-width: 90%;
+        margin: 0 auto 3.2rem;
+      }
+    }
+
+    img {
+      display: block;
+      height: 100%;
+    }
+  }
+
+  &--pricing {
+    max-width: 90.6rem;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 0;
+
+    .heading,
+    p {
+      max-width: 100%;
+    }
+  }
+
+  &--affordable-care {
+    background-image: linear-gradient(to bottom, #ffffff, #ecffde);
+  }
+
+  &--elderly {
+    // padding-bottom: 0;
+    @include respond(phone) {
+      padding-bottom: 1.6rem;
+    }
+  }
+
+  &--doc-on-demand {
+    padding: 10vh 0 5vh;
+  }
+
+  &--teleconsultation,
+  &--doc-on-demand {
+    @include respond(tab-port) {
+      text-align: center;
+    }
+
+    .btn--main,
+    p {
+      @include respond(tab-port) {
+        margin: 0 auto 4rem;
+      }
+    }
+  }
+
+  &--care-giver {
+    padding-bottom: 4.8rem;
+  }
+
+  &--contact {
+    padding-bottom: 0;
+    text-align: center;
+
+    @include respond(phone-sm) {
+      max-width: 30rem;
+      margin: 0 auto 1.6rem;
+    }
+
+    p {
+      @include respond(tab-port) {
+        margin-bottom: 1.6rem;
+      }
+    }
+  }
+
+  &__elderly-text {
+    max-width: 70rem;
+    margin: 0 auto 5.6rem;
+    text-align: center;
+
+    .heading {
+      max-width: 100%;
+    }
+
+    p {
+      max-width: 52rem;
+      margin: 0 auto 3.2rem;
+    }
+
+    .btn--main {
+      margin: 0 auto;
+    }
+  }
+
+  &__elderly-img {
+    img {
+      height: fit-content;
+      object-fit: contain;
+    }
+  }
+
+  &__text {
+    // display: grid;
+    // grid-template-columns: 1fr 1fr;
+    // gap: 6.4rem;
+    // align-items: center;
+    // margin-bottom: 4.8rem;
+
+    h1 {
+      max-width: 59rem;
+
+      @include respond(tab-port) {
+        margin: 0 auto;
+      }
+
+      @include respond(phone) {
+        max-width: 40rem;
+      }
+    }
+
+    p {
+      max-width: 49rem;
+    }
+  }
+
+  &__hire {
+    max-width: 70.5rem;
+    margin: 0 auto;
+    text-align: center;
+
+    .heading {
+      max-width: 100%;
+    }
+
+    p {
+      max-width: 62.3rem;
+      margin: 0 auto 4.8rem;
+    }
+
+    .btn--main {
+      margin: 0 auto;
+    }
+  }
+
+  &--hmo-basic,
+  &--hmo-standard,
+  &--hmo-premium,
+  &--hmo-diamond,
+  &--hmo-platinum,
+  &--hmo-utimate {
+    padding: 13vh 0 0;
+  }
+}
+
+[class*="hmo"] {
+  .heading {
+    max-width: 66.4rem;
+  }
+
+  p {
+    max-width: 62.3rem;
+  }
+}
+
+[class*="hmo-"] {
+  // .heading {
+  //   max-width: 82.7rem;
+  // }
+
+  @include respond(tab-port) {
+    padding-bottom: 0;
+  }
+
+  p {
+    max-width: 55rem;
+  }
+}
+
+.hero-centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

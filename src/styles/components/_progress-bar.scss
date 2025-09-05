@@ -1,0 +1,81 @@
+.progress-bar {
+  max-width: 55.8rem;
+
+  &__bar {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 55.8rem;
+    max-width: 55.8rem;
+    height: 5px;
+    border-radius: 3rem;
+
+    @include respond(tab-port) {
+      width: 40rem;
+    }
+
+    @include respond(phone-sm) {
+      width: 30rem;
+    }
+
+    &::-webkit-progress-bar {
+      background-color: hsla(0, 0%, 85%, 1);
+      border-radius: 2px;
+    }
+
+    &::-webkit-progress-value {
+      background-color: hsla(177, 85%, 18%, 1);
+      border-radius: 2px;
+    }
+
+    &::-moz-progress-bar {
+      background-color: hsla(0, 0%, 85%, 1);
+      border-radius: 2px;
+    }
+
+    &::-moz-progress-value {
+      background-color: hsla(177, 85%, 18%, 1);
+      border-radius: 2px;
+    }
+  }
+
+  &__progress {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.2rem;
+
+    .step {
+      font-size: 1.4rem;
+      font-family: "Graphik R Trial";
+
+      &:nth-child(1) {
+        color: get-color(primary);
+      }
+
+      &:nth-child(2) {
+        color: hsla(180, 1%, 30%, 1);
+      }
+
+      &:nth-child(3) {
+        color: hsla(180, 1%, 63%, 1);
+      }
+
+      &.step--active {
+        color: get-color(primary);
+      }
+    }
+
+    div {
+      @include respond(tab-port) {
+        display: none;
+      }
+    }
+  }
+
+  &__mobile {
+    display: none !important;
+
+    @include respond(tab-port) {
+      display: block !important;
+    }
+  }
+}
