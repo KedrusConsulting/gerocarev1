@@ -1,0 +1,85 @@
+.faqs {
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(calc((100% - 2.4rem) / 2), 1fr)
+    );
+    gap: 2.4rem;
+    margin-inline: auto;
+
+    @include respond(md-laptop) {
+      grid-template-columns: 1fr;
+    }
+
+    @include respond(phone) {
+      grid-template-columns: 1fr;
+    }
+
+    [data-aos="fade-up"]:not(:last-child) {
+      border-bottom: 1px solid #e4e7ec;
+    }
+  }
+
+  &__faq {
+    background-color: transparent;
+    padding: 0.8rem;
+
+    background: #f5faed;
+    padding: 2.2rem 1.3rem;
+    border-radius: 0.8rem;
+    width: 100%;
+    max-width: 54rem;
+    margin: 0 auto;
+    color: #075450;
+
+    align-self: start;
+
+    &--is-open {
+      padding-bottom: 0.2rem;
+    }
+  }
+
+  &__title {
+    @include d-flex(space-between, center);
+    // margin-bottom: 1.6rem;
+    cursor: pointer;
+
+    h5 {
+      font-size: 2rem;
+      font-weight: 400;
+    }
+
+    svg {
+      flex-shrink: 0;
+    }
+  }
+
+  &__body {
+    height: 0;
+    transition: height 0.5s ease-out;
+    overflow: hidden;
+
+    p {
+      font-weight: 300;
+      color: var(--text-secondary);
+    }
+  }
+
+  &__faq--is-open &__body {
+    height: 8.7rem;
+    margin-bottom: 2.4rem;
+  }
+
+  &__faq--is-open &__title {
+    margin-bottom: 0.8rem;
+  }
+
+  &__open.hidden {
+    display: none;
+  }
+
+  &__close.hidden {
+    display: none;
+  }
+}

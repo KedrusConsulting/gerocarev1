@@ -67,6 +67,10 @@
   }
 }
 
+@mixin border($color: hsl(80, 56%, 75%)) {
+  border: 1.5px solid $color;
+}
+
 // MEDIA QUERY MANAGER
 /*
 0 - 600px:      Phone

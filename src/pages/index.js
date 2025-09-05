@@ -38,8 +38,10 @@ export default function Home() {
                 src={require("@/assets/img/check-icon.svg")}
                 alt={"Check icon"}
               />
+
               <span>
-                Highly Preferred by over <strong>+30,000</strong> Customers
+                Trusted by over <strong>30,000</strong> families, top hospitals,
+                and HMOs.
               </span>
             </div>
 
@@ -48,7 +50,10 @@ export default function Home() {
               data-aos-duration="2000"
               className="heading heading--display"
             >
-              Give your Parents the gift of a Healthy, Long Life.
+              Caring for aging parents from afar is hard{" "}
+              <span className="heading heading--display">
+                but neglect is worst.
+              </span>
             </h1>
 
             <p
@@ -57,8 +62,8 @@ export default function Home() {
               data-aos-once="true"
               data-aos-offset="-100"
             >
-              Subscribe them for regular doctor home visits for under $30 per
-              month.
+              Gerocare connects licensed doctors to homes, sends you updates
+              anywhere you are, and catches problems early.
             </p>
 
             <div
@@ -69,18 +74,39 @@ export default function Home() {
               data-aos-offset="-100"
             >
               <a href="/register" className="btn btn--main">
-                Get Started
+                Start Care Plan Today
               </a>
-              <a href="/login" className="btn btn--sec">
-                Log In
+
+              <a href="/register" className="btn btn--text">
+                <span>Start care in 24hours. Peace of mind begins today.</span>
+                <span className="btn--icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="21"
+                    viewBox="0 0 20 21"
+                    fill="none"
+                  >
+                    <path
+                      d="M7.5 15.8477L12.5 10.8477L7.5 5.84766"
+                      stroke="#009855"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
               </a>
+
+              {/* <a href="/login" className="btn btn--text">
+                Start care in 24 hours. Peace of mind begins todays.
+              </a> */}
             </div>
           </div>
 
           <div className="header__img header__img--1">
             <div className="header__img-swiper">
               <Swiper
-                // centeredSlides={true}
                 autoplay={{
                   delay: 10000,
                   disableOnInteraction: false,
@@ -111,6 +137,10 @@ export default function Home() {
                       service={"On-Demand Doctor"}
                       href="/doctor-on-demand"
                     />
+
+                    <ServiceTag service={"Care Givers"} href="/care-giver" />
+
+                    <ServiceTag service={"HMO Plans"} href="/hmo" />
                   </div>
                 </SwiperSlide>
 
@@ -122,6 +152,19 @@ export default function Home() {
                       data-aos="fade-up"
                       data-aos-duration="2000"
                       data-aos-once="true"
+                    />
+
+                    <ServiceTag
+                      service={"Teleconsultation"}
+                      href="/teleconsultation"
+                    />
+                    <ServiceTag
+                      service={"Doctor Home Visits"}
+                      href="/elderly-care"
+                    />
+                    <ServiceTag
+                      service={"On-Demand Doctor"}
+                      href="/doctor-on-demand"
                     />
 
                     <ServiceTag service={"Care Givers"} href="/care-giver" />
@@ -137,21 +180,21 @@ export default function Home() {
       <main>
         <Awards />
 
-        <Services />
-
         <Testimonials />
 
-        <Solutions />
-
         <GetStarted />
+
+        <Services />
+
+        <Solutions />
 
         <Benefits />
 
         <Metrics />
 
-        <FeaturedIn />
-
         <CTA />
+
+        <FeaturedIn />
       </main>
     </Root>
   );

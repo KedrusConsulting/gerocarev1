@@ -1,24 +1,21 @@
-import Section from "@/Layout/Section";
 import React from "react";
+import Image from "next/image";
+
+import Section from "@/Layout/Section";
+
+import doctor_img from "@/assets/img/become-a-doctor.png";
 
 const CTA = () => {
   return (
     <Section sectionName={"cta"}>
       <div className="cta">
         <h2
-          className="heading heading--display"
+          className="heading heading--1"
           data-aos="fade-up"
           data-aos-duration="2000"
         >
           Work as a Gerocare Doctor{" "}
         </h2>
-
-        {/* <p data-aos="fade-up" data-aos-duration="2000">
-          If you are a qualified doctor or nurse, or a certified healthcare
-          provider looking for an opportunity to help deliver quality medical
-          services for the elderly, we welcome you to join our growing family of
-          committed medical professionals
-        </p> */}
 
         <a
           href="/doctors-registration"
@@ -28,6 +25,17 @@ const CTA = () => {
         >
           Register as a Doctor
         </a>
+
+        <Image
+          className="cta__img"
+          src={doctor_img}
+          alt="Register as a Doctor"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        />
+
+        <div className="cta__rect cta__rect--1"></div>
+        <div className="cta__rect cta__rect--2"></div>
       </div>
     </Section>
   );

@@ -1,9 +1,12 @@
 import Head from "next/head";
-import Navigation from "@/components/Navigation";
 
+import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { useContext } from "react";
-import Link from "next/link";
+import PlanCard from "@/components/PlanCard";
+import PriceCard from "@/components/PriceCard";
+import PriceCardOutline from "@/components/PriceCard/PriceCardOutline";
+import WhyDiaspora from "@/components/WhyDiaspora";
+import ServiceTag from "@/components/ServicesTag";
 
 export default function Playground() {
   // const { open, handleOpen, handleClose } = useContext(MoadlContext);
@@ -25,27 +28,20 @@ export default function Playground() {
 
       <Navigation />
 
-      {/* <Link href={"#"} onClick={handleOpen}>
-        Open Modal
-      </Link>
+      {/* <PlanCard /> */}
 
-      {open && (
-        <div className="modal">
-          <div className="modal__container">
-            <Link href={"#"} onClick={handleClose}>
-              Close Modal
-            </Link>
-          </div>
-        </div>
-      )} */}
+      {/* <PriceCardOutline
+        title={"Voice Call"}
+        nairaAmt={"2,500"}
+        description={
+          "Talk to a licensed doctor by phone, anytime. Include diagnosis + medical report."
+        }
+        label={"Book Voice Call"}
+      /> */}
+
+      <ServiceTag href={"#"} service={"On Demand"} />
 
       <Footer />
-
-      {/* <header className="header">
-      <div className="row">
-        <h1 className="heading heading--1">Log In</h1>
-      </div>
-    </header> */}
     </>
   );
 }

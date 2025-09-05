@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -11,7 +10,7 @@ const ServiceTag = ({ service, href }) => {
       data-aos-duration="2000"
       data-aos-offset="-200"
     >
-      <Image src={require("@/assets/img/circle.svg")} alt="circle icon" />
+      <span className="service-tag__icon"></span>
       <span>{service}</span>
     </Link>
   );

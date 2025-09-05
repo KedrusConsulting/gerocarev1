@@ -4,6 +4,7 @@ import { Formik } from "formik";
 import * as Yup from "yup";
 import InputField from "@/components/InputField";
 import Logo from "@/components/Logo";
+import Link from "next/link";
 
 export default function Forgot() {
   const initialValues = {
@@ -39,8 +40,13 @@ export default function Forgot() {
           </div>
 
           <header className="auth__header">
-            <h4 className="heading heading--4">Reset Password</h4>
-            <p>Input details to reset password</p>
+            <h4 className="heading heading--4">Forgot Password</h4>
+            <p>
+              Remember password?{" "}
+              <Link className="form__link" href={"/register"}>
+                Login
+              </Link>{" "}
+            </p>
           </header>
 
           <Formik

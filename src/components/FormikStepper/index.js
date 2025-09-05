@@ -18,7 +18,7 @@ export const FormikStep = ({ children, getFormikState, className }) => {
 
 const FormikStepper = ({ children, ...props }) => {
   const childrenArray = React.Children.toArray(children);
-  const [step, setStep] = useState(0);
+  const [step, setStep] = useState(2);
   const [completed, setCompleted] = useState(false);
 
   const { currentProgress } = useContext(ProgressContext);
@@ -57,16 +57,16 @@ const FormikStepper = ({ children, ...props }) => {
                   ? "Submitting"
                   : isLastStep()
                   ? "Submit"
-                  : "Next"}
+                  : "Continue"}
               </button>
 
               {step > 0 ? (
                 <button
-                  className="btn btn--text"
+                  className="btn btn--sec"
                   type="button"
                   onClick={() => setStep((s) => s - 1)}
                 >
-                  Back
+                  Go Back
                 </button>
               ) : null}
             </div>

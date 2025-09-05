@@ -16,7 +16,7 @@ const Solutions = () => {
         data-aos-duration="2000"
         // data-aos-once="true"
       >
-        <h2 className="heading heading--display">
+        <h2 className="heading heading--1">
           A complete health solution for the Elderly
         </h2>
       </div>
@@ -27,7 +27,7 @@ const Solutions = () => {
           data-aos="fade-up"
           data-aos-duration="2000"
         >
-          <h2 className="heading heading--display">Home Doctor Visits</h2>
+          <h2 className="heading heading--2">A doctor visit every month</h2>
           <p className="solution__text">
             Once you add a beneficiary, we assign them a doctor who visits
             monthly at home for health checkups. Your elderly loved ones can
@@ -67,7 +67,9 @@ const Solutions = () => {
           data-aos="fade-up"
           data-aos-duration="2000"
         >
-          <h2 className="heading heading--display">Get Reports Monthly</h2>
+          <h2 className="heading heading--2">
+            Health updates without the wait
+          </h2>
           <p className="solution__text">
             Oh yes! You get reports for every visit. You’ll see the test results
             and prescriptions as well. We’ll update you on every step we take
@@ -82,7 +84,9 @@ const Solutions = () => {
           data-aos="fade-up"
           data-aos-duration="2000"
         >
-          <h2 className="heading heading--display">Home Medication</h2>
+          <h2 className="heading heading--2">
+            Prescriptions delivered to their door
+          </h2>
           <p className="solution__text">
             At your request, we can administer prescriptions to the patient at
             home or just deliver it to them.
@@ -120,7 +124,7 @@ const Solutions = () => {
           data-aos="fade-up"
           data-aos-duration="2000"
         >
-          <h2 className="heading heading--display">Home Sample Collections</h2>
+          <h2 className="heading heading--2">No more long hospital lines</h2>
           <p className="solution__text">
             No need to step an inch outside your home. We perform home-based
             laboratory investigations and tests for your elderly loved ones

@@ -10,7 +10,7 @@ const Metrics = () => {
           data-aos="fade-up"
           data-aos-duration="2000"
         >
-          <h2 className="heading heading--display">Gerocare in Numbers</h2>
+          <h2 className="heading heading--1">Gerocare in Numbers</h2>
           <p>
             You can trust our team of outstanding professionals. In the last 5
             years, we have taken care of more than 30,000 elderly persons across
@@ -26,6 +26,24 @@ const Metrics = () => {
           >
             <span>750+</span>
             <h6 className="heading heading--6">Doctors Nationwide </h6>
+          </div>
+
+          <div
+            className="metrics__stat"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          >
+            <span>134k</span>
+            <h6 className="heading heading--6">Doctors Visits </h6>
+          </div>
+
+          <div
+            className="metrics__stat"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          >
+            <span>10k</span>
+            <h6 className="heading heading--6">Prescription Fulfilled</h6>
           </div>
 
           <div

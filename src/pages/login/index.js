@@ -61,7 +61,6 @@ export default function Login() {
               handleChange,
               handleSubmit,
               isSubmitting,
-              isValid,
             }) => (
               <form className="form" onSubmit={handleSubmit}>
                 <InputField
@@ -87,7 +86,9 @@ export default function Login() {
                 />
 
                 <button type="submit" className="btn btn--main btn--full">
-                  {dirty && isSubmitting ? "Please wait..." : "Sign In"}
+                  {dirty && isSubmitting
+                    ? "Please wait..."
+                    : "Login to Gerocare"}
                 </button>
 
                 <div className="inputfield__grp">

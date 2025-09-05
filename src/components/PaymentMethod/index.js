@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import RadioBtnGroup from "../RadioBtnGroup";
 import Link from "next/link";
 
 const PaymentMethod = ({ options, name, label }) => {
@@ -25,7 +24,7 @@ const PaymentMethod = ({ options, name, label }) => {
                     className="inputfield__radio"
                   />
                   <label
-                    className="inputfield__label inputfield__label-radio"
+                    className="inputfield__label inputfield__label-radio payment-method__label"
                     htmlFor={option.id}
                   >
                     <span className="inputfield__custom-radio"></span>
@@ -40,7 +39,7 @@ const PaymentMethod = ({ options, name, label }) => {
         )}
 
         <Link
-          className="payment-method__link"
+          className="btn btn--sec payment-method__link"
           href={"#"}
           onClick={handlePayLater}
         >

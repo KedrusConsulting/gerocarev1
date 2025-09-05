@@ -7,24 +7,24 @@ const steps = [
   {
     step: 1,
     title: "Create an account",
-    description: "Input your credentials to setup your personal account",
+    description: "Input your credentials to setup your personal account.",
   },
   {
     step: 2,
-    title: "Add a Beneficiary",
-    description: "Provide the relevant details of your beneficiary",
+    title: "Add your parent or loved one",
+    description: "Provide the relevant details of your beneficiary.",
   },
 
   {
     step: 3,
-    title: "Select a plan",
-    description: "Choose a subscription plan that suits your needs",
+    title: "Pick a plan that works for you",
+    description: "Choose a subscription plan that suits your needs.",
   },
 
   {
     step: 4,
-    title: "Make Payment",
-    description: "Proceed to payment and start enjoying our services",
+    title: "Make Payment and relax",
+    description: "Proceed to payment and we'll handle the rest.",
   },
 ];
 
@@ -36,11 +36,8 @@ const GetStarted = () => {
         data-aos="fade-up"
         data-aos-duration="2000"
       >
-        <h2 className="heading heading--display">How to Get Started</h2>
-        <p>
-          Our onboarding process is as easy as breathing. Complete four simple
-          steps, and you’re set for your first visit.
-        </p>
+        <h2 className="heading heading--1">How to Get Started</h2>
+        <p>It takes less than 5 minutes to start care.</p>
       </div>
 
       <SplitScreen>
@@ -55,8 +52,9 @@ const GetStarted = () => {
           />
         </div>
         <div className="get-started__steps">
-          {steps.map((step) => (
+          {steps.map((step, i) => (
             <div
+              key={i}
               className="get-started__step"
               data-aos="fade-up"
               data-aos-duration="2000"
@@ -76,8 +74,8 @@ const GetStarted = () => {
             // data-aos-once="true"
             style={{ marginTop: "3.2rem" }}
           >
-            <a href="/register" className="btn btn--main">
-              Get Started
+            <a href="/register" className="btn btn--primary">
+              Start Care Plan Today
             </a>
           </div>
         </div>

@@ -14,7 +14,12 @@ const Awards = () => {
     <Section sectionName={"awards"}>
       <div className="row">
         <div className="awards__caption">
-          <span className="awards__subtitle">Our Awards</span>
+          <h2 className="heading heading--1">You're in good hands</h2>
+
+          <p className="awards__subtitle">
+            Recognised by the world Health Organization, Google, and African
+            Business Heroes
+          </p>
         </div>
       </div>
       <div className="row">

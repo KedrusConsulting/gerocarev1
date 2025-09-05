@@ -225,6 +225,11 @@
     border-radius: 0.8rem;
     text-align: center;
 
+    @include respond(tab-port) {
+      width: 100%;
+      max-width: 100%;
+    }
+
     @include respond(phone) {
       padding: 2.4rem;
     }
@@ -235,16 +240,67 @@
 
     p {
       font-family: "Graphik L Trial";
-      // margin-bottom: 1.6rem;
       max-width: 25rem;
       margin: 0 auto 1.6rem;
-      // text-align: left;
     }
 
     .btn--main {
       width: 27.4rem;
       max-width: 27.4rem;
       margin: 0 auto;
+    }
+
+    &--outline {
+      @include border;
+      padding: 4rem 3.2rem;
+      border-radius: 1.6rem;
+      background-color: #ffffff;
+      text-align: left;
+
+      display: flex;
+      flex-direction: column;
+
+      & > * {
+        text-align: left !important;
+      }
+    }
+
+    &--outline .heading--4 {
+      font-family: "Graphik M Trial";
+      font-size: 2.4rem;
+      font-weight: 500;
+    }
+
+    &--outline .price__price {
+      margin-bottom: 1.6rem;
+    }
+
+    &--outline .price__description,
+    &--outline .price__note {
+      max-width: max-content;
+      margin: 0;
+      margin-bottom: 2.4rem;
+    }
+
+    &--outline .btn--main {
+      margin: 0;
+      width: fit-content;
+      @include border(#002e1a);
+      background-color: #fff;
+    }
+
+    &--demand .price__note {
+      font-family: "Graphik M Trial";
+      font-weight: 500;
+    }
+
+    &--outline.price__card--demand .btn--main {
+      background-color: hsla(94, 71%, 68%, 1);
+      @include border(transparent);
+    }
+
+    &--outline > p:last-of-type {
+      flex: 1;
     }
   }
 

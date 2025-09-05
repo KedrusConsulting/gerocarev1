@@ -2,9 +2,6 @@ import Image from "next/image";
 import React from "react";
 import Logo from "../Logo";
 
-import image_url_1 from "@/assets/img/top-awards-2x.png";
-import image_url_2 from "@/assets/img/top-awards2-2x.png";
-
 const footerList = [
   {
     category: "Our Services",
@@ -26,21 +23,38 @@ const footerList = [
       { name: "Contact Us", href: "/contact" },
     ],
   },
-
-  // {
-  //   category: "Payments Methods",
-  //   list: [
-  //     { name: "Blogs", href: "#" },
-  //     { name: "Get Started", href: "/register" },
-  //     { name: "Pricing", href: "/pricing" },
-  //     { name: "Contact Us", href: "/contact" },
-  //   ],
-  // },
 ];
 
 const Footer = () => {
   return (
     <footer className="footer">
+      <div className="row footer__caption">
+        <h4>
+          Want to stay up to date with our product updates and other important
+          health tips?
+        </h4>
+
+        <p>Subcribe to our newsletter</p>
+
+        <form>
+          <fieldset className="inputfield inputfield__newsletter">
+            <input
+              type="email"
+              id="newsletter"
+              name="newsletter"
+              placeholder="email@something.com"
+              className="inputfield__input inputfield__newsletter-input"
+            />
+            <button
+              className="btn btn--main inputfield__newsletter-btn"
+              type="submit"
+            >
+              Subscribe
+            </button>
+          </fieldset>
+        </form>
+      </div>
+
       <div className="row grid footer__grid">
         <div className="footer__summary">
           <Logo />

@@ -42,7 +42,7 @@ const ResetPassword = () => {
 
           <header className="auth__header">
             <h4 className="heading heading--4">Reset Password</h4>
-            <p>Choose New password</p>
+            <p>Create new login password</p>
           </header>
 
           <Formik
@@ -57,12 +57,11 @@ const ResetPassword = () => {
               handleChange,
               handleSubmit,
               isSubmitting,
-              isValid,
             }) => (
               <form className="form" onSubmit={handleSubmit}>
                 <InputField
                   type={"password"}
-                  label={"Password:"}
+                  label={"New Password:"}
                   name={"password"}
                   id={"password"}
                   placeholder={"*******"}
@@ -83,7 +82,7 @@ const ResetPassword = () => {
                 />
 
                 <button type="submit" className="btn btn--main btn--full">
-                  {dirty && isSubmitting ? "Please wait..." : "Reset"}
+                  {dirty && isSubmitting ? "Please wait..." : "Reset Password"}
                 </button>
               </form>
             )}

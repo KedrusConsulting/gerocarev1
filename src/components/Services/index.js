@@ -53,17 +53,19 @@ const Services = () => {
         data-aos-duration="2000"
         // data-aos-once="true"
       >
-        <h2 className="heading heading--display">Our Services</h2>
+        <h2 className="heading heading--1">
+          You won't always be there. That's why we are.
+        </h2>
         <p>
-          Explore our bouquet of Premium health care services designed to
-          provide the best possible experience for those that have shown greater
-          care for us.
+          No matter where you live, Gerocare make it easy for your
+          parents&mdash;without stress, guilt, or fear. Here's how we help:
         </p>
       </div>
 
       <div className="services grid grid--3-col">
-        {services.map((service) => (
+        {services.map((service, i) => (
           <div
+            key={i}
             className="services__service"
             data-aos="fade-up"
             data-aos-duration="2000"

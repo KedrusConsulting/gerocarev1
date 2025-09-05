@@ -29,17 +29,25 @@ const Benefits = () => {
   return (
     <Section sectionName={"benefits"}>
       <div className="benefits">
-        <h2
-          className="heading heading--display"
-          data-aos="fade-up"
-          data-aos-duration="2000"
-        >
-          Why Our Paitents Love Gerocare Services
-        </h2>
+        <div className="benefits__caption">
+          <h2
+            className="heading heading--1"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          >
+            Why Families Trust Gerocare
+          </h2>
+
+          <p data-aos="fade-up" data-aos-duration="2000">
+            We treat your parents like our own. Affordable care, no hidden
+            costs. Nationwide coverage&mdash;urban or remote.
+          </p>
+        </div>
 
         <div className="benefits__grid">
-          {benefits.map((benefit) => (
+          {benefits.map((benefit, i) => (
             <div
+              key={i}
               className="benefits__card"
               data-aos="fade-up"
               data-aos-duration="2000"

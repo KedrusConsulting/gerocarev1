@@ -12,19 +12,12 @@
         flex-direction: column;
       }
     }
-
-    // .logo {
-    //   @include respond(phone) {
-    //     display: none;
-    //   }
-    // }
   }
 
   &__form {
     .heading {
       font-family: "Graphik M Trial";
       color: get-color(primary);
-      text-align: center;
 
       &--5 {
         font-size: 2.8rem;
@@ -38,8 +31,7 @@
 
   &__header {
     color: get-color(primary);
-    margin-bottom: 4.8rem;
-    text-align: center;
+    margin-bottom: 1.6rem;
 
     .heading {
       margin-bottom: 0.8rem;

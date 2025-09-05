@@ -31,7 +31,7 @@ const Success = () => {
           </header>
 
           <Link href={"/login"} className="btn btn--main btn--full">
-            Sign In
+            Login
           </Link>
         </div>
       </div>

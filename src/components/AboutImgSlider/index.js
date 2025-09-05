@@ -10,7 +10,6 @@ const images = [
   { image_url: require("@/assets/img/slider-img-4.jpeg") },
   { image_url: require("@/assets/img/slider-img-5.jpeg") },
   { image_url: require("@/assets/img/slider-img-6.jpeg") },
-  { image_url: require("@/assets/img/slider-img-7.png") },
 ];
 
 import "swiper/css";

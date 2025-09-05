@@ -2,7 +2,13 @@ import Head from "next/head";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import GetStarted from "@/components/GetStarted";
-import Prices from "@/components/Pricing";
+import OurPlans from "@/components/OurPlans";
+import FeaturedIn from "@/components/FeaturedIn";
+import WhyDiaspora from "@/components/WhyDiaspora";
+import OnDemand from "@/components/OnDemand";
+
+import affordableCare from "@/assets/img/affordable-care.png";
+import Image from "next/image";
 
 export default function Pricing() {
   return (
@@ -22,28 +28,38 @@ export default function Pricing() {
 
       <Navigation />
 
-      <header className="header header--pricing">
+      <header className="header header--affordable-care">
         <div className="row">
-          <h1
-            className="heading heading--display"
-            data-aos="fade-up"
-            data-aos-duration="2000"
-          >
-            Pricing Page
-          </h1>
+          <div className="affordable-care">
+            <div className="affordable-care__content">
+              <h1 className="heading heading--display">
+                Affordable Care. Trusted Doctors. Real Peace of Mind.
+              </h1>
 
-          <p data-aos="fade-up" data-aos-duration="2000">
-            Subscription entitles patient to one doctor visit per month as a
-            routine as needed valid for the subscribed duration. Time line for
-            first appointment - 3 Working days for patient to be matched to a
-            doctor and first appointment scheduled.
-          </p>
+              <p>
+                You want your parents safe, healthy, and cared for. Whether it’s
+                a monthly check-in, an urgent visit, or a quick call—you can
+                choose what they need, when they need it.
+              </p>
+            </div>
+
+            <div className="affordable-care__img">
+              <Image src={affordableCare} alt="Affordable Care" />
+            </div>
+          </div>
         </div>
       </header>
 
       <main>
-        <Prices />
+        <OnDemand />
+
+        <OurPlans />
+
+        <WhyDiaspora />
+
         <GetStarted />
+
+        <FeaturedIn />
       </main>
 
       <Footer />

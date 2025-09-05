@@ -1,53 +1,41 @@
-import React, { useState } from "react";
+import React from "react";
 
-const ProgressBar = ({ value }) => {
-  // alert(value);
+const steps = [
+  { number: 1, name: "Account Setup" },
+  { number: 2, name: "Add Beneficiary" },
+  { number: 3, name: "Choose Plan" },
+];
+
+const ProgressBar = ({ value = 100 / 3 }) => {
+  // Determine current step
+  const getStep = (val) => {
+    if (val <= 33.3333) return 1;
+    if (val <= 66.6667) return 2;
+    return 3;
+  };
+
+  const currentStep = getStep(value);
+
   return (
     <div className="progress-bar">
-      <progress
-        className="progress-bar__bar"
-        value={value || 100 / 3}
-        max={100}
-        onChange={() => setStep(value)}
-      ></progress>
+      <progress className="progress-bar__bar" value={value} max={100} />
 
       <div className="progress-bar__progress">
         <div className="progress-bar__mobile">
-          Step{" "}
-          {value > 0 && value <= 33.33336
-            ? "1"
-            : value >= 33.33336 && value <= 66.66667
-            ? "2"
-            : value >= 66.66667 && value <= 100
-            ? "3"
-            : "1"}{" "}
-          of 3
+          Step {currentStep} of {steps.length}
         </div>
 
-        <div
-          className={`step ${value > 0 && value <= 100 ? "step--active" : ""}`}
-        >
-          <span className="step__number">1.</span>
-          <span className="step__name">Create an Account</span>
-        </div>
-
-        <div
-          className={`step ${
-            value >= 33.33336 && value <= 100 ? "step--active" : ""
-          }`}
-        >
-          <span className="step__number">2.</span>
-          <span className="step__name">Add beneficiary</span>
-        </div>
-
-        <div
-          className={`step ${
-            value >= 66.66667 && value <= 100 ? "step--active" : ""
-          }`}
-        >
-          <span className="step__number">3.</span>
-          <span className="step__name">Choose Plan</span>
-        </div>
+        {steps.map((step) => (
+          <div
+            key={step.number}
+            className={`step ${
+              currentStep >= step.number ? "step--active" : ""
+            }`}
+          >
+            <span className="step__number">{step.number}.</span>
+            <span className="step__name">{step.name}</span>
+          </div>
+        ))}
       </div>
     </div>
   );
