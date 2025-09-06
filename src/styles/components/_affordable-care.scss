@@ -9,6 +9,7 @@
 
   @include respond(tab-port) {
     grid-template-columns: 1fr;
+    gap: 5.6rem;
   }
 
   &__content {
@@ -25,6 +26,10 @@
 
   &__img {
     height: 59.2rem;
+
+    @include respond(tab-port) {
+      height: auto;
+    }
   }
 
   &__img img {

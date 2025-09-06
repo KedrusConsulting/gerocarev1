@@ -8,6 +8,14 @@
     }
   }
 
+  &__wrapper {
+    overflow-x: scroll;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
   &__table {
     border-collapse: collapse;
     width: 100%;

@@ -5,17 +5,17 @@ import React from "react";
 const WhyDiaspora = () => {
   return (
     <Section sectionName={"why-diaspora"}>
-      <div className="row">
-        <div className="why-diaspora__caption">
-          <h2
-            data-aos="fade-up"
-            data-aos-duration="2000"
-            className="heading heading--1"
-          >
-            Why Diaspora Plans Cost More
-          </h2>
-        </div>
+      <div className="why-diaspora__caption">
+        <h2
+          data-aos="fade-up"
+          data-aos-duration="2000"
+          className="heading heading--1"
+        >
+          Why Diaspora Plans Cost More
+        </h2>
+      </div>
 
+      <div className="why-diaspora__wrapper">
         <table
           data-aos="fade-up"
           data-aos-duration="2000"

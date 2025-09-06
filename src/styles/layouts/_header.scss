@@ -20,6 +20,7 @@
 
     @include respond(phone) {
       ont-size: get-text-size(md);
+      margin-bottom: 0;
     }
   }
 

@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 
-import DoctorOnDemand from "@/assets/img/doctor-on-demand.svg";
 import Section from "@/Layout/Section";
 
 const services = [

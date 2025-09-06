@@ -28,11 +28,11 @@ export default function About() {
             across Africa.
           </p>
         </HeroCentered>
-
-        <AboutImgSlider />
       </Header>
 
       <main>
+        <AboutImgSlider />
+
         <Vision />
 
         <Story />

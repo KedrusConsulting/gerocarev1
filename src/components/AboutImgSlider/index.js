@@ -21,21 +21,23 @@ import Image from "next/image";
 const AboutImgSlider = () => {
   return (
     <div className="about-us__slider">
-      <Swiper
-        autoplay={{
-          delay: 4000,
-          disableOnInteraction: false,
-        }}
-        navigation={true}
-        modules={[Navigation, Autoplay]}
-        className="mySwiper"
-      >
-        {images.map((image) => (
-          <SwiperSlide>
-            <Image src={image.image_url} alt={"Swiper"} />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      <div className="row">
+        <Swiper
+          autoplay={{
+            delay: 4000,
+            disableOnInteraction: false,
+          }}
+          navigation={true}
+          modules={[Navigation, Autoplay]}
+          className="mySwiper"
+        >
+          {images.map((image) => (
+            <SwiperSlide>
+              <Image src={image.image_url} alt={"Swiper"} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     </div>
   );
 };

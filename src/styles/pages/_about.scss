@@ -1,10 +1,15 @@
 .about-us {
   &__slider {
-    height: 130vh;
+    height: auto;
+    padding-bottom: 12rem;
 
     @include respond(tab-port) {
       height: auto;
-      // object-fit: cover;
+      padding-bottom: 8rem;
+    }
+
+    @include respond(phone) {
+      padding-bottom: 4.8rem;
     }
 
     img {
@@ -12,6 +17,7 @@
       width: 100%;
       object-fit: cover;
       object-position: top;
+      margin-bottom: -2.4rem;
 
       @include respond(tab-port) {
         height: auto;
@@ -33,6 +39,10 @@
     }
 
     @include swiper;
+
+    .swiper {
+      border-radius: 2.4rem;
+    }
   }
 }
 
