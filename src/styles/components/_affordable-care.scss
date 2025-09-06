@@ -12,6 +12,12 @@
     gap: 5.6rem;
   }
 
+  .header p {
+    @include respond(phone) {
+      margin-bottom: 0;
+    }
+  }
+
   &__content {
     max-width: 55rem;
 
