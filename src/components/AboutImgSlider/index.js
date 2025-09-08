@@ -38,21 +38,6 @@ const AboutImgSlider = () => {
           ))}
         </Swiper>
       </div>
-      <Swiper
-        autoplay={{
-          delay: 4000,
-          disableOnInteraction: false,
-        }}
-        navigation={true}
-        modules={[Navigation, Autoplay]}
-        className="mySwiper"
-      >
-        {images.map((image) => (
-          <SwiperSlide>
-            <Image src={image.image_url} alt={"Swiper"} />
-          </SwiperSlide>
-        ))}
-      </Swiper>
     </div>
   );
 };
