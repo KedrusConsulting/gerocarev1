@@ -1,0 +1,78 @@
+.beneficiary-card {
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  max-width: 50rem;
+
+  border-radius: 1.6rem;
+  @include border(#9ecb47);
+  background: #ecffde;
+
+  margin-bottom: 2.4rem;
+
+  &:last-of-type {
+    margin-bottom: 4.8rem;
+  }
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3.2rem;
+  }
+
+  &__edit {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    cursor: pointer;
+
+    svg {
+      width: 1.5rem;
+      height: 1.6rem;
+    }
+
+    span {
+      font-size: 1.4rem;
+      font-family: "Graphik M Trial";
+      font-weight: 500;
+    }
+  }
+
+  &__icon {
+    border-radius: 10rem;
+    background-color: #b0dfca;
+    width: 3.2rem;
+    height: 3.2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      position: relative;
+      top: -1px;
+    }
+  }
+
+  &__field {
+    width: calc((100% - 2.4rem) / 2);
+    font-size: 1.5rem;
+
+    & span:nth-child(1) {
+      color: #009855;
+    }
+
+    & span:nth-child(2) {
+      color: #444444;
+    }
+  }
+}

@@ -2,11 +2,7 @@ import Head from "next/head";
 
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import PlanCard from "@/components/PlanCard";
-import PriceCard from "@/components/PriceCard";
-import PriceCardOutline from "@/components/PriceCard/PriceCardOutline";
-import WhyDiaspora from "@/components/WhyDiaspora";
-import ServiceTag from "@/components/ServicesTag";
+import BeneficiaryCard from "@/components/BeneficiaryCard";
 
 export default function Playground() {
   // const { open, handleOpen, handleClose } = useContext(MoadlContext);
@@ -28,19 +24,9 @@ export default function Playground() {
 
       <Navigation />
 
-      {/* <PlanCard /> */}
-
-      {/* <PriceCardOutline
-        title={"Voice Call"}
-        nairaAmt={"2,500"}
-        description={
-          "Talk to a licensed doctor by phone, anytime. Include diagnosis + medical report."
-        }
-        label={"Book Voice Call"}
-      /> */}
-
-      <ServiceTag href={"#"} service={"On Demand"} />
-
+      <div className="row">
+        <BeneficiaryCard fields={[{}]} />
+      </div>
       <Footer />
     </>
   );

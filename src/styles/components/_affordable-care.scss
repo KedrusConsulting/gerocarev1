@@ -54,6 +54,10 @@
       bottom: 26.4rem;
     }
 
+    @include respond(tab-port) {
+      display: none;
+    }
+
     &--long {
       width: 90%;
       height: 0.2rem;
@@ -110,10 +114,6 @@
           width: 2.8rem;
           height: 2.8rem;
         }
-      }
-
-      @include respond(tab-port) {
-        display: none;
       }
     }
   }

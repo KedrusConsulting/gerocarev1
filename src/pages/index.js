@@ -16,10 +16,9 @@ import SplitScreen from "@/Layout/SplitScreen";
 import Image from "next/image";
 import Root from "@/Layout/Root";
 import ServiceTag from "@/components/ServicesTag";
-import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import { EffectFade, Autoplay } from "swiper";
+import { Autoplay } from "swiper";
 
 // import "../styles/main.scss";
 

@@ -17,6 +17,7 @@ import {
   TeleConsultation,
 } from "@/components/ChoosePlan";
 import Link from "next/link";
+import BeneficiaryCard from "@/components/BeneficiaryCard";
 
 const Register = () => {
   const { progress } = useContext(ProgressContext);
@@ -136,19 +137,6 @@ const Register = () => {
         />
       </Head>
 
-      {/* <nav className="register__nav">
-        <div className="row">
-          <Logo />
-
-          <div className="register__progress">
-            <ProgressBar value={progress} />
-          </div>
-
-          <div className="register__empty">
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          </div>
-        </div>
-      </nav> */}
       <div className="auth__container">
         <div className="auth__left"></div>
         <div className="auth__right">
@@ -246,125 +234,88 @@ const Register = () => {
                   <h4 className="heading heading--7">Beneficiary Details</h4>
                 </div>
 
-                <FieldArray
-                  name="beneficiaryDetails"
-                  render={({ push }) => (
-                    <>
-                      {formikState?.values.beneficiaryDetails &&
-                      formikState?.values.beneficiaryDetails.length > 0 ? (
-                        <>
-                          {formikState?.values.beneficiaryDetails.length > 0 &&
-                            formikState?.values.beneficiaryDetails.map(
-                              (_, index) => (
-                                <>
-                                  <div key={index}>
-                                    <div className="form__flex">
-                                      <InputField
-                                        type={"text"}
-                                        id={"beneficiaryFirstname"}
-                                        name={`beneficiaryDetails.${index}.firstname`}
-                                        label={"First Name"}
-                                        placeholder={"First name"}
-                                      />
+                <FieldArray name="beneficiaryDetails">
+                  {({ push }) => {
+                    const lastIndex =
+                      formikState?.values.beneficiaryDetails.length - 1;
 
-                                      <InputField
-                                        type={"text"}
-                                        id={"beneficiaryLastname"}
-                                        name={`beneficiaryDetails.${index}.lastname`}
-                                        label={"Last Name"}
-                                        placeholder={"Last name"}
-                                      />
-                                    </div>
+                    return (
+                      <>
+                        {formikState?.values.beneficiaryDetails
+                          .slice(0, lastIndex)
+                          .map((b, i) => (
+                            <BeneficiaryCard key={i} beneficiary={b} />
+                          ))}
 
-                                    <div className="form__flex">
-                                      <InputField
-                                        type={"date"}
-                                        id={"beneficiaryDateOfBirth"}
-                                        name={`beneficiaryDetails.${index}.dateOfBirth`}
-                                        label={"Date of Birth"}
-                                        placeholder={"First name"}
-                                      />
+                        {formikState?.values.beneficiaryDetails.length > 0 && (
+                          <div className="beneficiary__form">
+                            <div className="form__flex">
+                              <InputField
+                                type="text"
+                                name={`beneficiaryDetails.${lastIndex}.firstname`}
+                                label="First Name"
+                                placeholder="First name"
+                              />
+                              <InputField
+                                type="text"
+                                name={`beneficiaryDetails.${lastIndex}.lastname`}
+                                label="Last Name"
+                                placeholder="Last name"
+                              />
+                            </div>
 
-                                      <SelectField
-                                        options={genderOptions}
-                                        id={"beneficiaryGender"}
-                                        name={`beneficiaryDetails.${index}.gender`}
-                                        label={"Gender"}
-                                      />
-                                    </div>
+                            <div className="form__flex">
+                              <InputField
+                                type="date"
+                                name={`beneficiaryDetails.${lastIndex}.dateOfBirth`}
+                                label="Date of Birth"
+                              />
+                              <SelectField
+                                options={genderOptions}
+                                name={`beneficiaryDetails.${lastIndex}.gender`}
+                                label="Gender"
+                              />
+                            </div>
 
-                                    <div className="form__flex">
-                                      <InputField
-                                        type={"email"}
-                                        id={"beneficiaryEmail"}
-                                        name={`beneficiaryDetails.${index}.email`}
-                                        label={"Email Address"}
-                                        placeholder={"email@example.com"}
-                                      />
+                            <div className="form__flex">
+                              <InputField
+                                type="email"
+                                name={`beneficiaryDetails.${lastIndex}.email`}
+                                label="Email Address"
+                                placeholder="email@example.com"
+                              />
+                              <InputField
+                                type="number"
+                                name={`beneficiaryDetails.${lastIndex}.phone`}
+                                label="Phone Number"
+                                placeholder="+234"
+                              />
+                            </div>
 
-                                      <InputField
-                                        type={"number"}
-                                        id={"beneficiaryPhone"}
-                                        name={`beneficiaryDetails.${index}.phone`}
-                                        label={"Phone Number"}
-                                        placeholder={"+234"}
-                                      />
-                                    </div>
+                            <div className="form__flex">
+                              <InputField
+                                type="text"
+                                name={`beneficiaryDetails.${lastIndex}.state`}
+                                label="State"
+                              />
+                              <InputField
+                                type="text"
+                                name={`beneficiaryDetails.${lastIndex}.lga`}
+                                label="LGA"
+                              />
+                            </div>
 
-                                    <div className="form__flex">
-                                      <InputField
-                                        type={"text"}
-                                        id={"beneficiaryState"}
-                                        name={`beneficiaryDetails.${index}.state`}
-                                        label={"State"}
-                                        placeholder={"State"}
-                                      />
-
-                                      <InputField
-                                        type={"text"}
-                                        id={"beneficiaryLga"}
-                                        name={`beneficiaryDetails.${index}.lga`}
-                                        label={"LGA"}
-                                        placeholder={"LGA"}
-                                      />
-                                    </div>
-
-                                    <InputField
-                                      type={"text"}
-                                      id={"beneficiaryAddress"}
-                                      name={`beneficiaryDetails.${index}.address`}
-                                      label={"Home Address"}
-                                      placeholder={"Address"}
-                                    />
-                                  </div>
-                                </>
-                              )
-                            )}
-                          <button
-                            onClick={() =>
-                              push({
-                                firstname: "",
-                                lastname: "",
-                                dateOfBirth: "",
-                                gender: "",
-                                phone: "",
-                                state: "",
-                                lga: "",
-                                address: "",
-                              })
-                            }
-                            type="button"
-                            className="btn register__text-link"
-                          >
-                            <Image
-                              src={require("@/assets/img/plus_icon.svg")}
-                              alt="plus icon"
+                            <InputField
+                              type="text"
+                              name={`beneficiaryDetails.${lastIndex}.address`}
+                              label="Home Address"
                             />
-                            <span>Add Beneficiary</span>
-                          </button>
-                        </>
-                      ) : (
+                          </div>
+                        )}
+
                         <button
+                          type="button"
+                          className="btn register__text-link"
                           onClick={() =>
                             push({
                               firstname: "",
@@ -378,19 +329,17 @@ const Register = () => {
                               address: "",
                             })
                           }
-                          type="button"
-                          className="register__text-link"
                         >
                           <Image
                             src={require("@/assets/img/plus_icon.svg")}
                             alt="plus icon"
                           />
-                          <span>Add Beneficiary</span>
+                          <span>Add Another Beneficiary</span>
                         </button>
-                      )}
-                    </>
-                  )}
-                />
+                      </>
+                    );
+                  }}
+                </FieldArray>
               </div>
             </FormikStep>
 
