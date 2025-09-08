@@ -46,6 +46,26 @@ export default function Pricing() {
             <div className="affordable-care__img">
               <Image src={affordableCare} alt="Affordable Care" />
             </div>
+
+            <div className="affordable-care__divider affordable-care__divider--long"></div>
+            <div className="affordable-care__divider affordable-care__divider--short"></div>
+            <div className="affordable-care__divider affordable-care__divider--square">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M12 24L20 16L12 8"
+                  stroke="#002E1A"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
           </div>
         </div>
       </header>

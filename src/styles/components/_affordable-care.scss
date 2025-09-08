@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 4rem;
+  position: relative;
 
   @include respond(tab-land) {
     grid-template-columns: 1fr 1fr;
@@ -10,12 +11,6 @@
   @include respond(tab-port) {
     grid-template-columns: 1fr;
     gap: 5.6rem;
-  }
-
-  .header p {
-    @include respond(phone) {
-      margin-bottom: 0;
-    }
   }
 
   &__content {
@@ -28,10 +23,18 @@
         margin-top: 4vh;
       }
     }
+
+    p {
+      @include respond(phone) {
+        margin-bottom: 0 !important;
+      }
+    }
   }
 
   &__img {
     height: 59.2rem;
+    position: relative;
+    z-index: 2;
 
     @include respond(tab-port) {
       height: auto;
@@ -41,5 +44,77 @@
   &__img img {
     height: 100%;
     object-fit: contain;
+  }
+
+  &__divider {
+    position: absolute;
+    bottom: 16.4rem;
+
+    @include respond(tab-md) {
+      bottom: 26.4rem;
+    }
+
+    &--long {
+      width: 90%;
+      height: 0.2rem;
+      background-color: #9ecb47;
+    }
+
+    &--short {
+      width: 15%;
+      height: 0.2rem;
+      background-color: #002e1a;
+
+      &::before {
+        content: "";
+        width: 0.8rem;
+        height: 0.8rem;
+        background-color: #002e1a;
+        position: absolute;
+        top: -0.3rem;
+        left: -0.8rem;
+        transform: rotate(130deg);
+      }
+    }
+
+    &--square {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #ecffde;
+      @include border(#002e1a);
+      border-radius: 10rem;
+      width: 4rem;
+      height: 4rem;
+      position: absolute;
+      bottom: 14.65rem;
+      left: 16.4rem;
+
+      @include respond(tab-md) {
+        bottom: 24.65rem;
+      }
+
+      svg {
+        position: absolute;
+        top: 0.4rem;
+        left: 0.3rem;
+
+        @include respond(tab-land) {
+          top: 0.15rem;
+          left: 0.2rem;
+        }
+
+        @include respond(tab-md) {
+          top: 0.1rem;
+          left: 0.1rem;
+          width: 2.8rem;
+          height: 2.8rem;
+        }
+      }
+
+      @include respond(tab-port) {
+        display: none;
+      }
+    }
   }
 }

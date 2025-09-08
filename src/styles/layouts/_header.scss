@@ -123,48 +123,69 @@
         top: 6.4rem;
         right: 2.4rem;
 
-        @include respond(phone-sm) {
+        @include respond(phone) {
           right: -2.4rem;
           transform: scale(0.7);
         }
+
+        // @media only screen and (min-width: 400px) and (max-width: 600px) {
+        //   transform: scale(0.9);
+        // }
       }
 
       &:nth-of-type(2) {
         bottom: 14rem;
 
-        @include respond(phone-sm) {
+        @include respond(phone) {
           left: -1.2rem;
-          bottom: 6.4rem;
+          bottom: 8rem;
           transform: scale(0.7);
         }
+
+        // @media only screen and (min-width: 400px) and (max-width: 600px) {
+        //   left: 4rem;
+        //   bottom: 9.6rem;
+        //   transform: scale(0.9);
+        // }
       }
 
       &:nth-of-type(3) {
         bottom: 22rem;
         right: 2.4rem;
 
-        @include respond(phone-sm) {
+        @include respond(phone) {
           bottom: 11rem;
           right: -2.4rem;
           transform: scale(0.7);
         }
+
+        // @media only screen and (min-width: 400px) and (max-width: 600px) {
+        //   left: 4rem;
+        //   bottom: 10.2rem;
+        //   transform: scale(0.9);
+        // }
       }
 
       &:nth-of-type(4) {
         top: 12rem;
         left: -1.6rem;
 
-        @include respond(phone-sm) {
+        @include respond(phone) {
           top: 8.8rem;
           transform: scale(0.7);
         }
+
+        // @media only screen and (min-width: 400px) and (max-width: 600px) {
+        //   top: 12rem;
+        //   transform: scale(0.9);
+        // }
       }
 
       &:nth-of-type(5) {
         bottom: 6.4rem;
         left: 24rem;
 
-        @include respond(phone-sm) {
+        @include respond(phone) {
           bottom: 2.4rem;
           left: 12rem;
           transform: scale(0.7);
