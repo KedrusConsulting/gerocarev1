@@ -19,10 +19,17 @@ import {
 import Link from "next/link";
 import BeneficiaryCard from "@/components/BeneficiaryCard";
 
+// ✅ Import images at top (cleaner than require)
+import paystackLogo from "@/assets/img/paystack-2.png";
+import paypalLogo from "@/assets/img/paypal-2.png";
+import stripeLogo from "@/assets/img/stripe.png";
+import flutterwaveLogo from "@/assets/img/flutterwave.png";
+import plusIcon from "@/assets/img/plus_icon.svg";
+
 const Register = () => {
   const { progress } = useContext(ProgressContext);
   const [formikState, setFormikState] = useState();
-  const [service, setService] = useState();
+  const [service, setService] = useState("");
 
   const serviceRef = useRef();
 
@@ -31,14 +38,16 @@ const Register = () => {
   };
 
   const handleServiceChange = (e) => {
-    setService(serviceRef.current.value);
-    console.log(serviceRef.current.value);
+    setService(e.target.value);
   };
 
   const initialValues = {
     firstname: "",
     lastname: "",
     email: "",
+    phoneNumber: "",
+    referralCode: "",
+    aboutUs: "",
     password: "",
     confirmPassword: "",
     beneficiaryDetails: [
@@ -56,11 +65,13 @@ const Register = () => {
     ],
     choosePlan: {
       plan: "",
+      numberOfVisits: "",
+      frequencyOfVisits: "",
       paymentMethod: "",
     },
   };
 
-  const onSubmit = async (values, { resetForm }, onSubmitProps) => {
+  const onSubmit = async (values, { resetForm }) => {
     console.log(values);
   };
 
@@ -80,47 +91,34 @@ const Register = () => {
   ];
 
   const numberOfVisitsOptions = [{ value: "Select" }];
-
   const frequencyOfVisitsOptions = [{ value: "Select" }];
 
-  const options = [
+  const paymentOptions = [
     {
       id: "paystack",
-      paymentMethod: (
-        <Image
-          src={require("@/assets/img/paystack-2.png").default}
-          alt="Paystack Logo"
-        />
-      ),
+      paymentMethod: <Image src={paystackLogo} alt="Paystack Logo" />,
     },
     {
       id: "paypal",
-      paymentMethod: (
-        <Image
-          src={require("@/assets/img/paypal-2.png").default}
-          alt="PayPal Logo"
-        />
-      ),
+      paymentMethod: <Image src={paypalLogo} alt="PayPal Logo" />,
     },
     {
       id: "stripe",
-      paymentMethod: (
-        <Image
-          src={require("@/assets/img/stripe.png").default}
-          alt="Stripe Logo"
-        />
-      ),
+      paymentMethod: <Image src={stripeLogo} alt="Stripe Logo" />,
     },
     {
       id: "flutterwave",
-      paymentMethod: (
-        <Image
-          src={require("@/assets/img/flutterwave.png").default}
-          alt="Flutterwave Logo"
-        />
-      ),
+      paymentMethod: <Image src={flutterwaveLogo} alt="Flutterwave Logo" />,
     },
   ];
+
+  // ✅ Map services to components (instead of multiple ifs)
+  const serviceComponents = {
+    "Phone Consultation": <TeleConsultation />,
+    "Elderly Home Visits": <ElderlyHomeVisit />,
+    "On Demand Service": <OnDemandService />,
+    HMO: <HMO />,
+  };
 
   return (
     <>
@@ -130,7 +128,11 @@ const Register = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
         <link
           href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap"
           rel="stylesheet"
@@ -146,9 +148,9 @@ const Register = () => {
             <h4 className="heading heading--4">Create Account</h4>
             <p>
               Already have an account?{" "}
-              <Link className="form__link" href={"/register"}>
+              <Link className="form__link" href={"/login"}>
                 Login
-              </Link>{" "}
+              </Link>
             </p>
 
             <div className="register__progress">
@@ -157,77 +159,78 @@ const Register = () => {
           </header>
 
           <FormikStepper initialValues={initialValues} onSubmit={onSubmit}>
+            {/* Step 1 */}
             <FormikStep getFormikState={getFormikState}>
               <div className="register__form">
                 <div className="form__flex">
                   <InputField
-                    type={"text"}
-                    id={"firstname"}
-                    name={"firstname"}
-                    label={"First name"}
-                    placeholder={"First name"}
+                    type="text"
+                    id="firstname"
+                    name="firstname"
+                    label="First name"
+                    placeholder="First name"
                   />
-
                   <InputField
-                    type={"text"}
-                    id={"lastname"}
-                    name={"lastname"}
-                    label={"Last name"}
-                    placeholder={"Last name"}
+                    type="text"
+                    id="lastname"
+                    name="lastname"
+                    label="Last name"
+                    placeholder="Last name"
                   />
                 </div>
 
                 <InputField
-                  type={"email"}
-                  id={"email"}
-                  name={"email"}
-                  label={"Email Address"}
-                  placeholder={"same@gmail.com"}
+                  type="email"
+                  id="email"
+                  name="email"
+                  label="Email Address"
+                  placeholder="same@gmail.com"
                 />
 
                 <InputField
-                  type={"text"}
-                  id={"phoneNumber"}
-                  name={"phoneNumber"}
-                  label={"Phone Number"}
-                  placeholder={"70xxxxxxxx"}
+                  type="text"
+                  id="phoneNumber"
+                  name="phoneNumber"
+                  label="Phone Number"
+                  placeholder="70xxxxxxxx"
                 />
 
                 <div className="form__flex">
                   <InputField
-                    type={"text"}
-                    id={"referralCode"}
-                    name={"referralCode"}
-                    label={"Referral Code"}
-                    placeholder={"Enter referral code"}
+                    type="text"
+                    id="referralCode"
+                    name="referralCode"
+                    label="Referral Code"
+                    placeholder="Enter referral code"
                   />
 
                   <SelectField
                     options={genderOptions}
-                    id={"aboutUs"}
-                    name={`aboutUs`}
-                    label={"Where did you hear about us?"}
+                    id="aboutUs"
+                    name="aboutUs"
+                    label="Where did you hear about us?"
                   />
                 </div>
 
                 <InputField
-                  type={"password"}
-                  id={"password"}
-                  name={"password"}
-                  label={"Create Password"}
-                  placeholder={"**************"}
+                  type="password"
+                  id="password"
+                  name="password"
+                  label="Create Password"
+                  placeholder="**************"
                 />
 
                 <InputField
-                  type={"password"}
-                  id={"confirmPassword"}
-                  name={"confirmPassword"}
-                  label={"Confirm Password"}
-                  placeholder={"**************"}
+                  type="password"
+                  id="confirmPassword"
+                  name="confirmPassword"
+                  label="Confirm Password"
+                  placeholder="**************"
                 />
               </div>
             </FormikStep>
 
+            {/* Step 2 */}
             <FormikStep getFormikState={getFormikState}>
               <div className="register__form">
                 <div className="register__header">
@@ -235,19 +238,19 @@ const Register = () => {
                 </div>
 
                 <FieldArray name="beneficiaryDetails">
-                  {({ push }) => {
-                    const lastIndex =
-                      formikState?.values.beneficiaryDetails.length - 1;
+                  {({ push, form }) => {
+                    const beneficiaries = form.values.beneficiaryDetails || [];
+                    const lastIndex = beneficiaries.length - 1;
 
                     return (
                       <>
-                        {formikState?.values.beneficiaryDetails
-                          .slice(0, lastIndex)
-                          .map((b, i) => (
-                            <BeneficiaryCard key={i} beneficiary={b} />
-                          ))}
+                        {/* ✅ Show all except the last one as cards */}
+                        {beneficiaries.slice(0, lastIndex).map((b, i) => (
+                          <BeneficiaryCard key={i} beneficiary={b} />
+                        ))}
 
-                        {formikState?.values.beneficiaryDetails.length > 0 && (
+                        {/* ✅ Last item is the active form */}
+                        {beneficiaries.length > 0 && (
                           <div className="beneficiary__form">
                             <div className="form__flex">
                               <InputField
@@ -313,10 +316,12 @@ const Register = () => {
                           </div>
                         )}
 
+                        {/* ✅ Save current beneficiary & add new blank one */}
                         <button
                           type="button"
                           className="btn register__text-link"
-                          onClick={() =>
+                          onClick={() => {
+                            // ensure current beneficiary is "locked in"
                             push({
                               firstname: "",
                               lastname: "",
@@ -327,13 +332,10 @@ const Register = () => {
                               state: "",
                               lga: "",
                               address: "",
-                            })
-                          }
+                            });
+                          }}
                         >
-                          <Image
-                            src={require("@/assets/img/plus_icon.svg")}
-                            alt="plus icon"
-                          />
+                          <Image src={plusIcon} alt="plus icon" />
                           <span>Add Another Beneficiary</span>
                         </button>
                       </>
@@ -343,63 +345,43 @@ const Register = () => {
               </div>
             </FormikStep>
 
+            {/* Step 3 */}
             <FormikStep getFormikState={getFormikState}>
               <div className="register__form">
                 <SelectField
                   ref={serviceRef}
                   options={choosePlanOptions}
-                  id={"choosePlan"}
-                  name={`choosePlan`}
-                  label={"Choose a Service"}
+                  id="choosePlan"
+                  name="choosePlan.plan"
+                  label="Choose a Service"
                   onChange={handleServiceChange}
                 />
 
-                {service === "Phone Consultation" && (
+                {service && (
                   <div className="register__plan-options">
-                    {<TeleConsultation />}
-                  </div>
-                )}
-
-                {service === "Elderly Home Visits" && (
-                  <div className="register__plan-options">
-                    <ElderlyHomeVisit />
-                  </div>
-                )}
-
-                {service === "On Demand Service" && (
-                  <div className="register__plan-options">
-                    <OnDemandService />
-                  </div>
-                )}
-
-                {service === "HMO" && (
-                  <div className="register__plan-options">
-                    <HMO />
+                    {serviceComponents[service]}
                   </div>
                 )}
 
                 <div className="form__flex">
                   <SelectField
-                    // ref={serviceRef}
                     options={numberOfVisitsOptions}
-                    id={"numberOfVisits"}
-                    name={`numberOfVisits`}
-                    label={"Number of Visits"}
+                    id="numberOfVisits"
+                    name="choosePlan.numberOfVisits"
+                    label="Number of Visits"
                   />
                   <SelectField
-                    // ref={serviceRef}
                     options={frequencyOfVisitsOptions}
-                    id={"frequencyOfVisits"}
-                    name={`choosePlan`}
-                    label={"Choose a Service"}
-                    onChange={handleServiceChange}
+                    id="frequencyOfVisits"
+                    name="choosePlan.frequencyOfVisits"
+                    label="Frequency of Visits"
                   />
                 </div>
 
                 <PaymentMethod
-                  options={options}
-                  label={"Select Payment Method"}
-                  name={"paymentMethod"}
+                  options={paymentOptions}
+                  label="Select Payment Method"
+                  name="choosePlan.paymentMethod"
                 />
 
                 <p>
@@ -407,10 +389,11 @@ const Register = () => {
                   <Link className="form__link" href={"/"}>
                     Terms and Conditions
                   </Link>{" "}
-                  and
+                  and{" "}
                   <Link className="form__link" href={"/"}>
-                    Privacy Policy.
+                    Privacy Policy
                   </Link>
+                  .
                 </p>
               </div>
             </FormikStep>

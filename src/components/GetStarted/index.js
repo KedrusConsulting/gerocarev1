@@ -69,13 +69,21 @@ const GetStarted = () => {
           ))}
 
           <div
+            className="get-started__btns"
             data-aos="fade-up"
             data-aos-duration="2000"
             // data-aos-once="true"
-            style={{ marginTop: "3.2rem" }}
+            style={{ marginTop: "4.8rem" }}
           >
             <a href="/register" className="btn btn--primary">
               Start Care Plan Today
+            </a>
+
+            <a
+              href="https://app.gerocare.org/sponsor/processes"
+              className="btn btn--sec"
+            >
+              See Our Progress
             </a>
           </div>
         </div>

@@ -56,10 +56,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 
     svg {
       position: relative;
-      top: -1px;
+      top: -1.5px;
     }
   }
 

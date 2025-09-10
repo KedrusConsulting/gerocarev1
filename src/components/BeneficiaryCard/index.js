@@ -14,16 +14,16 @@ const capitalizeEveryWord = (str) => {
 };
 
 const BeneficiaryCard = ({ beneficiary = null }) => {
-  const [open, setOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(true);
   const fields = Object.entries(beneficiary);
 
   const handleToggle = () => {
-    setOpen(!open);
+    setIsOpen(!isOpen);
   };
 
   return (
     <div className="beneficiary-card">
-      {open && (
+      {isOpen && (
         <div className="beneficiary-card__body">
           {fields &&
             fields?.map(([key, value], i) => (
@@ -62,6 +62,10 @@ const BeneficiaryCard = ({ beneficiary = null }) => {
             height="20"
             viewBox="0 0 20 20"
             fill="none"
+            style={{
+              transform: isOpen ? "rotate(180deg)" : "rotate(0deg)",
+              transition: "transform 0.3s ease",
+            }}
           >
             <path
               d="M5 12.5L10 7.5L15 12.5"
