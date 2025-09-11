@@ -83,7 +83,7 @@ const GetStarted = () => {
               href="https://app.gerocare.org/sponsor/processes"
               className="btn btn--sec"
             >
-              See Our Progress
+              See Our Process
             </a>
           </div>
         </div>
